@@ -1,0 +1,23 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "COD King Blog",
+  "colors": {
+    "primary": "#196BF5",
+    "light": "#196BF5",
+    "dark": "#196BF5"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Blog",
+        "groups": [
+          {
+            "group": "Latest",
+            "pages": []
+          }
+        ]
+      }
+    ]
+  }
+}
