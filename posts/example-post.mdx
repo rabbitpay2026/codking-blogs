@@ -7,110 +7,141 @@ noindex: true
 hidden: true
 ---
 
-<div className="mx-auto w-full max-w-7xl px-6 pb-24" style={{background:'#FFFFFF',color:'#111111'}}>
-  <aside className="mt-10 rounded-lg border p-6" style={{borderColor:'#734DFF',background:'#F7F7F7'}}>
-    <div className="text-xs font-semibold uppercase tracking-widest" style={{color:'#734DFF'}}>Internal only</div>
-    <h2 className="mt-2 text-xl font-bold" style={{color:'#111111'}}>Internal article template — do not publish as a blog post</h2>
-    <p className="mt-3 text-sm" style={{color:'#667085',lineHeight:1.6}}>Duplicate this page to start a new article. It is hidden and noindexed, and must never be linked from the blog homepage as a published article.</p>
-    <p className="mt-4 text-sm font-semibold" style={{color:'#111111'}}>Only change these nine things</p>
+<div className="ck-shell">
+  <div className="ck-summary">
+    <div className="ck-summary-label">Internal only — do not publish as a blog post</div>
+    <p>Duplicate this page to start a new article. It is hidden and noindexed. Change only the nine things listed below; leave every ck- class exactly as it is, because all layout comes from style.css at the repository root, not from this file.</p>
+    <p>1. Frontmatter title, sidebarTitle, description — and remove noindex and hidden. 2. The ck-eyebrow category and date. 3. The ck-title. 4. The ck-readtime. 5. The cover kicker and line, and swap ck-cover--template for one of the four cover variants. 6. The ck-body content: lede, h2 headings with id attributes, paragraphs, lists. 7. The ck-toc links, one per h2 id. 8. The left nav — move is-current onto the new article, and add a link to it in the other four articles. 9. The three share URLs and the two ck-more cards.</p>
+    <p>Then add a card for it on /blog under the matching ck-section-label, preview the branch, and publish only after review.</p>
+  </div>
 
-    <ol className="mt-2 list-decimal pl-5 text-sm" style={{color:'#667085',lineHeight:1.7}}>
-      <li>Frontmatter title, sidebarTitle and description, and remove noindex and hidden.</li>
-      <li>The category and date line in the header.</li>
-      <li>The article title in the h1.</li>
-      <li>The reading time.</li>
-      <li>The cover panel in the centre column.</li>
-      <li>The article body: paragraphs, h2 headings with id attributes, lists.</li>
-      <li>The On this page links, matching each h2 id.</li>
-      <li>The left nav: move the active styling to the new article and add a link to it in the other four articles.</li>
-      <li>The three share URLs.</li>
-    </ol>
+  <a href="/blog" className="ck-back">← All articles</a>
 
-    <p className="mt-4 text-sm" style={{color:'#667085',lineHeight:1.6}}>Leave the layout classes alone. The three columns come from flex-col plus lg:flex-row with lg:w-56, lg:flex-1 and lg:w-60. Do not add Tailwind arbitrary values such as w-\[240px] — Mintlify does not compile them. Use the style prop for any custom value.</p>
-    <p className="mt-4 text-sm" style={{color:'#667085',lineHeight:1.6}}>Then add a card for the article on /blog under the matching category heading, preview the branch, and publish only after review.</p>
-  </aside>
-
-  <a href="/blog" className="mt-10 inline-block text-base font-medium no-underline" style={{color:'#111111'}}>← All articles</a>
-
-  <header className="mt-8 max-w-4xl">
-    <div className="text-xs font-semibold uppercase tracking-widest" style={{color:'#734DFF'}}>Category / Month Year</div>
-    <h1 className="mt-5 text-4xl font-bold md:text-5xl" style={{color:'#111111',lineHeight:1.08,letterSpacing:'-0.02em'}}>Article title goes here</h1>
-    <div className="mt-5 text-xs uppercase tracking-widest" style={{color:'#667085'}}>0 minutes read</div>
+  <header className="ck-head">
+    <div className="ck-eyebrow">Category · Month Year</div>
+    <h1 className="ck-title">Article title goes here</h1>
+    <div className="ck-readtime">0 minutes read</div>
   </header>
 
-  <div className="mt-10 flex flex-col gap-10 border-t pt-10 lg:flex-row lg:gap-9" style={{borderColor:'#E5E7EB'}}>
-    <aside className="order-2 w-full shrink-0 lg:order-1 lg:w-56">
-      <div className="lg:sticky lg:top-24">
-        <div className="text-xs font-semibold uppercase tracking-widest" style={{color:'#667085'}}>Blog articles</div>
+  <div className="ck-layout">
+    <aside className="ck-col-left">
+      <div className="ck-sticky">
+        <div className="ck-navlabel">Blog articles</div>
 
-        <nav className="mt-4 flex flex-col gap-1 text-sm">
-          <a href="/blog/understanding-cod-verification" className="block border-l-2 px-3 py-2 no-underline" style={{color:'#667085',borderColor:'transparent'}}>Understanding COD Verification</a>
-          <a href="/blog/reduce-rto-for-cod-orders" className="block border-l-2 px-3 py-2 no-underline" style={{color:'#667085',borderColor:'transparent'}}>How to Reduce RTO for COD Orders</a>
-          <a href="/blog/shopify-checkout-optimization" className="block border-l-2 px-3 py-2 no-underline" style={{color:'#667085',borderColor:'transparent'}}>Checkout Optimization for Shopify Stores</a>
-          <a href="/blog/payment-options-indian-ecommerce" className="block border-l-2 px-3 py-2 no-underline" style={{color:'#667085',borderColor:'transparent'}}>Payment Options for Indian E-commerce</a>
+        <nav className="ck-nav">
+          <a href="/blog/understanding-cod-verification">Understanding COD Verification</a>
+          <a href="/blog/reduce-rto-for-cod-orders">How to Reduce RTO for COD Orders</a>
+          <a href="/blog/shopify-checkout-optimization">Checkout Optimization for Shopify Stores</a>
+          <a href="/blog/payment-options-indian-ecommerce">Payment Options for Indian E-commerce</a>
         </nav>
 
-        <div className="mt-8 border-t pt-6" style={{borderColor:'#E5E7EB'}}>
-          <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-xs font-bold" style={{background:'#734DFF',color:'#FFFFFF'}}>CK</div>
+        <div className="ck-author">
+          <div className="ck-author-row">
+            <div className="ck-avatar">CK</div>
 
-            <div className="min-w-0">
-              <div className="text-sm font-semibold" style={{color:'#111111'}}>COD King Team</div>
-              <div className="text-xs" style={{color:'#667085'}}>E-commerce</div>
+            <div>
+              <div className="ck-author-name">COD King Team</div>
+              <div className="ck-author-role">Category</div>
             </div>
           </div>
 
-          <div className="mt-6 text-xs font-semibold uppercase tracking-widest" style={{color:'#667085'}}>Share this article</div>
+          <div className="ck-navlabel ck-share-label">Share this article</div>
 
-          <div className="mt-3 flex gap-2">
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcodking.in%2Fblog%2Farticle-slug" target="_blank" rel="noreferrer" className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-medium no-underline" style={{background:'#F7F7F7',color:'#111111'}}>in</a>
-            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcodking.in%2Fblog%2Farticle-slug" target="_blank" rel="noreferrer" className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-medium no-underline" style={{background:'#F7F7F7',color:'#111111'}}>X</a>
-            <a href="https://codking.in/blog/article-slug" className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-medium no-underline" style={{background:'#F7F7F7',color:'#111111'}}>↗</a>
+          <div className="ck-share">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcodking.in%2Fblog%2Farticle-slug" target="_blank" rel="noreferrer">in</a>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcodking.in%2Fblog%2Farticle-slug" target="_blank" rel="noreferrer">X</a>
+            <a href="https://codking.in/blog/article-slug">↗</a>
           </div>
         </div>
       </div>
     </aside>
 
-    <main className="order-1 mx-auto w-full min-w-0 max-w-2xl lg:order-2 lg:mx-0 lg:max-w-none lg:flex-1">
-      <div className="flex aspect-video w-full items-end rounded-xl p-8 md:p-10" style={{background:'#F7F7F7'}}>
-        <div>
-          <div className="text-2xl font-bold md:text-4xl" style={{color:'#111111',lineHeight:1.1,letterSpacing:'-0.02em'}}>Cover headline,<br />two short lines.</div>
+    <main className="ck-col-main">
+      <div className="ck-cover ck-cover--template">
+        <div className="ck-cover-art">
+          <div className="ck-cover-rule" />
+
+          <div className="ck-cover-kicker">Cover kicker</div>
+          <div className="ck-cover-line">Cover headline,<br />two short lines.</div>
         </div>
       </div>
 
-      <p className="mt-9 text-lg" style={{lineHeight:1.75,color:'#111111'}}>Open the article with useful context and explain what the reader will learn.</p>
-      <h2 id="section-one" className="mt-12 text-2xl font-bold md:text-3xl" style={{color:'#111111',letterSpacing:'-0.015em'}}>First section</h2>
-      <p className="mt-4" style={{lineHeight:1.75,color:'#111111'}}>Develop the first major idea with practical, factual guidance.</p>
-      <h2 id="section-two" className="mt-12 text-2xl font-bold md:text-3xl" style={{color:'#111111',letterSpacing:'-0.015em'}}>Second section</h2>
-      <p className="mt-4" style={{lineHeight:1.75,color:'#111111'}}>Develop the next idea and keep the article easy to scan.</p>
-      <h2 id="takeaways" className="mt-12 text-2xl font-bold md:text-3xl" style={{color:'#111111',letterSpacing:'-0.015em'}}>Key takeaways</h2>
+      <div className="ck-summary">
+        <div className="ck-summary-label">Summary</div>
+        <p>Use the same sentence as the frontmatter description.</p>
+      </div>
 
-      <ul className="mt-4 list-disc pl-5" style={{lineHeight:1.75,color:'#111111'}}>
-        <li className="mt-2">First useful takeaway.</li>
-        <li className="mt-2">Second useful takeaway.</li>
-        <li className="mt-2">Third useful takeaway.</li>
-      </ul>
+      <div className="ck-body">
+        <p className="ck-lede">Open the article with useful context and explain what the reader will learn.</p>
+        <h2 id="section-one">First section</h2>
+        <p>Develop the first major idea with practical, factual guidance.</p>
+        <h2 id="section-two">Second section</h2>
+        <p>Develop the next idea and keep the article easy to scan.</p>
+        <h2 id="takeaways">Key takeaways</h2>
 
-      <h2 id="conclusion" className="mt-12 text-2xl font-bold md:text-3xl" style={{color:'#111111',letterSpacing:'-0.015em'}}>Conclusion</h2>
-      <p className="mt-4" style={{lineHeight:1.75,color:'#111111'}}>Close with a concise summary and a useful final thought.</p>
+        <ul>
+          <li>First useful takeaway.</li>
+          <li>Second useful takeaway.</li>
+          <li>Third useful takeaway.</li>
+        </ul>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Close with a concise summary and a useful final thought.</p>
+      </div>
+
+      <section className="ck-more">
+        <h2 className="ck-more-title">More blog posts to read</h2>
+
+        <div className="ck-grid">
+          <a href="/blog/understanding-cod-verification" className="ck-card">
+            <div className="ck-card-media ck-cover--verification">
+              <div className="ck-cover-art">
+                <div className="ck-cover-rule" />
+
+                <div className="ck-cover-kicker">COD verification</div>
+                <div className="ck-cover-line">Confirm intent<br />before dispatch.</div>
+              </div>
+            </div>
+
+            <div className="ck-card-meta"><span className="ck-card-cat">COD & RTO</span><span className="ck-card-date">July 2026</span></div>
+            <h3 className="ck-card-title">Understanding COD Verification for Shopify Orders</h3>
+            <p className="ck-card-desc">How confirmation can support better COD fulfillment decisions before an order moves forward.</p>
+          </a>
+
+          <a href="/blog/reduce-rto-for-cod-orders" className="ck-card">
+            <div className="ck-card-media ck-cover--rto">
+              <div className="ck-cover-art">
+                <div className="ck-cover-rule" />
+
+                <div className="ck-cover-kicker">Return to origin</div>
+                <div className="ck-cover-line">Fewer avoidable<br />returns.</div>
+              </div>
+            </div>
+
+            <div className="ck-card-meta"><span className="ck-card-cat">COD & RTO</span><span className="ck-card-date">July 2026</span></div>
+            <h3 className="ck-card-title">How to Reduce RTO for COD Orders</h3>
+            <p className="ck-card-desc">Practical operational steps for improving COD order quality before and after fulfillment begins.</p>
+          </a>
+        </div>
+      </section>
     </main>
 
-    <aside className="order-3 w-full shrink-0 lg:w-60">
-      <div className="lg:sticky lg:top-24">
-        <div className="text-xs font-semibold uppercase tracking-widest" style={{color:'#667085'}}>On this page</div>
+    <aside className="ck-col-right">
+      <div className="ck-sticky">
+        <div className="ck-toc-label">On this page</div>
 
-        <div className="mt-5 flex flex-col gap-3 border-l pl-4 text-sm" style={{borderColor:'#E5E7EB'}}>
-          <a href="#section-one" className="no-underline" style={{color:'#667085'}}>First section</a>
-          <a href="#section-two" className="no-underline" style={{color:'#667085'}}>Second section</a>
-          <a href="#takeaways" className="no-underline" style={{color:'#667085'}}>Key takeaways</a>
-          <a href="#conclusion" className="no-underline" style={{color:'#667085'}}>Conclusion</a>
-        </div>
+        <nav className="ck-toc">
+          <a href="#section-one">First section</a>
+          <a href="#section-two">Second section</a>
+          <a href="#takeaways">Key takeaways</a>
+          <a href="#conclusion">Conclusion</a>
+        </nav>
 
-        <div className="mt-8 flex max-w-xs flex-col gap-2 lg:max-w-none">
-          <input type="email" placeholder="Email address" className="box-border h-10 w-full rounded-sm border px-3 text-sm" style={{borderColor:'#E5E7EB',background:'#FFFFFF',color:'#111111'}} />
+        <div className="ck-cta">
+          <input type="email" placeholder="Email address" />
 
-          <a href="https://codking.in" className="flex h-11 w-full items-center justify-center rounded-sm text-sm font-medium no-underline" style={{background:'#111111',color:'#FFFFFF'}}>Start for free</a>
-          <a href="https://codking.in" className="flex h-11 w-full items-center justify-center rounded-sm border text-sm font-medium no-underline" style={{borderColor:'#E5E7EB',background:'#FFFFFF',color:'#111111'}}>Contact sales</a>
+          <a href="https://codking.in" className="ck-btn-primary">Start for free</a>
+          <a href="https://codking.in" className="ck-btn-secondary">Contact sales</a>
         </div>
       </div>
     </aside>

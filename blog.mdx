@@ -8,120 +8,107 @@ isPublic: true
 hideFooterPagination: true
 ---
 
-<div className="mx-auto w-full max-w-7xl px-6 pb-24" style={{background:'#FFFFFF',color:'#111111'}}>
-  <header className="mt-10 max-w-3xl">
-    <h1 className="text-3xl font-bold md:text-4xl" style={{color:'#111111',lineHeight:1.1,letterSpacing:'-0.025em'}}>COD King Blog</h1>
-    <p className="mt-3 text-base" style={{color:'#667085',lineHeight:1.6}}>Practical guides, strategies, and product insights for Shopify merchants managing Cash on Delivery.</p>
-  </header>
-
-  <a href="/blog/understanding-cod-verification" className="mt-9 flex flex-col overflow-hidden rounded-lg border no-underline md:h-96 md:flex-row" style={{borderColor:'#E5E7EB',color:'#111111'}}>
-    <div className="flex flex-col justify-end p-8 md:w-1/2 md:p-10">
-      <div className="text-xs font-semibold uppercase tracking-widest" style={{color:'#734DFF'}}>COD & RTO / July 2026 / 6 min read</div>
-      <h2 className="mt-4 text-3xl font-bold md:text-4xl" style={{color:'#111111',lineHeight:1.1,letterSpacing:'-0.025em'}}>Understanding COD Verification for Shopify Orders</h2>
-      <p className="mt-4 text-base" style={{color:'#667085',lineHeight:1.6}}>A practical guide to confirming customer intent before a Cash on Delivery order enters fulfillment.</p>
-      <div className="mt-5 text-sm" style={{color:'#667085'}}>COD King Team · E-commerce</div>
+<div className="ck-shell ck-home">
+  <a href="/blog/understanding-cod-verification" className="ck-featured ck-cover--verification">
+    <div className="ck-cover-art">
+      <div className="ck-cover-line">Confirm intent<br />before dispatch.</div>
     </div>
 
-    <div className="flex aspect-video w-full items-end p-8 md:aspect-auto md:h-full md:w-1/2 md:p-10" style={{background:'#F7F7F7'}}>
-      <div>
-        <div className="flex h-10 w-10 items-center justify-center rounded-full text-lg font-bold" style={{background:'#7CD548',color:'#111111'}}>✓</div>
-        <div className="mt-4 text-2xl font-bold md:text-3xl" style={{color:'#111111',lineHeight:1.1,letterSpacing:'-0.02em'}}>Confirm intent<br />before dispatch.</div>
+    <div className="ck-featured-copy">
+      <div className="ck-featured-meta">July 2026 · 6 min read</div>
+      <h1 className="ck-featured-title">Understanding COD Verification for Shopify Orders</h1>
+      <p className="ck-featured-desc">A practical guide to confirming customer intent before a Cash on Delivery order enters fulfillment.</p>
+
+      <div className="ck-featured-author">
+        <div className="ck-avatar">CK</div>
+
+        <div>
+          <div className="ck-author-name">COD King Team</div>
+          <div className="ck-author-role">COD & RTO</div>
+        </div>
       </div>
     </div>
   </a>
 
-  <nav aria-label="Blog categories" className="mt-12 flex items-center gap-7 overflow-x-auto border-b text-sm" style={{borderColor:'#E5E7EB'}}>
-    <a href="#all-articles" className="-mb-px block whitespace-nowrap border-b-2 pb-3 font-semibold no-underline" style={{color:'#111111',borderColor:'#734DFF'}}>All articles</a>
-    <a href="#cod-rto" className="-mb-px block whitespace-nowrap border-b-2 pb-3 no-underline" style={{color:'#667085',borderColor:'transparent'}}>COD & RTO</a>
-    <span className="-mb-px block whitespace-nowrap border-b-2 pb-3" style={{color:'#B6BCC8',borderColor:'transparent'}}>Shopify</span>
-    <a href="#checkout-conversion" className="-mb-px block whitespace-nowrap border-b-2 pb-3 no-underline" style={{color:'#667085',borderColor:'transparent'}}>Checkout & Conversion</a>
-    <a href="#payments" className="-mb-px block whitespace-nowrap border-b-2 pb-3 no-underline" style={{color:'#667085',borderColor:'transparent'}}>Payments</a>
-    <span className="-mb-px block whitespace-nowrap border-b-2 pb-3" style={{color:'#B6BCC8',borderColor:'transparent'}}>E-commerce Growth</span>
+  <nav className="ck-tabs" aria-label="Blog categories">
+    <a href="#all-articles" className="ck-tab is-active">All articles</a>
+    <a href="#cod-rto" className="ck-tab">COD & RTO</a>
+    <span className="ck-tab is-empty">Shopify</span>
+    <a href="#checkout-conversion" className="ck-tab">Checkout & Conversion</a>
+    <a href="#payments" className="ck-tab">Payments</a>
+    <span className="ck-tab is-empty">E-commerce Growth</span>
   </nav>
 
-  <section id="all-articles" className="pt-10">
-    <h2 id="cod-rto" className="text-xs font-semibold uppercase tracking-widest" style={{color:'#667085'}}>COD & RTO</h2>
+  <section id="all-articles">
+    <h2 id="cod-rto" className="ck-section-label">COD & RTO</h2>
 
-    <div className="mt-6 grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-      <a href="/blog/understanding-cod-verification" className="block min-w-0 no-underline" style={{color:'#111111'}}>
-        <div className="flex aspect-video w-full items-end overflow-hidden rounded-md p-5" style={{background:'#F7F7F7'}}>
-          <div>
-            <div className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold" style={{background:'#7CD548',color:'#111111'}}>✓</div>
-            <div className="mt-3 text-lg font-bold" style={{color:'#111111',lineHeight:1.15,letterSpacing:'-0.02em'}}>Confirm intent<br />before dispatch.</div>
+    <div className="ck-grid">
+      <a href="/blog/understanding-cod-verification" className="ck-card">
+        <div className="ck-card-media ck-cover--verification">
+          <div className="ck-cover-art">
+            <div className="ck-cover-rule" />
+
+            <div className="ck-cover-kicker">COD verification</div>
+            <div className="ck-cover-line">Confirm intent<br />before dispatch.</div>
           </div>
         </div>
 
-        <div className="mt-3 flex items-center gap-2 text-xs">
-          <span className="font-semibold uppercase" style={{color:'#734DFF'}}>COD & RTO</span>
-          <span style={{color:'#667085'}}>July 2026</span>
-        </div>
-
-        <h3 className="mt-2 text-lg font-semibold" style={{color:'#111111',lineHeight:1.3,letterSpacing:'-0.015em'}}>Understanding COD Verification for Shopify Orders</h3>
-        <p className="mt-2 line-clamp-2 text-sm" style={{color:'#667085',lineHeight:1.55}}>How confirmation can support better COD fulfillment decisions before an order moves forward.</p>
+        <div className="ck-card-meta"><span className="ck-card-cat">COD & RTO</span><span className="ck-card-date">July 2026</span></div>
+        <h3 className="ck-card-title">Understanding COD Verification for Shopify Orders</h3>
+        <p className="ck-card-desc">How confirmation can support better COD fulfillment decisions before an order moves forward.</p>
       </a>
 
-      <a href="/blog/reduce-rto-for-cod-orders" className="block min-w-0 no-underline" style={{color:'#111111'}}>
-        <div className="flex aspect-video w-full items-end overflow-hidden rounded-md p-5" style={{background:'#F3F0FF'}}>
-          <div>
-            <div className="text-2xl font-bold" style={{color:'#734DFF',letterSpacing:'-0.04em'}}>RTO ↓</div>
-            <div className="mt-2 text-sm" style={{color:'#667085',lineHeight:1.3}}>Better order quality before dispatch.</div>
+      <a href="/blog/reduce-rto-for-cod-orders" className="ck-card">
+        <div className="ck-card-media ck-cover--rto">
+          <div className="ck-cover-art">
+            <div className="ck-cover-rule" />
+
+            <div className="ck-cover-kicker">Return to origin</div>
+            <div className="ck-cover-line">Fewer avoidable<br />returns.</div>
           </div>
         </div>
 
-        <div className="mt-3 flex items-center gap-2 text-xs">
-          <span className="font-semibold uppercase" style={{color:'#734DFF'}}>COD & RTO</span>
-          <span style={{color:'#667085'}}>July 2026</span>
-        </div>
-
-        <h3 className="mt-2 text-lg font-semibold" style={{color:'#111111',lineHeight:1.3,letterSpacing:'-0.015em'}}>How to Reduce RTO for COD Orders</h3>
-        <p className="mt-2 line-clamp-2 text-sm" style={{color:'#667085',lineHeight:1.55}}>Practical operational steps for improving COD order quality before and after fulfillment begins.</p>
+        <div className="ck-card-meta"><span className="ck-card-cat">COD & RTO</span><span className="ck-card-date">July 2026</span></div>
+        <h3 className="ck-card-title">How to Reduce RTO for COD Orders</h3>
+        <p className="ck-card-desc">Practical operational steps for improving COD order quality before and after fulfillment begins.</p>
       </a>
     </div>
 
-    <h2 id="checkout-conversion" className="mt-14 text-xs font-semibold uppercase tracking-widest" style={{color:'#667085'}}>Checkout & Conversion</h2>
+    <h2 id="checkout-conversion" className="ck-section-label">Checkout & Conversion</h2>
 
-    <div className="mt-6 grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-      <a href="/blog/shopify-checkout-optimization" className="block min-w-0 no-underline" style={{color:'#111111'}}>
-        <div className="flex aspect-video w-full items-end overflow-hidden rounded-md p-5" style={{background:'#17151F'}}>
-          <div>
-            <div className="mb-3 flex gap-2">
-              <span className="block h-1 w-14 rounded-full" style={{background:'#734DFF'}} />
+    <div className="ck-grid">
+      <a href="/blog/shopify-checkout-optimization" className="ck-card">
+        <div className="ck-card-media ck-cover--checkout">
+          <div className="ck-cover-art">
+            <div className="ck-cover-rule" />
 
-              <span className="block h-1 w-8 rounded-full" style={{background:'#3A3543'}} />
-            </div>
-
-            <div className="text-lg font-bold" style={{color:'#FFFFFF',lineHeight:1.15,letterSpacing:'-0.02em'}}>Less friction.<br />Clearer checkout.</div>
+            <div className="ck-cover-kicker">Checkout & conversion</div>
+            <div className="ck-cover-line">Less friction.<br />Clearer checkout.</div>
           </div>
         </div>
 
-        <div className="mt-3 flex items-center gap-2 text-xs">
-          <span className="font-semibold uppercase" style={{color:'#734DFF'}}>Checkout & Conversion</span>
-          <span style={{color:'#667085'}}>July 2026</span>
-        </div>
-
-        <h3 className="mt-2 text-lg font-semibold" style={{color:'#111111',lineHeight:1.3,letterSpacing:'-0.015em'}}>Checkout Optimization for Shopify Stores</h3>
-        <p className="mt-2 line-clamp-2 text-sm" style={{color:'#667085',lineHeight:1.55}}>Make the path to a completed Shopify order easier for shoppers to understand and complete.</p>
+        <div className="ck-card-meta"><span className="ck-card-cat">Checkout & Conversion</span><span className="ck-card-date">July 2026</span></div>
+        <h3 className="ck-card-title">Checkout Optimization for Shopify Stores</h3>
+        <p className="ck-card-desc">Make the path to a completed Shopify order easier for shoppers to understand and complete.</p>
       </a>
     </div>
 
-    <h2 id="payments" className="mt-14 text-xs font-semibold uppercase tracking-widest" style={{color:'#667085'}}>Payments</h2>
+    <h2 id="payments" className="ck-section-label">Payments</h2>
 
-    <div className="mt-6 grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-      <a href="/blog/payment-options-indian-ecommerce" className="block min-w-0 no-underline" style={{color:'#111111'}}>
-        <div className="flex aspect-video w-full items-end overflow-hidden rounded-md p-5" style={{background:'#F7F7F7'}}>
-          <div>
-            <div className="text-2xl font-bold" style={{color:'#3613B6'}}>₹</div>
-            <div className="mt-1 text-lg font-bold" style={{color:'#111111',lineHeight:1.15,letterSpacing:'-0.02em'}}>Payment choice,<br />made clearer.</div>
+    <div className="ck-grid">
+      <a href="/blog/payment-options-indian-ecommerce" className="ck-card">
+        <div className="ck-card-media ck-cover--payments">
+          <div className="ck-cover-art">
+            <div className="ck-cover-rule" />
+
+            <div className="ck-cover-kicker">Payment options</div>
+            <div className="ck-cover-line">Payment choice,<br />made clearer.</div>
           </div>
         </div>
 
-        <div className="mt-3 flex items-center gap-2 text-xs">
-          <span className="font-semibold uppercase" style={{color:'#734DFF'}}>Payments</span>
-          <span style={{color:'#667085'}}>July 2026</span>
-        </div>
-
-        <h3 className="mt-2 text-lg font-semibold" style={{color:'#111111',lineHeight:1.3,letterSpacing:'-0.015em'}}>Managing Payment Options for Indian E-commerce</h3>
-        <p className="mt-2 line-clamp-2 text-sm" style={{color:'#667085',lineHeight:1.55}}>Present prepaid and Cash on Delivery choices clearly while keeping checkout understandable.</p>
+        <div className="ck-card-meta"><span className="ck-card-cat">Payments</span><span className="ck-card-date">July 2026</span></div>
+        <h3 className="ck-card-title">Managing Payment Options for Indian E-commerce</h3>
+        <p className="ck-card-desc">Present prepaid and Cash on Delivery choices clearly while keeping checkout understandable.</p>
       </a>
     </div>
   </section>

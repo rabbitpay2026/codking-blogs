@@ -6,83 +6,128 @@ mode: "custom"
 hideFooterPagination: true
 ---
 
-<div className="mx-auto w-full max-w-7xl px-6 pb-24" style={{background:'#FFFFFF',color:'#111111'}}>
-  <a href="/blog" className="mt-10 inline-block text-base font-medium no-underline" style={{color:'#111111'}}>← All articles</a>
+<div className="ck-shell">
+  <a href="/blog" className="ck-back">← All articles</a>
 
-  <header className="mt-8 max-w-4xl">
-    <div className="text-xs font-semibold uppercase tracking-widest" style={{color:'#734DFF'}}>Payments / July 2026</div>
-    <h1 className="mt-5 text-4xl font-bold md:text-5xl" style={{color:'#111111',lineHeight:1.08,letterSpacing:'-0.02em'}}>Managing Payment Options for Indian E-commerce</h1>
-    <div className="mt-5 text-xs uppercase tracking-widest" style={{color:'#667085'}}>6 minutes read</div>
+  <header className="ck-head">
+    <div className="ck-eyebrow">Payments · July 2026</div>
+    <h1 className="ck-title">Managing Payment Options for Indian E-commerce</h1>
+    <div className="ck-readtime">6 minutes read</div>
   </header>
 
-  <div className="mt-10 flex flex-col gap-10 border-t pt-10 lg:flex-row lg:gap-9" style={{borderColor:'#E5E7EB'}}>
-    <aside className="order-2 w-full shrink-0 lg:order-1 lg:w-56">
-      <div className="lg:sticky lg:top-24">
-        <div className="text-xs font-semibold uppercase tracking-widest" style={{color:'#667085'}}>Blog articles</div>
+  <div className="ck-layout">
+    <aside className="ck-col-left">
+      <div className="ck-sticky">
+        <div className="ck-navlabel">Blog articles</div>
 
-        <nav className="mt-4 flex flex-col gap-1 text-sm">
-          <a href="/blog/understanding-cod-verification" className="block border-l-2 px-3 py-2 no-underline" style={{color:'#667085',borderColor:'transparent'}}>Understanding COD Verification</a>
-          <a href="/blog/reduce-rto-for-cod-orders" className="block border-l-2 px-3 py-2 no-underline" style={{color:'#667085',borderColor:'transparent'}}>How to Reduce RTO for COD Orders</a>
-          <a href="/blog/shopify-checkout-optimization" className="block border-l-2 px-3 py-2 no-underline" style={{color:'#667085',borderColor:'transparent'}}>Checkout Optimization for Shopify Stores</a>
-          <a href="/blog/payment-options-indian-ecommerce" className="block border-l-2 px-3 py-2 font-semibold no-underline" style={{color:'#734DFF',borderColor:'#734DFF',background:'#F7F7F7'}}>Payment Options for Indian E-commerce</a>
+        <nav className="ck-nav">
+          <a href="/blog/understanding-cod-verification">Understanding COD Verification</a>
+          <a href="/blog/reduce-rto-for-cod-orders">How to Reduce RTO for COD Orders</a>
+          <a href="/blog/shopify-checkout-optimization">Checkout Optimization for Shopify Stores</a>
+          <a href="/blog/payment-options-indian-ecommerce" className="is-current">Payment Options for Indian E-commerce</a>
         </nav>
 
-        <div className="mt-8 border-t pt-6" style={{borderColor:'#E5E7EB'}}>
-          <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-xs font-bold" style={{background:'#734DFF',color:'#FFFFFF'}}>CK</div>
+        <div className="ck-author">
+          <div className="ck-author-row">
+            <div className="ck-avatar">CK</div>
 
-            <div className="min-w-0">
-              <div className="text-sm font-semibold" style={{color:'#111111'}}>COD King Team</div>
-              <div className="text-xs" style={{color:'#667085'}}>E-commerce</div>
+            <div>
+              <div className="ck-author-name">COD King Team</div>
+              <div className="ck-author-role">Payments</div>
             </div>
           </div>
 
-          <div className="mt-6 text-xs font-semibold uppercase tracking-widest" style={{color:'#667085'}}>Share this article</div>
+          <div className="ck-navlabel ck-share-label">Share this article</div>
 
-          <div className="mt-3 flex gap-2">
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcodking.in%2Fblog%2Fpayment-options-indian-ecommerce" target="_blank" rel="noreferrer" className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-medium no-underline" style={{background:'#F7F7F7',color:'#111111'}}>in</a>
-            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcodking.in%2Fblog%2Fpayment-options-indian-ecommerce" target="_blank" rel="noreferrer" className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-medium no-underline" style={{background:'#F7F7F7',color:'#111111'}}>X</a>
-            <a href="https://codking.in/blog/payment-options-indian-ecommerce" className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-medium no-underline" style={{background:'#F7F7F7',color:'#111111'}}>↗</a>
+          <div className="ck-share">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcodking.in%2Fblog%2Fpayment-options-indian-ecommerce" target="_blank" rel="noreferrer">in</a>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcodking.in%2Fblog%2Fpayment-options-indian-ecommerce" target="_blank" rel="noreferrer">X</a>
+            <a href="https://codking.in/blog/payment-options-indian-ecommerce">↗</a>
           </div>
         </div>
       </div>
     </aside>
 
-    <main className="order-1 mx-auto w-full min-w-0 max-w-2xl lg:order-2 lg:mx-0 lg:max-w-none lg:flex-1">
-      <div className="flex aspect-video w-full items-end rounded-xl p-8 md:p-10" style={{background:'#F7F7F7'}}>
-        <div>
-          <div className="text-4xl font-bold md:text-6xl" style={{color:'#3613B6'}}>₹</div>
-          <div className="mt-3 text-2xl font-bold md:text-4xl" style={{color:'#111111',lineHeight:1.15,letterSpacing:'-0.02em'}}>Payment choice,<br />made clearer.</div>
+    <main className="ck-col-main">
+      <div className="ck-cover ck-cover--payments">
+        <div className="ck-cover-art">
+          <div className="ck-cover-rule" />
+
+          <div className="ck-cover-kicker">Payment options</div>
+          <div className="ck-cover-line">Payment choice,<br />made clearer.</div>
         </div>
       </div>
 
-      <p className="mt-9 text-lg" style={{lineHeight:1.75,color:'#111111'}}>Indian e-commerce shoppers may prefer different payment methods depending on trust, convenience, order value, and familiarity. A good checkout presents those choices clearly without overwhelming the customer.</p>
-      <h2 id="choices" className="mt-12 text-2xl font-bold md:text-3xl" style={{color:'#111111',letterSpacing:'-0.015em'}}>Present choices clearly</h2>
-      <p className="mt-4" style={{lineHeight:1.75,color:'#111111'}}>Use familiar labels and make the difference between prepaid and Cash on Delivery easy to understand.</p>
-      <h2 id="costs" className="mt-12 text-2xl font-bold md:text-3xl" style={{color:'#111111',letterSpacing:'-0.015em'}}>Explain costs before confirmation</h2>
-      <p className="mt-4" style={{lineHeight:1.75,color:'#111111'}}>If a payment method changes the payable amount or delivery terms, communicate that before the final action.</p>
-      <h2 id="trust" className="mt-12 text-2xl font-bold md:text-3xl" style={{color:'#111111',letterSpacing:'-0.015em'}}>Support shopper trust</h2>
-      <p className="mt-4" style={{lineHeight:1.75,color:'#111111'}}>Keep payment messaging consistent with the rest of the storefront.</p>
-      <h2 id="review" className="mt-12 text-2xl font-bold md:text-3xl" style={{color:'#111111',letterSpacing:'-0.015em'}}>Review payment behavior</h2>
-      <p className="mt-4" style={{lineHeight:1.75,color:'#111111'}}>Understand which choices shoppers use and where confusion appears.</p>
+      <div className="ck-summary">
+        <div className="ck-summary-label">Summary</div>
+        <p>How to present prepaid and Cash on Delivery choices clearly for Indian e-commerce shoppers.</p>
+      </div>
+
+      <div className="ck-body">
+        <p className="ck-lede">Indian e-commerce shoppers may prefer different payment methods depending on trust, convenience, order value, and familiarity. A good checkout presents those choices clearly without overwhelming the customer.</p>
+        <h2 id="choices">Present choices clearly</h2>
+        <p>Use familiar labels and make the difference between prepaid and Cash on Delivery easy to understand.</p>
+        <h2 id="costs">Explain costs before confirmation</h2>
+        <p>If a payment method changes the payable amount or delivery terms, communicate that before the final action.</p>
+        <h2 id="trust">Support shopper trust</h2>
+        <p>Keep payment messaging consistent with the rest of the storefront.</p>
+        <h2 id="review">Review payment behavior</h2>
+        <p>Understand which choices shoppers use and where confusion appears.</p>
+      </div>
+
+      <section className="ck-more">
+        <h2 className="ck-more-title">More blog posts to read</h2>
+
+        <div className="ck-grid">
+          <a href="/blog/shopify-checkout-optimization" className="ck-card">
+            <div className="ck-card-media ck-cover--checkout">
+              <div className="ck-cover-art">
+                <div className="ck-cover-rule" />
+
+                <div className="ck-cover-kicker">Checkout</div>
+                <div className="ck-cover-line">Less friction.<br />Clearer checkout.</div>
+              </div>
+            </div>
+
+            <div className="ck-card-meta"><span className="ck-card-cat">Checkout & Conversion</span><span className="ck-card-date">July 2026</span></div>
+            <h3 className="ck-card-title">Checkout Optimization for Shopify Stores</h3>
+            <p className="ck-card-desc">Make the path to a completed Shopify order easier for shoppers to understand and complete.</p>
+          </a>
+
+          <a href="/blog/reduce-rto-for-cod-orders" className="ck-card">
+            <div className="ck-card-media ck-cover--rto">
+              <div className="ck-cover-art">
+                <div className="ck-cover-rule" />
+
+                <div className="ck-cover-kicker">Return to origin</div>
+                <div className="ck-cover-line">Fewer avoidable<br />returns.</div>
+              </div>
+            </div>
+
+            <div className="ck-card-meta"><span className="ck-card-cat">COD & RTO</span><span className="ck-card-date">July 2026</span></div>
+            <h3 className="ck-card-title">How to Reduce RTO for COD Orders</h3>
+            <p className="ck-card-desc">Practical operational steps for improving COD order quality before and after fulfillment begins.</p>
+          </a>
+        </div>
+      </section>
     </main>
 
-    <aside className="order-3 w-full shrink-0 lg:w-60">
-      <div className="lg:sticky lg:top-24">
-        <div className="text-xs font-semibold uppercase tracking-widest" style={{color:'#667085'}}>On this page</div>
+    <aside className="ck-col-right">
+      <div className="ck-sticky">
+        <div className="ck-toc-label">On this page</div>
 
-        <div className="mt-5 flex flex-col gap-3 border-l pl-4 text-sm" style={{borderColor:'#E5E7EB'}}>
-          <a href="#choices" className="no-underline" style={{color:'#667085'}}>Present choices clearly</a>
-          <a href="#costs" className="no-underline" style={{color:'#667085'}}>Explain costs</a>
-          <a href="#trust" className="no-underline" style={{color:'#667085'}}>Support shopper trust</a>
-          <a href="#review" className="no-underline" style={{color:'#667085'}}>Review behavior</a>
-        </div>
+        <nav className="ck-toc">
+          <a href="#choices">Present choices clearly</a>
+          <a href="#costs">Explain costs</a>
+          <a href="#trust">Support shopper trust</a>
+          <a href="#review">Review behavior</a>
+        </nav>
 
-        <div className="mt-8 flex max-w-xs flex-col gap-2 lg:max-w-none">
-          <input type="email" placeholder="Email address" className="box-border h-10 w-full rounded-sm border px-3 text-sm" style={{borderColor:'#E5E7EB',background:'#FFFFFF',color:'#111111'}} />
+        <div className="ck-cta">
+          <input type="email" placeholder="Email address" />
 
-          <a href="https://codking.in" className="flex h-11 w-full items-center justify-center rounded-sm text-sm font-medium no-underline" style={{background:'#111111',color:'#FFFFFF'}}>Start for free</a>
-          <a href="https://codking.in" className="flex h-11 w-full items-center justify-center rounded-sm border text-sm font-medium no-underline" style={{borderColor:'#E5E7EB',background:'#FFFFFF',color:'#111111'}}>Contact sales</a>
+          <a href="https://codking.in" className="ck-btn-primary">Start for free</a>
+          <a href="https://codking.in" className="ck-btn-secondary">Contact sales</a>
         </div>
       </div>
     </aside>
