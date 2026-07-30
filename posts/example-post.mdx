@@ -1,59 +1,32 @@
 ---
-title: "Example Blog Post Template"
-description: "Reusable COD King Blog article template for writers and editors."
+title: "Internal Article Template"
+description: "Internal COD King blog article template for writers and editors."
 mode: "custom"
 hideFooterPagination: true
+noindex: true
+hidden: true
 ---
 
 <div className="max-w-3xl mx-auto">
-  <aside className="mb-12 rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-950/20 p-6">
-    <h2 className="text-lg font-bold mt-0">HOW TO CREATE A NEW COD KING BLOG POST</h2>
+  <aside className="mb-12 rounded-2xl border border-[#734DFF]/30 bg-[#734DFF]/5 p-6">
+    <div className="text-xs font-bold tracking-[0.16em] text-[#734DFF]">INTERNAL ONLY</div>
+    <h2 className="text-xl font-bold mt-2">INTERNAL ARTICLE TEMPLATE — DO NOT PUBLISH AS A BLOG POST</h2>
+    <p>This page is a reusable starting point for future COD King Blog articles. It is hidden from the public blog navigation and should never be linked from the homepage as a published article.</p>
 
     <ol>
-      <li>Duplicate this example article.</li>
-      <li>Save it under <code>/posts/</code> using a descriptive lowercase slug, for example <code>posts/reduce-cod-rto-shopify.mdx</code>.</li>
-      <li>Update the title, description, category, author, publication date, reading time, and cover image.</li>
-      <li>Write or edit the article through Mintlify's visual editor.</li>
+      <li>Duplicate this article.</li>
+      <li>Rename the file using a lowercase descriptive slug.</li>
+      <li>Update metadata.</li>
+      <li>Add a cover image.</li>
+      <li>Write or edit using Mintlify's visual editor.</li>
       <li>Preview the article.</li>
-      <li>Add it to the appropriate blog navigation/homepage when ready.</li>
-      <li>Publish through Mintlify.</li>
+      <li>Add the article to the homepage.</li>
+      <li>Verify its link.</li>
+      <li>Publish only after review.</li>
     </ol>
-
-    <p className="font-bold mb-0">REMOVE THIS EDITOR NOTE BEFORE PUBLISHING A REAL ARTICLE.</p>
   </aside>
 
-  <header className="mb-10">
-    <div className="text-sm font-semibold">\[Category]</div>
-    <h1 className="text-4xl md:text-5xl font-bold tracking-tight mt-4">\[Article title]</h1>
-    <p className="text-xl text-gray-600 dark:text-gray-300 mt-5">\[Short description]</p>
-    <div className="text-sm text-gray-500 mt-6">\[Author] · \[Publication date] · \[Reading time]</div>
-  </header>
-
-  <div className="aspect-video rounded-2xl bg-gray-100 dark:bg-gray-900 flex items-center justify-center text-gray-400 mb-12">\[Cover image — use /images/blog/covers/]</div>
-
-  <section>
-    <h2>Introduction</h2>
-    <p>\[Article introduction]</p>
-
-    <h2>Main section</h2>
-    <p>\[Section content]</p>
-
-    <h2>Second section</h2>
-    <p>\[Section content]</p>
-
-    <h2>Key takeaways</h2>
-
-    <ul>
-      <li>\[Key takeaway]</li>
-      <li>\[Key takeaway]</li>
-      <li>\[Key takeaway]</li>
-    </ul>
-
-    <h2>Conclusion</h2>
-    <p>\[Conclusion]</p>
-  </section>
-
-  <hr />
-
-  <p className="text-sm text-gray-500">Future blog assets should be organized under <code>/images/blog/covers/</code> for cover images and <code>/images/blog/authors/</code> for author images.</p>
+  <header className="mb-10"><div className="text-sm font-bold text-[#734DFF]">Category</div><h1 className="text-4xl md:text-5xl font-bold tracking-tight mt-4">Article title</h1><p className="text-xl text-gray-600 dark:text-gray-300 mt-5">Short article description or deck.</p><div className="text-sm text-gray-500 mt-6">COD King Team · Publication date · Reading time</div></header>
+  <div className="aspect-video rounded-3xl bg-gradient-to-br from-[#734DFF] to-[#3613B6] flex items-center justify-center text-white mb-12">Cover visual</div>
+  <section><h2>Introduction</h2><p>Open the article with useful context and explain what the reader will learn.</p><h2>Main section</h2><p>Develop the first major idea with practical, factual guidance.</p><h2>Second section</h2><p>Develop the next idea and keep the article easy to scan.</p><h2>Key takeaways</h2><ul><li>First useful takeaway.</li><li>Second useful takeaway.</li><li>Third useful takeaway.</li></ul><h2>Conclusion</h2><p>Close with a concise summary and a useful final thought.</p></section>
 </div>
