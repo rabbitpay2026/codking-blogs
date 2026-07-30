@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "COD King Blog",
   "colors": {
-    "primary": "#196BF5",
-    "light": "#196BF5",
-    "dark": "#196BF5"
+    "primary": "#734DFF",
+    "light": "#734DFF",
+    "dark": "#3613B6"
   },
   "navigation": {
     "tabs": [
@@ -16,11 +16,19 @@
             "group": "Latest",
             "pages": [
               "index",
+              "posts/understanding-cod-verification",
+              "posts/payment-options-indian-ecommerce",
+              "posts/shopify-checkout-optimization",
+              "posts/reduce-rto-for-cod-orders",
               "posts/example-post"
             ]
           }
         ]
       }
     ]
+  },
+  "logo": {
+    "light": "https://cdn.shopify.com/s/files/1/0743/3119/3628/files/with_bg_logo2.png?v=1757062726",
+    "dark": "https://cdn.shopify.com/s/files/1/0743/3119/3628/files/with_bg_logo2.png?v=1757062726"
   }
 }
