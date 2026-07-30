@@ -15,11 +15,12 @@
           {
             "group": "Latest",
             "pages": [
+              "blog",
               "index",
-              "posts/understanding-cod-verification",
-              "posts/reduce-rto-for-cod-orders",
-              "posts/shopify-checkout-optimization",
-              "posts/payment-options-indian-ecommerce",
+              "blog/understanding-cod-verification",
+              "blog/reduce-rto-for-cod-orders",
+              "blog/shopify-checkout-optimization",
+              "blog/payment-options-indian-ecommerce",
               "posts/example-post"
             ]
           }
@@ -30,5 +31,12 @@
   "logo": {
     "light": "https://cdn.shopify.com/s/files/1/0743/3119/3628/files/with_bg_logo2.png?v=1757062726",
     "dark": "https://cdn.shopify.com/s/files/1/0743/3119/3628/files/with_bg_logo2.png?v=1757062726"
-  }
+  },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/blog",
+      "permanent": false
+    }
+  ]
 }
