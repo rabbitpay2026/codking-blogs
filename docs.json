@@ -14,7 +14,10 @@
         "groups": [
           {
             "group": "Latest",
-            "pages": []
+            "pages": [
+              "index",
+              "posts/example-post"
+            ]
           }
         ]
       }
