@@ -46,5 +46,50 @@
     "body": {
       "family": "Inter"
     }
+  },
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Start for free",
+      "href": "https://apps.shopify.com/cash-on-delivery-cod-order-confirmation"
+    }
+  },
+  "footer": {
+    "links": [
+      {
+        "header": "Blog",
+        "items": [
+          {
+            "label": "All articles",
+            "href": "/blog"
+          },
+          {
+            "label": "Understanding COD Verification",
+            "href": "/blog/understanding-cod-verification"
+          },
+          {
+            "label": "How to Reduce RTO for COD Orders",
+            "href": "/blog/reduce-rto-for-cod-orders"
+          },
+          {
+            "label": "Checkout Optimization for Shopify Stores",
+            "href": "/blog/shopify-checkout-optimization"
+          },
+          {
+            "label": "Payment Options for Indian E-commerce",
+            "href": "/blog/payment-options-indian-ecommerce"
+          }
+        ]
+      },
+      {
+        "header": "COD King",
+        "items": [
+          {
+            "label": "Shopify App Store",
+            "href": "https://apps.shopify.com/cash-on-delivery-cod-order-confirmation"
+          }
+        ]
+      }
+    ]
   }
 }
