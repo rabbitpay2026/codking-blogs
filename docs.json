@@ -45,5 +45,13 @@
       "light": "#FCFBFF",
       "dark": "#0D0918"
     }
+  },
+  "fonts": {
+    "heading": {
+      "family": "Inter"
+    },
+    "body": {
+      "family": "Inter"
+    }
   }
 }
