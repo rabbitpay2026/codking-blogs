@@ -11,16 +11,12 @@
     "tabs": [
       {
         "tab": "Blog",
-        "groups": [
-          {
-            "group": "Latest",
-            "pages": [
-              "index",
-              "posts/example-post"
-            ]
-          }
-        ]
+        "href": "/"
       }
     ]
+  },
+  "logo": {
+    "light": "https://cdn.shopify.com/s/files/1/0743/3119/3628/files/with_bg_logo2.png?v=1757062726",
+    "dark": "https://cdn.shopify.com/s/files/1/0743/3119/3628/files/with_bg_logo2.png?v=1757062726"
   }
 }
