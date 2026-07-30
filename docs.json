@@ -38,5 +38,12 @@
       "destination": "/blog",
       "permanent": false
     }
-  ]
+  ],
+  "background": {
+    "decoration": "gradient",
+    "color": {
+      "light": "#FCFBFF",
+      "dark": "#0D0918"
+    }
+  }
 }
