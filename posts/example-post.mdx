@@ -7,26 +7,112 @@ noindex: true
 hidden: true
 ---
 
-<div className="max-w-3xl mx-auto">
-  <aside className="mb-12 rounded-2xl border border-[#734DFF]/30 bg-[#734DFF]/5 p-6">
-    <div className="text-xs font-bold tracking-[0.16em] text-[#734DFF]">INTERNAL ONLY</div>
-    <h2 className="text-xl font-bold mt-2">INTERNAL ARTICLE TEMPLATE — DO NOT PUBLISH AS A BLOG POST</h2>
-    <p>This page is a reusable starting point for future COD King Blog articles. It is hidden from the public blog navigation and should never be linked from the homepage as a published article.</p>
+<div className="mx-auto w-full max-w-7xl px-6 pb-24" style={{background:'#FFFFFF',color:'#111111'}}>
+  <aside className="mt-10 rounded-lg border p-6" style={{borderColor:'#734DFF',background:'#F7F7F7'}}>
+    <div className="text-xs font-semibold uppercase tracking-widest" style={{color:'#734DFF'}}>Internal only</div>
+    <h2 className="mt-2 text-xl font-bold" style={{color:'#111111'}}>Internal article template — do not publish as a blog post</h2>
+    <p className="mt-3 text-sm" style={{color:'#667085',lineHeight:1.6}}>Duplicate this page to start a new article. It is hidden and noindexed, and must never be linked from the blog homepage as a published article.</p>
+    <p className="mt-4 text-sm font-semibold" style={{color:'#111111'}}>Only change these nine things</p>
 
-    <ol>
-      <li>Duplicate this article.</li>
-      <li>Rename the file using a lowercase descriptive slug.</li>
-      <li>Update metadata.</li>
-      <li>Add a cover image.</li>
-      <li>Write or edit using Mintlify's visual editor.</li>
-      <li>Preview the article.</li>
-      <li>Add the article to the homepage.</li>
-      <li>Verify its link.</li>
-      <li>Publish only after review.</li>
+    <ol className="mt-2 list-decimal pl-5 text-sm" style={{color:'#667085',lineHeight:1.7}}>
+      <li>Frontmatter title, sidebarTitle and description, and remove noindex and hidden.</li>
+      <li>The category and date line in the header.</li>
+      <li>The article title in the h1.</li>
+      <li>The reading time.</li>
+      <li>The cover panel in the centre column.</li>
+      <li>The article body: paragraphs, h2 headings with id attributes, lists.</li>
+      <li>The On this page links, matching each h2 id.</li>
+      <li>The left nav: move the active styling to the new article and add a link to it in the other four articles.</li>
+      <li>The three share URLs.</li>
     </ol>
+
+    <p className="mt-4 text-sm" style={{color:'#667085',lineHeight:1.6}}>Leave the layout classes alone. The three columns come from flex-col plus lg:flex-row with lg:w-56, lg:flex-1 and lg:w-60. Do not add Tailwind arbitrary values such as w-\[240px] — Mintlify does not compile them. Use the style prop for any custom value.</p>
+    <p className="mt-4 text-sm" style={{color:'#667085',lineHeight:1.6}}>Then add a card for the article on /blog under the matching category heading, preview the branch, and publish only after review.</p>
   </aside>
 
-  <header className="mb-10"><div className="text-sm font-bold text-[#734DFF]">Category</div><h1 className="text-4xl md:text-5xl font-bold tracking-tight mt-4">Article title</h1><p className="text-xl text-gray-600 dark:text-gray-300 mt-5">Short article description or deck.</p><div className="text-sm text-gray-500 mt-6">COD King Team · Publication date · Reading time</div></header>
-  <div className="aspect-video rounded-3xl bg-gradient-to-br from-[#734DFF] to-[#3613B6] flex items-center justify-center text-white mb-12">Cover visual</div>
-  <section><h2>Introduction</h2><p>Open the article with useful context and explain what the reader will learn.</p><h2>Main section</h2><p>Develop the first major idea with practical, factual guidance.</p><h2>Second section</h2><p>Develop the next idea and keep the article easy to scan.</p><h2>Key takeaways</h2><ul><li>First useful takeaway.</li><li>Second useful takeaway.</li><li>Third useful takeaway.</li></ul><h2>Conclusion</h2><p>Close with a concise summary and a useful final thought.</p></section>
+  <a href="/blog" className="mt-10 inline-block text-base font-medium no-underline" style={{color:'#111111'}}>← All articles</a>
+
+  <header className="mt-8 max-w-4xl">
+    <div className="text-xs font-semibold uppercase tracking-widest" style={{color:'#734DFF'}}>Category / Month Year</div>
+    <h1 className="mt-5 text-4xl font-bold md:text-5xl" style={{color:'#111111',lineHeight:1.08,letterSpacing:'-0.02em'}}>Article title goes here</h1>
+    <div className="mt-5 text-xs uppercase tracking-widest" style={{color:'#667085'}}>0 minutes read</div>
+  </header>
+
+  <div className="mt-10 flex flex-col gap-10 border-t pt-10 lg:flex-row lg:gap-9" style={{borderColor:'#E5E7EB'}}>
+    <aside className="order-2 w-full shrink-0 lg:order-1 lg:w-56">
+      <div className="lg:sticky lg:top-24">
+        <div className="text-xs font-semibold uppercase tracking-widest" style={{color:'#667085'}}>Blog articles</div>
+
+        <nav className="mt-4 flex flex-col gap-1 text-sm">
+          <a href="/blog/understanding-cod-verification" className="block border-l-2 px-3 py-2 no-underline" style={{color:'#667085',borderColor:'transparent'}}>Understanding COD Verification</a>
+          <a href="/blog/reduce-rto-for-cod-orders" className="block border-l-2 px-3 py-2 no-underline" style={{color:'#667085',borderColor:'transparent'}}>How to Reduce RTO for COD Orders</a>
+          <a href="/blog/shopify-checkout-optimization" className="block border-l-2 px-3 py-2 no-underline" style={{color:'#667085',borderColor:'transparent'}}>Checkout Optimization for Shopify Stores</a>
+          <a href="/blog/payment-options-indian-ecommerce" className="block border-l-2 px-3 py-2 no-underline" style={{color:'#667085',borderColor:'transparent'}}>Payment Options for Indian E-commerce</a>
+        </nav>
+
+        <div className="mt-8 border-t pt-6" style={{borderColor:'#E5E7EB'}}>
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-xs font-bold" style={{background:'#734DFF',color:'#FFFFFF'}}>CK</div>
+
+            <div className="min-w-0">
+              <div className="text-sm font-semibold" style={{color:'#111111'}}>COD King Team</div>
+              <div className="text-xs" style={{color:'#667085'}}>E-commerce</div>
+            </div>
+          </div>
+
+          <div className="mt-6 text-xs font-semibold uppercase tracking-widest" style={{color:'#667085'}}>Share this article</div>
+
+          <div className="mt-3 flex gap-2">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcodking.in%2Fblog%2Farticle-slug" target="_blank" rel="noreferrer" className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-medium no-underline" style={{background:'#F7F7F7',color:'#111111'}}>in</a>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcodking.in%2Fblog%2Farticle-slug" target="_blank" rel="noreferrer" className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-medium no-underline" style={{background:'#F7F7F7',color:'#111111'}}>X</a>
+            <a href="https://codking.in/blog/article-slug" className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-medium no-underline" style={{background:'#F7F7F7',color:'#111111'}}>↗</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main className="order-1 mx-auto w-full min-w-0 max-w-2xl lg:order-2 lg:mx-0 lg:max-w-none lg:flex-1">
+      <div className="flex aspect-video w-full items-end rounded-xl p-8 md:p-10" style={{background:'#F7F7F7'}}>
+        <div>
+          <div className="text-2xl font-bold md:text-4xl" style={{color:'#111111',lineHeight:1.1,letterSpacing:'-0.02em'}}>Cover headline,<br />two short lines.</div>
+        </div>
+      </div>
+
+      <p className="mt-9 text-lg" style={{lineHeight:1.75,color:'#111111'}}>Open the article with useful context and explain what the reader will learn.</p>
+      <h2 id="section-one" className="mt-12 text-2xl font-bold md:text-3xl" style={{color:'#111111',letterSpacing:'-0.015em'}}>First section</h2>
+      <p className="mt-4" style={{lineHeight:1.75,color:'#111111'}}>Develop the first major idea with practical, factual guidance.</p>
+      <h2 id="section-two" className="mt-12 text-2xl font-bold md:text-3xl" style={{color:'#111111',letterSpacing:'-0.015em'}}>Second section</h2>
+      <p className="mt-4" style={{lineHeight:1.75,color:'#111111'}}>Develop the next idea and keep the article easy to scan.</p>
+      <h2 id="takeaways" className="mt-12 text-2xl font-bold md:text-3xl" style={{color:'#111111',letterSpacing:'-0.015em'}}>Key takeaways</h2>
+
+      <ul className="mt-4 list-disc pl-5" style={{lineHeight:1.75,color:'#111111'}}>
+        <li className="mt-2">First useful takeaway.</li>
+        <li className="mt-2">Second useful takeaway.</li>
+        <li className="mt-2">Third useful takeaway.</li>
+      </ul>
+
+      <h2 id="conclusion" className="mt-12 text-2xl font-bold md:text-3xl" style={{color:'#111111',letterSpacing:'-0.015em'}}>Conclusion</h2>
+      <p className="mt-4" style={{lineHeight:1.75,color:'#111111'}}>Close with a concise summary and a useful final thought.</p>
+    </main>
+
+    <aside className="order-3 w-full shrink-0 lg:w-60">
+      <div className="lg:sticky lg:top-24">
+        <div className="text-xs font-semibold uppercase tracking-widest" style={{color:'#667085'}}>On this page</div>
+
+        <div className="mt-5 flex flex-col gap-3 border-l pl-4 text-sm" style={{borderColor:'#E5E7EB'}}>
+          <a href="#section-one" className="no-underline" style={{color:'#667085'}}>First section</a>
+          <a href="#section-two" className="no-underline" style={{color:'#667085'}}>Second section</a>
+          <a href="#takeaways" className="no-underline" style={{color:'#667085'}}>Key takeaways</a>
+          <a href="#conclusion" className="no-underline" style={{color:'#667085'}}>Conclusion</a>
+        </div>
+
+        <div className="mt-8 flex max-w-xs flex-col gap-2 lg:max-w-none">
+          <input type="email" placeholder="Email address" className="box-border h-10 w-full rounded-sm border px-3 text-sm" style={{borderColor:'#E5E7EB',background:'#FFFFFF',color:'#111111'}} />
+
+          <a href="https://codking.in" className="flex h-11 w-full items-center justify-center rounded-sm text-sm font-medium no-underline" style={{background:'#111111',color:'#FFFFFF'}}>Start for free</a>
+          <a href="https://codking.in" className="flex h-11 w-full items-center justify-center rounded-sm border text-sm font-medium no-underline" style={{borderColor:'#E5E7EB',background:'#FFFFFF',color:'#111111'}}>Contact sales</a>
+        </div>
+      </div>
+    </aside>
+  </div>
 </div>
