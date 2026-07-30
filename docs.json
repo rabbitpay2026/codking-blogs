@@ -17,9 +17,9 @@
             "pages": [
               "index",
               "posts/understanding-cod-verification",
-              "posts/payment-options-indian-ecommerce",
-              "posts/shopify-checkout-optimization",
               "posts/reduce-rto-for-cod-orders",
+              "posts/shopify-checkout-optimization",
+              "posts/payment-options-indian-ecommerce",
               "posts/example-post"
             ]
           }
