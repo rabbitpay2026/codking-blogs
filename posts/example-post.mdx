@@ -9,31 +9,40 @@ hidden: true
 
 <div className="ck-shell">
   <div className="ck-summary">
-    <div className="ck-summary-label">Internal only — do not publish as a blog post</div>
-    <p>Duplicate this page to start a new article. It is hidden and noindexed. Change only the nine things listed below; leave every ck- class exactly as it is, because all layout comes from style.css at the repository root, not from this file.</p>
-    <p>1. Frontmatter title, sidebarTitle, description — and remove noindex and hidden. 2. The ck-eyebrow category and date. 3. The ck-title. 4. The ck-readtime. 5. The cover kicker and line, and swap ck-cover--template for one of the four cover variants. 6. The ck-body content: lede, h2 headings with id attributes, paragraphs, lists. 7. The ck-toc links, one per h2 id. 8. The left nav — move is-current onto the new article, and add a link to it in the other four articles. 9. The three share URLs and the two ck-more cards.</p>
-    <p>Then add a card for it on /blog under the matching ck-section-label, preview the branch, and publish only after review.</p>
+    <div className="ck-summary-label">Internal article template — do not publish as a blog post</div>
+    <p>This page is hidden and noindexed. It exists so writers can duplicate a working article instead of building one. Duplicate it, rename it, then change only the fields listed below. Everything else is layout and must stay exactly as it is.</p>
+    <p><strong>1. File name / slug.</strong> Duplicate into the blog folder. The file name becomes the URL: a file named <code>my-new-article</code> in <code>blog</code> publishes at <code>/blog/my-new-article</code>. Use lowercase words separated by hyphens. Once published, never rename it.</p>
+    <p><strong>2. Title.</strong> Frontmatter <code>title</code>, and the <code>ck-title</code> heading further down. Keep both the same.</p>
+    <p><strong>3. Description.</strong> Frontmatter <code>description</code>. Reuse the same sentence in the Summary box below so they stay in sync.</p>
+    <p><strong>4. Category.</strong> Frontmatter <code>category</code>, and the first half of the <code>ck-eyebrow</code> line. Use one of exactly these six values: COD & RTO, Shopify, Checkout & Conversion, Payments, E-commerce Growth, or leave the article uncategorised only if none apply.</p>
+    <p><strong>5. Publication date.</strong> The second half of the <code>ck-eyebrow</code> line, written as Month Year.</p>
+    <p><strong>6. Read time.</strong> The <code>ck-readtime</code> line. Roughly 200 words per minute.</p>
+    <p><strong>7. Hero image.</strong> The <code>ck-cover</code> block. Change the kicker and the two headline lines, and swap <code>ck-cover--template</code> for one of: <code>ck-cover--verification</code>, <code>ck-cover--rto</code>, <code>ck-cover--checkout</code>, <code>ck-cover--payments</code>.</p>
+    <p><strong>8. Article body.</strong> Everything inside <code>ck-body</code>. One <code>ck-lede</code> paragraph, then H2 headings and paragraphs.</p>
+    <p><strong>9. H2 headings and the TOC.</strong> Every H2 needs a unique <code>id</code>. Every entry in the right-hand On this page list must link to <code>#that-id</code>. If they do not match, the link will not scroll and the highlight will not track.</p>
+    <p><strong>Then, outside this file:</strong> add a card for the article on the <code>/blog</code> homepage under the matching category heading, and add a link to it in the Blog articles list on all other articles.</p>
+    <p><strong>Never edit</strong> <code>style.css</code> or <code>ck-toc.js</code>. All layout, spacing, sticky behaviour and responsive rules live there and are shared by every article.</p>
   </div>
 
   <a href="/blog" className="ck-back">← All articles</a>
 
-  <header className="ck-head">
+  <div className="ck-head">
     <div className="ck-eyebrow">Category · Month Year</div>
     <h1 className="ck-title">Article title goes here</h1>
     <div className="ck-readtime">0 minutes read</div>
-  </header>
+  </div>
 
   <div className="ck-layout">
-    <aside className="ck-col-left">
+    <div className="ck-col-left">
       <div className="ck-sticky">
         <div className="ck-navlabel">Blog articles</div>
 
-        <nav className="ck-nav">
+        <div className="ck-nav">
           <a href="/blog/understanding-cod-verification">Understanding COD Verification</a>
           <a href="/blog/reduce-rto-for-cod-orders">How to Reduce RTO for COD Orders</a>
           <a href="/blog/shopify-checkout-optimization">Checkout Optimization for Shopify Stores</a>
           <a href="/blog/payment-options-indian-ecommerce">Payment Options for Indian E-commerce</a>
-        </nav>
+        </div>
 
         <div className="ck-author">
           <div className="ck-author-row">
@@ -54,9 +63,9 @@ hidden: true
           </div>
         </div>
       </div>
-    </aside>
+    </div>
 
-    <main className="ck-col-main">
+    <div className="ck-col-main">
       <div className="ck-cover ck-cover--template">
         <div className="ck-cover-art">
           <div className="ck-cover-rule" />
@@ -89,7 +98,7 @@ hidden: true
         <p>Close with a concise summary and a useful final thought.</p>
       </div>
 
-      <section className="ck-more">
+      <div className="ck-more">
         <h2 className="ck-more-title">More blog posts to read</h2>
 
         <div className="ck-grid">
@@ -123,19 +132,19 @@ hidden: true
             <p className="ck-card-desc">Practical operational steps for improving COD order quality before and after fulfillment begins.</p>
           </a>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
 
-    <aside className="ck-col-right">
+    <div className="ck-col-right">
       <div className="ck-sticky">
         <div className="ck-toc-label">On this page</div>
 
-        <nav className="ck-toc">
+        <div className="ck-toc">
           <a href="#section-one">First section</a>
           <a href="#section-two">Second section</a>
           <a href="#takeaways">Key takeaways</a>
           <a href="#conclusion">Conclusion</a>
-        </nav>
+        </div>
 
         <div className="ck-cta">
           <input type="email" placeholder="Email address" />
@@ -144,10 +153,10 @@ hidden: true
           <a href="https://codking.in" className="ck-btn-secondary">Contact sales</a>
         </div>
       </div>
-    </aside>
+    </div>
   </div>
 
-  <footer className="ck-footer">
+  <div className="ck-footer">
     <div className="ck-footer-inner">
       <div className="ck-footer-brand">
         <div className="ck-footer-logo">COD King</div>
@@ -172,5 +181,5 @@ hidden: true
     </div>
 
     <div className="ck-footer-bottom">© 2026 COD King</div>
-  </footer>
+  </div>
 </div>
