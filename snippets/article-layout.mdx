@@ -1,0 +1,157 @@
+---
+title: "Article Layout (internal component)"
+hidden: true
+noindex: true
+---
+
+export const CK = {
+  purple: "#734DFF",
+  deep: "#3613B6",
+  green: "#7CD548",
+  ink: "#111111",
+  muted: "#667085",
+  border: "#E5E7EB",
+  surface: "#F7F7F7",
+  tint: "#F3F0FF",
+  night: "#17151F"
+};
+
+export const ARTICLES = [
+  { href: "/blog/understanding-cod-verification", label: "Understanding COD Verification" },
+  { href: "/blog/reduce-rto-for-cod-orders", label: "How to Reduce RTO for COD Orders" },
+  { href: "/blog/shopify-checkout-optimization", label: "Checkout Optimization for Shopify Stores" },
+  { href: "/blog/payment-options-indian-ecommerce", label: "Payment Options for Indian E-commerce" }
+];
+
+export const Cover = ({ variant }) => {
+  if (variant === "rto") {
+    return (
+      <div className="w-full aspect-video rounded-lg" style={{ position: "relative", overflow: "hidden", background: CK.surface }}>
+        <div style={{ position: "absolute", left: "8%", top: "13%", right: "8%", fontSize: "clamp(16px,2.6vw,30px)", fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1.15, color: CK.ink }}>Fewer returns to origin</div>
+        <div style={{ position: "absolute", left: "8%", right: "8%", bottom: "15%", height: "44%", display: "flex", alignItems: "flex-end", gap: "3%" }}>
+          <div style={{ flex: 1, height: "100%", borderRadius: "6px", background: CK.purple, opacity: 0.85 }} />
+          <div style={{ flex: 1, height: "72%", borderRadius: "6px", background: CK.purple, opacity: 0.6 }} />
+          <div style={{ flex: 1, height: "50%", borderRadius: "6px", background: CK.purple, opacity: 0.4 }} />
+          <div style={{ flex: 1, height: "30%", borderRadius: "6px", background: CK.green }} />
+        </div>
+      </div>
+    );
+  }
+  if (variant === "checkout") {
+    return (
+      <div className="w-full aspect-video rounded-lg" style={{ position: "relative", overflow: "hidden", background: CK.night }}>
+        <div style={{ position: "absolute", left: "8%", right: "8%", bottom: "15%" }}>
+          <div style={{ display: "flex", gap: "8px", marginBottom: "16px" }}>
+            <span style={{ display: "block", height: "7px", width: "72px", borderRadius: "99px", background: CK.purple }} />
+            <span style={{ display: "block", height: "7px", width: "44px", borderRadius: "99px", background: "rgba(255,255,255,0.22)" }} />
+            <span style={{ display: "block", height: "7px", width: "26px", borderRadius: "99px", background: "rgba(255,255,255,0.12)" }} />
+          </div>
+          <div style={{ color: "#FFFFFF", fontSize: "clamp(16px,2.4vw,28px)", fontWeight: 700, lineHeight: 1.2, letterSpacing: "-0.02em" }}>Less friction.<br />Clearer checkout.</div>
+        </div>
+      </div>
+    );
+  }
+  if (variant === "payments") {
+    return (
+      <div className="w-full aspect-video rounded-lg" style={{ position: "relative", overflow: "hidden", background: CK.tint }}>
+        <div style={{ position: "absolute", left: "8%", top: "14%", fontSize: "clamp(24px,3.6vw,42px)", fontWeight: 700, color: CK.deep, lineHeight: 1 }}>&#8377;</div>
+        <div style={{ position: "absolute", left: "8%", right: "8%", bottom: "17%", display: "flex", gap: "3%" }}>
+          <div style={{ flex: 1, padding: "12px 14px", borderRadius: "8px", background: "#FFFFFF", border: "1px solid " + CK.border, fontSize: "13px", fontWeight: 600, color: CK.ink }}>Prepaid</div>
+          <div style={{ flex: 1, padding: "12px 14px", borderRadius: "8px", background: CK.purple, fontSize: "13px", fontWeight: 600, color: "#FFFFFF" }}>Cash on Delivery</div>
+        </div>
+      </div>
+    );
+  }
+  return (
+    <div className="w-full aspect-video rounded-lg" style={{ position: "relative", overflow: "hidden", background: "linear-gradient(120deg, #3613B6 0%, #734DFF 100%)" }}>
+      <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "14px" }}>
+        <div style={{ height: "64px", width: "64px", borderRadius: "50%", background: "rgba(255,255,255,0.14)", border: "1px solid rgba(255,255,255,0.38)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <span style={{ color: CK.green, fontSize: "28px", lineHeight: 1 }}>&#10003;</span>
+        </div>
+        <div style={{ color: "#FFFFFF", fontSize: "11px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase" }}>Confirmed before dispatch</div>
+      </div>
+    </div>
+  );
+};
+
+export const Share = () => {
+  const dot = "flex h-8 w-8 items-center justify-center rounded-full text-xs no-underline";
+  const share = (build) => (e) => {
+    if (typeof window === "undefined") return;
+    e.preventDefault();
+    window.open(build(window.location.href), "_blank", "noopener");
+  };
+  const copy = (e) => {
+    if (typeof navigator === "undefined" || !navigator.clipboard) return;
+    e.preventDefault();
+    navigator.clipboard.writeText(window.location.href);
+  };
+  return (
+    <div className="mt-3 flex gap-2">
+      <a href="https://www.linkedin.com/sharing/share-offsite/" onClick={share((u) => "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(u))} className={dot} style={{ background: CK.surface, color: CK.ink }} aria-label="Share on LinkedIn">in</a>
+      <a href="https://x.com/intent/post" onClick={share((u) => "https://x.com/intent/post?url=" + encodeURIComponent(u))} className={dot} style={{ background: CK.surface, color: CK.ink }} aria-label="Share on X">X</a>
+      <a href="/blog" onClick={copy} className={dot} style={{ background: CK.surface, color: CK.ink }} aria-label="Copy link to this article">&#8599;</a>
+    </div>
+  );
+};
+
+export const H2 = ({ id, children }) => (
+  <h2 id={id} className="mt-12 font-bold" style={{ fontSize: "clamp(22px,2.6vw,28px)", lineHeight: 1.25, letterSpacing: "-0.02em", color: CK.ink }}>{children}</h2>
+);
+
+export const Lead = ({ children }) => (
+  <p style={{ marginTop: "32px", fontSize: "19px", lineHeight: 1.7, color: CK.ink }}>{children}</p>
+);
+
+export const ArticleLayout = ({ category, date, title, readTime, slug, toc = [], cover, children }) => (
+  <div className="mx-auto w-full max-w-7xl px-6 pb-24" style={{ background: "#FFFFFF", color: CK.ink }}>
+    <a href="/blog" className="mt-10 inline-block text-sm font-medium no-underline" style={{ color: CK.ink }}>&#8592;&nbsp;&nbsp;All articles</a>
+    <header className="mt-8">
+      <div className="text-xs font-semibold uppercase" style={{ color: CK.purple, letterSpacing: "0.12em" }}>{category} / {date}</div>
+      <h1 className="mt-4 max-w-4xl font-bold" style={{ fontSize: "clamp(30px,4.4vw,46px)", lineHeight: 1.08, letterSpacing: "-0.032em" }}>{title}</h1>
+      <div className="mt-5 text-xs uppercase" style={{ color: CK.muted, letterSpacing: "0.12em" }}>{readTime}</div>
+    </header>
+    <div className="mt-10 flex flex-col gap-9 border-t pt-10 lg:flex-row" style={{ borderColor: CK.border }}>
+      <aside className="hidden w-56 shrink-0 lg:block">
+        <div className="lg:sticky lg:top-24">
+          <div className="text-xs font-semibold uppercase" style={{ color: CK.muted, letterSpacing: "0.12em" }}>Blog articles</div>
+          <nav className="mt-4">
+            {ARTICLES.map((a) => (
+              <a key={a.href} href={a.href} className="block px-3 py-2 text-sm no-underline" style={a.href === slug ? { color: CK.purple, fontWeight: 600, borderLeft: "2px solid " + CK.purple, background: CK.surface } : { color: CK.muted, borderLeft: "2px solid transparent" }}>{a.label}</a>
+            ))}
+          </nav>
+          <div className="mt-8 border-t pt-6" style={{ borderColor: CK.border }}>
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full text-xs font-bold" style={{ background: CK.purple, color: "#FFFFFF" }}>CK</div>
+              <div>
+                <div className="text-sm font-semibold">COD King Team</div>
+                <div className="text-xs" style={{ color: CK.muted }}>E-commerce</div>
+              </div>
+            </div>
+            <div className="mt-6 text-xs font-semibold uppercase" style={{ color: CK.muted, letterSpacing: "0.12em" }}>Share this article</div>
+            <Share />
+          </div>
+        </div>
+      </aside>
+      <main className="mx-auto w-full min-w-0 max-w-2xl grow lg:mx-0 lg:max-w-none">
+        <Cover variant={cover} />
+        <div style={{ fontSize: "17px", lineHeight: 1.75, color: CK.ink }}>{children}</div>
+      </main>
+      <aside className="hidden w-60 shrink-0 lg:block">
+        <div className="lg:sticky lg:top-24">
+          <div className="text-xs font-semibold uppercase" style={{ color: CK.muted, letterSpacing: "0.12em" }}>On this page</div>
+          <div className="mt-4 border-l pl-4" style={{ borderColor: CK.border }}>
+            {toc.map((t, i) => (
+              <a key={t.id} href={"#" + t.id} className="block py-1 text-sm no-underline" style={i === 0 ? { color: CK.ink, fontWeight: 600 } : { color: CK.muted }}>{t.label}</a>
+            ))}
+          </div>
+          <div className="mt-8">
+            <input type="email" placeholder="Email address" className="block h-10 w-full rounded border px-3 text-sm" style={{ borderColor: "#D0D5DD", background: "#FFFFFF", boxSizing: "border-box" }} />
+            <a href="https://codking.in" className="mt-2 flex h-11 w-full items-center justify-center rounded text-sm font-medium no-underline" style={{ background: CK.ink, color: "#FFFFFF", boxSizing: "border-box" }}>Start for free</a>
+            <a href="https://codking.in" className="mt-2 flex h-11 w-full items-center justify-center rounded border text-sm font-medium no-underline" style={{ borderColor: CK.border, background: "#FFFFFF", color: CK.ink, boxSizing: "border-box" }}>Contact sales</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+);

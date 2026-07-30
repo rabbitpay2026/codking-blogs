@@ -8,8 +8,107 @@ isPublic: true
 hideFooterPagination: true
 ---
 
-<style>
-  {`.ck-blog{max-width:1200px;margin:0 auto;padding:22px 24px 80px;background:#fff;color:#111}.ck-feature{position:relative;display:block;height:500px;overflow:hidden;border-radius:6px;text-decoration:none;color:#fff;background:#15131d}.ck-feature-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.72}.ck-feature-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,8,18,.90) 0%,rgba(10,8,18,.60) 52%,rgba(10,8,18,.18) 100%)}.ck-feature-copy{position:absolute;left:46px;right:46px;bottom:42px;max-width:760px}.ck-feature-meta{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}.ck-feature-title{margin:12px 0 0;font-size:50px;line-height:1.04;font-weight:700;letter-spacing:-.035em;color:#fff}.ck-feature-desc{margin:16px 0 0;max-width:680px;font-size:16px;line-height:1.55;color:rgba(255,255,255,.86)}.ck-feature-author{margin-top:18px;font-size:13px;color:rgba(255,255,255,.78)}.ck-tabs{display:flex;align-items:center;gap:30px;overflow-x:auto;border-bottom:1px solid #e5e7eb;margin-top:22px;white-space:nowrap}.ck-tab{display:block;padding:0 0 14px;text-decoration:none;color:#667085;font-size:14px;font-weight:500}.ck-tab:hover{color:#734DFF}.ck-tab-active{color:#111;font-weight:600;border-bottom:2px solid #734DFF}.ck-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:20px;row-gap:42px;padding-top:38px}.ck-card{display:block;min-width:0;text-decoration:none;color:inherit}.ck-card-image{width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:6px;background:#f7f7f7}.ck-card-image img{display:block;width:100%;height:100%;object-fit:cover}.ck-visual{width:100%;height:100%;display:flex;align-items:center;justify-content:center}.ck-visual-inner{padding:26px}.ck-card-meta{display:flex;align-items:center;gap:9px;margin-top:12px;font-size:11px;line-height:1.3}.ck-category{font-weight:700;color:#734DFF;text-transform:uppercase}.ck-date{color:#667085}.ck-card-title{margin:8px 0 0;font-size:19px;line-height:1.28;font-weight:650;letter-spacing:-.015em;color:#111}.ck-card:hover .ck-card-title{color:#734DFF}.ck-card-desc{margin:7px 0 0;font-size:14px;line-height:1.55;color:#667085;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}@media(max-width:1023px){.ck-blog{padding-top:20px}.ck-feature{height:430px}.ck-feature-title{font-size:42px}.ck-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:640px){.ck-blog{padding:14px 18px 60px}.ck-feature{height:390px}.ck-feature-copy{left:24px;right:24px;bottom:28px}.ck-feature-title{font-size:34px}.ck-feature-desc{font-size:15px}.ck-tabs{gap:22px}.ck-grid{grid-template-columns:1fr;row-gap:34px;padding-top:30px}}`}
-</style>
+import { Cover, CK } from "/snippets/article-layout.mdx";
 
-<div className="ck-blog"><section><a href="/blog/understanding-cod-verification" className="ck-feature"><img className="ck-feature-bg" src="https://cdn.shopify.com/s/files/1/0743/3119/3628/files/with_bg_logo2.png?v=1757062726" alt="COD King featured article" /><div className="ck-feature-overlay" /><div className="ck-feature-copy"><div className="ck-feature-meta">COD & RTO   /   JULY 2026   /   6 MIN READ</div><h1 className="ck-feature-title">Understanding COD Verification for Shopify Orders</h1><p className="ck-feature-desc">A practical guide to confirming customer intent before a Cash on Delivery order enters fulfillment.</p><div className="ck-feature-author">COD King Team · E-commerce</div></div></a></section><nav className="ck-tabs" aria-label="Blog categories"><a href="#all-articles" className="ck-tab ck-tab-active">All articles</a><a href="#cod-rto" className="ck-tab">COD & RTO</a><a href="#shopify" className="ck-tab">Shopify</a><a href="#checkout" className="ck-tab">Checkout & Conversion</a><a href="#payments" className="ck-tab">Payments</a><a href="#growth" className="ck-tab">E-commerce Growth</a></nav><section id="all-articles" className="ck-grid"><a id="cod-rto" href="/blog/understanding-cod-verification" className="ck-card"><div className="ck-card-image"><div className="ck-visual"><img src="https://cdn.shopify.com/s/files/1/0743/3119/3628/files/CKlogoicon-1200px_1.png?v=1762758841" alt="COD verification" style={{objectFit:'contain',padding:'48px'}} /></div></div><div className="ck-card-meta"><span className="ck-category">COD & RTO</span><span className="ck-date">July 2026</span></div><h2 className="ck-card-title">Understanding COD Verification for Shopify Orders</h2><p className="ck-card-desc">How confirmation can support better COD fulfillment decisions before an order moves forward.</p></a><a href="/blog/reduce-rto-for-cod-orders" className="ck-card"><div className="ck-card-image"><div className="ck-visual" style={{background:'#F3F0FF'}}><div className="ck-visual-inner"><div style={{fontSize:'42px',fontWeight:750,color:'#734DFF',letterSpacing:'-0.04em'}}>RTO ↓</div><div style={{marginTop:'8px',fontSize:'15px',color:'#667085'}}>Better order quality before dispatch.</div></div></div></div><div className="ck-card-meta"><span className="ck-category">COD & RTO</span><span className="ck-date">July 2026</span></div><h2 className="ck-card-title">How to Reduce RTO for COD Orders</h2><p className="ck-card-desc">Practical operational steps for improving COD order quality before and after fulfillment begins.</p></a><a id="shopify" href="/blog/shopify-checkout-optimization" className="ck-card"><div id="checkout" className="ck-card-image"><div className="ck-visual" style={{background:'#17151F',color:'#fff',justifyContent:'flex-start',alignItems:'flex-end'}}><div className="ck-visual-inner"><div style={{display:'flex',gap:'7px',marginBottom:'16px'}}><span style={{height:'7px',width:'58px',borderRadius:'99px',background:'#734DFF'}} /><span style={{height:'7px',width:'38px',borderRadius:'99px',background:'rgba(255,255,255,.2)'}} /></div><div style={{fontSize:'23px',lineHeight:'1.15',fontWeight:700}}>Less friction.<br />Clearer checkout.</div></div></div></div><div className="ck-card-meta"><span className="ck-category">Checkout & Conversion</span><span className="ck-date">July 2026</span></div><h2 className="ck-card-title">Checkout Optimization for Shopify Stores</h2><p className="ck-card-desc">Make the path to a completed Shopify order easier for shoppers to understand and complete.</p></a><a id="payments" href="/blog/payment-options-indian-ecommerce" className="ck-card"><div className="ck-card-image"><div className="ck-visual" style={{background:'#F7F7F7',justifyContent:'flex-start',alignItems:'flex-end'}}><div className="ck-visual-inner"><div style={{fontSize:'42px',fontWeight:750,color:'#3613B6'}}>₹</div><div style={{marginTop:'4px',fontSize:'22px',lineHeight:'1.15',fontWeight:700}}>Payment choice,<br />made clearer.</div></div></div></div><div className="ck-card-meta"><span className="ck-category">Payments</span><span className="ck-date">July 2026</span></div><h2 className="ck-card-title">Managing Payment Options for Indian E-commerce</h2><p className="ck-card-desc">Present prepaid and Cash on Delivery choices clearly while keeping checkout understandable.</p></a><div id="growth" style={{display:'none'}} /></section></div>
+export const POSTS = [
+  {
+    href: "/blog/understanding-cod-verification",
+    cover: "cod",
+    category: "COD &amp; RTO",
+    anchor: "cod-rto",
+    date: "July 2026",
+    title: "Understanding COD Verification for Shopify Orders",
+    excerpt: "How confirmation can support better COD fulfillment decisions before an order moves forward."
+  },
+  {
+    href: "/blog/reduce-rto-for-cod-orders",
+    cover: "rto",
+    category: "COD &amp; RTO",
+    date: "July 2026",
+    title: "How to Reduce RTO for COD Orders",
+    excerpt: "Practical operational steps for improving COD order quality before and after fulfillment begins."
+  },
+  {
+    href: "/blog/shopify-checkout-optimization",
+    cover: "checkout",
+    category: "Checkout &amp; Conversion",
+    anchor: "checkout",
+    date: "July 2026",
+    title: "Checkout Optimization for Shopify Stores",
+    excerpt: "Make the path to a completed Shopify order easier for shoppers to understand and complete."
+  },
+  {
+    href: "/blog/payment-options-indian-ecommerce",
+    cover: "payments",
+    category: "Payments",
+    anchor: "payments",
+    date: "July 2026",
+    title: "Managing Payment Options for Indian E-commerce",
+    excerpt: "Present prepaid and Cash on Delivery choices clearly while keeping checkout understandable."
+  }
+];
+
+export const Card = ({ post }) => (
+  <a id={post.anchor} href={post.href} className="block min-w-0 no-underline" style={{ color: CK.ink }}>
+    <Cover variant={post.cover} />
+    <div className="mt-3 flex items-center gap-2" style={{ fontSize: "11px" }}>
+      <span style={{ color: CK.purple, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em" }}>{post.category}</span>
+      <span style={{ color: CK.muted }}>{post.date}</span>
+    </div>
+    <h2 className="mt-2 font-semibold" style={{ fontSize: "19px", lineHeight: 1.3, letterSpacing: "-0.015em", color: CK.ink }}>{post.title}</h2>
+    <p className="mt-2 line-clamp-2" style={{ fontSize: "14px", lineHeight: 1.55, color: CK.muted }}>{post.excerpt}</p>
+  </a>
+);
+
+export const Tab = ({ label, href, active }) =>
+  href ? (
+    <a href={href} className="block whitespace-nowrap pb-3 text-sm no-underline" style={active ? { color: CK.ink, fontWeight: 600, borderBottom: "2px solid " + CK.purple, marginBottom: "-1px" } : { color: CK.muted }}>{label}</a>
+  ) : (
+    <span className="block whitespace-nowrap pb-3 text-sm" style={{ color: "#98A2B3", cursor: "default" }}>{label}</span>
+  );
+
+<div className="mx-auto w-full max-w-7xl px-6 pb-24" style={{ background: "#FFFFFF", color: CK.ink }}>
+  <a href="/blog/understanding-cod-verification" className="mt-8 grid items-center gap-8 no-underline lg:grid-cols-2" style={{ color: CK.ink }}>
+    <Cover variant="cod" />
+
+    <div className="min-w-0">
+      <div className="flex items-center gap-2" style={{ fontSize: "11px" }}>
+        <span style={{ color: CK.purple, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em" }}>COD & RTO</span>
+        <span style={{ color: CK.muted }}>July 2026</span>
+        <span style={{ color: CK.muted }}>6 min read</span>
+      </div>
+
+      <h1 className="mt-3 font-bold" style={{ fontSize: "clamp(26px,3.2vw,40px)", lineHeight: 1.1, letterSpacing: "-0.03em" }}>Understanding COD Verification for Shopify Orders</h1>
+      <p className="mt-4" style={{ fontSize: "16px", lineHeight: 1.6, color: CK.muted }}>A practical guide to confirming customer intent before a Cash on Delivery order enters fulfillment.</p>
+
+      <div className="mt-5 flex items-center gap-3">
+        <div className="flex h-9 w-9 items-center justify-center rounded-full text-xs font-bold" style={{ background: CK.purple, color: "#FFFFFF" }}>CK</div>
+
+        <div>
+          <div className="text-sm font-semibold">COD King Team</div>
+          <div className="text-xs" style={{ color: CK.muted }}>E-commerce</div>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <nav className="mt-14 flex items-end gap-8 overflow-x-auto border-b" style={{ borderColor: CK.border }} aria-label="Blog categories">
+    <Tab label="All articles" href="#all-articles" active />
+
+    <Tab label="COD & RTO" href="#cod-rto" />
+
+    <Tab label="Shopify" />
+
+    <Tab label="Checkout & Conversion" href="#checkout" />
+
+    <Tab label="Payments" href="#payments" />
+
+    <Tab label="E-commerce Growth" />
+  </nav>
+
+  <section id="all-articles" className="mt-10 grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+    {POSTS.map((post) => (
+          <Card key={post.href} post={post} />
+        ))}
+  </section>
+</div>

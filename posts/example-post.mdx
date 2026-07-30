@@ -7,26 +7,50 @@ noindex: true
 hidden: true
 ---
 
-<div className="max-w-3xl mx-auto">
-  <aside className="mb-12 rounded-2xl border border-[#734DFF]/30 bg-[#734DFF]/5 p-6">
-    <div className="text-xs font-bold tracking-[0.16em] text-[#734DFF]">INTERNAL ONLY</div>
-    <h2 className="text-xl font-bold mt-2">INTERNAL ARTICLE TEMPLATE — DO NOT PUBLISH AS A BLOG POST</h2>
-    <p>This page is a reusable starting point for future COD King Blog articles. It is hidden from the public blog navigation and should never be linked from the homepage as a published article.</p>
+{/* INTERNAL ARTICLE TEMPLATE — DO NOT PUBLISH AS A BLOG POST.
+    To write a new article:
+      1. Duplicate this file into blog/<your-slug>.mdx
+      2. Update the frontmatter (title, sidebarTitle, description)
+      3. Update the ArticleLayout props below (category, date, title, readTime, slug, cover, toc)
+      4. Write the body between <ArticleLayout> and </ArticleLayout>
+      5. Add the article to ARTICLES in /snippets/article-layout.mdx so it appears in the left sidebar
+      6. Add a card to POSTS in blog.mdx so it appears on the homepage
+    cover accepts: "cod" | "rto" | "checkout" | "payments"
+    Every <H2> needs an id, and that same id must appear in toc. */}
 
-    <ol>
-      <li>Duplicate this article.</li>
-      <li>Rename the file using a lowercase descriptive slug.</li>
-      <li>Update metadata.</li>
-      <li>Add a cover image.</li>
-      <li>Write or edit using Mintlify's visual editor.</li>
-      <li>Preview the article.</li>
-      <li>Add the article to the homepage.</li>
-      <li>Verify its link.</li>
-      <li>Publish only after review.</li>
-    </ol>
-  </aside>
+import { ArticleLayout, H2, Lead } from "/snippets/article-layout.mdx";
 
-  <header className="mb-10"><div className="text-sm font-bold text-[#734DFF]">Category</div><h1 className="text-4xl md:text-5xl font-bold tracking-tight mt-4">Article title</h1><p className="text-xl text-gray-600 dark:text-gray-300 mt-5">Short article description or deck.</p><div className="text-sm text-gray-500 mt-6">COD King Team · Publication date · Reading time</div></header>
-  <div className="aspect-video rounded-3xl bg-gradient-to-br from-[#734DFF] to-[#3613B6] flex items-center justify-center text-white mb-12">Cover visual</div>
-  <section><h2>Introduction</h2><p>Open the article with useful context and explain what the reader will learn.</p><h2>Main section</h2><p>Develop the first major idea with practical, factual guidance.</p><h2>Second section</h2><p>Develop the next idea and keep the article easy to scan.</p><h2>Key takeaways</h2><ul><li>First useful takeaway.</li><li>Second useful takeaway.</li><li>Third useful takeaway.</li></ul><h2>Conclusion</h2><p>Close with a concise summary and a useful final thought.</p></section>
-</div>
+<ArticleLayout
+  category="Category name"
+  date="Month Year"
+  title="Article title goes here"
+  readTime="6 minutes read"
+  slug="/blog/your-article-slug"
+  cover="cod"
+  toc={[
+  { id: "section-one", label: "Section one" },
+  { id: "section-two", label: "Section two" },
+  { id: "section-three", label: "Section three" },
+  { id: "takeaways", label: "Key takeaways" }
+]}
+>
+  <Lead>One or two sentences that set up the article and tell the reader what they will get out of it.</Lead>
+
+  <H2 id="section-one">Section one</H2>
+
+  Body copy. Write in plain markdown here: paragraphs, **bold**, [links](https://codking.in), and lists all work.
+
+  <H2 id="section-two">Section two</H2>
+
+  Body copy.
+
+  <H2 id="section-three">Section three</H2>
+
+  Body copy.
+
+  <H2 id="takeaways">Key takeaways</H2>
+
+  * First takeaway.
+  * Second takeaway.
+  * Third takeaway.
+</ArticleLayout>
