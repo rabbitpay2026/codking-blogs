@@ -11,7 +11,7 @@ hidden: true
   <div className="ck-summary">
     <div className="ck-summary-label">Internal only — do not publish as a blog post</div>
     <p>Duplicate this page to start a new article. It is hidden and noindexed. Change only the nine things listed below; leave every ck- class exactly as it is, because all layout comes from style.css at the repository root, not from this file.</p>
-    <p>1. Frontmatter title, sidebarTitle, description — and remove noindex and hidden. 2. The ck-eyebrow category and date. 3. The ck-title. 4. The ck-readtime. 5. The cover kicker and line, and swap ck-cover--template for one of the four cover variants. 6. The ck-body content: lede, h2 headings with id attributes, paragraphs, lists. 7. The ck-toc links, one per h2 id. 8. The left nav — move is-current onto the new article, and add a link to it in the other four articles. 9. The three share URLs and the two ck-more cards.</p>
+    <p>1. Frontmatter title, sidebarTitle, description — and remove noindex and hidden. 2. The ck-eyebrow category and date. 3. The ck-title. 4. The ck-readtime. 5. The cover kicker and line, and swap ck-cover--template for one of the four cover variants. 6. The ck-body content: lede, h2 headings with id attributes, paragraphs, lists. 7. The ck-toc links, one per h2 id. 8. The left nav — move is-current onto the new article, and add a link to it in the other articles. 9. The ck-author-mount line: set data-category and data-slug only. The avatar, name, category and all three share links are generated automatically from those two attributes — do not paste an author block.</p>
     <p>Then add a card for it on /blog under the matching ck-section-label, preview the branch, and publish only after review.</p>
   </div>
 
@@ -26,33 +26,17 @@ hidden: true
   <div className="ck-layout">
     <aside className="ck-col-left">
       <div className="ck-sticky">
-        <div className="ck-navlabel">Blog articles</div>
+        <div className="ck-author-mount" data-category="Category" data-slug="article-slug" />
+
+        <div className="ck-navlabel" style={{marginTop:'32px',paddingTop:'24px',borderTop:'1px solid var(--ck-border)'}}>Blog articles</div>
 
         <nav className="ck-nav">
           <a href="/blog/understanding-cod-verification">Understanding COD Verification</a>
           <a href="/blog/reduce-rto-for-cod-orders">How to Reduce RTO for COD Orders</a>
           <a href="/blog/shopify-checkout-optimization">Checkout Optimization for Shopify Stores</a>
           <a href="/blog/payment-options-indian-ecommerce">Payment Options for Indian E-commerce</a>
+          <a href="/blog/how-to-reduce-cod-cancellations">How to Reduce COD Cancellations</a>
         </nav>
-
-        <div className="ck-author">
-          <div className="ck-author-row">
-            <div className="ck-avatar">CK</div>
-
-            <div>
-              <div className="ck-author-name">COD King Team</div>
-              <div className="ck-author-role">Category</div>
-            </div>
-          </div>
-
-          <div className="ck-navlabel ck-share-label">Share this article</div>
-
-          <div className="ck-share">
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcodking.in%2Fblog%2Farticle-slug" target="_blank" rel="noreferrer">in</a>
-            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcodking.in%2Fblog%2Farticle-slug" target="_blank" rel="noreferrer">X</a>
-            <a href="https://codking.in/blog/article-slug">↗</a>
-          </div>
-        </div>
       </div>
     </aside>
 
