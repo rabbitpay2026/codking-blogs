@@ -96,5 +96,10 @@
         ]
       }
     ]
+  },
+  "seo": {
+    "metatags": {
+      "canonical": "https://codking.tech"
+    }
   }
 }
