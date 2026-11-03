@@ -12,7 +12,7 @@ hideFooterPagination: true
   <div className="ck-head">
     <div className="ck-eyebrow">Checkout & Conversion · July 2026</div>
     <h1 className="ck-title">Checkout Optimization for Shopify Stores</h1>
-    <div className="ck-readtime">6 minutes read</div>
+    <div className="ck-readtime">12 minutes read</div>
   </div>
 
   <div className="ck-layout">
@@ -62,15 +62,93 @@ hideFooterPagination: true
       </div>
 
       <div className="ck-body">
-        <p className="ck-lede">Checkout optimization is about helping a shopper complete an intended purchase with as little confusion as possible. Clear information, predictable choices, and focused interfaces are more useful than unnecessary steps.</p>
-        <h2 id="clarity">Prioritize clarity</h2>
-        <p>Make prices, delivery expectations, payment choices, and required information easy to understand.</p>
-        <h2 id="friction">Remove unnecessary friction</h2>
-        <p>Every additional field or decision should have a clear purpose.</p>
-        <h2 id="mobile">Design for mobile shoppers</h2>
-        <p>Use readable type, comfortable tap targets, and a clear visual hierarchy on smaller screens.</p>
-        <h2 id="measure">Measure the complete journey</h2>
-        <p>Review where shoppers hesitate or abandon and test changes carefully.</p>
+        <p className="ck-lede">Most checkout advice is written for prepaid markets, where the only question is whether the shopper completes the purchase. In a COD market there are two questions, and they pull against each other: will they complete it, and will they accept it when it arrives. A checkout tuned only for the first will happily convert orders you lose money on. This is about optimising for both.</p>
+
+        <h2 id="two-jobs">The two jobs a COD checkout does</h2>
+
+        <p>Every change you make at checkout moves two numbers. The first is conversion — the share of shoppers who place the order. The second is order quality — the share of those orders that turn into collected cash.</p>
+
+        <p>Removing friction almost always raises the first. It frequently lowers the second, because some of the friction was doing useful work: a shopper who will not spend thirty seconds entering a correct address is often the same shopper who will not be home on Thursday.</p>
+
+        <p>So the question for any proposed change is not "does this lift conversion" but "does this lift <em>delivered</em> conversion". A store that measures only checkout completion will keep making changes that look like wins in analytics and feel like losses in the bank account.</p>
+
+        <p>Hold both numbers side by side for every test. If completion rises four percent and RTO rises six, you have made the store worse while the dashboard says otherwise.</p>
+
+        <h2 id="native">Whether to keep Shopify's checkout at all</h2>
+
+        <p>This is the largest decision in the category and the one most often made by accident.</p>
+
+        <p>Shopify's native checkout gives you Shop Pay, every payment method you have configured, Shopify's own fraud analysis, and compatibility with the rest of your app stack. You give up control over fields and layout.</p>
+
+        <p>A custom COD form — the one-page order forms that several apps provide — gives you complete control over which fields appear, how they are ordered, and what upsells sit beside them. You give up being in Shopify's checkout, with consequences for analytics attribution, some apps, and certain payment methods.</p>
+
+        <p>Neither is correct in the abstract. A dropshipping funnel selling one product to cold traffic genuinely benefits from a stripped one-page form; the shopper arrived from an ad, has no account, and every extra screen loses a share of them. An established brand with repeat customers, a Shop Pay base and a working app stack usually should not rip that out for a marginal completion gain.</p>
+
+        <p>Decide this before you optimise anything else, because it determines which of the changes below are even available to you.</p>
+
+        <h2 id="address">Address quality is a checkout problem</h2>
+
+        <p>A meaningful share of failed COD deliveries are not refusals at all. The courier could not find the address, or could not reach the customer to ask. That failure is created at checkout and paid for in logistics.</p>
+
+        <p>Three things help, and all three are cheap:</p>
+
+        <p><strong>Validate the pincode while the shopper is still on the page.</strong> A wrong pincode routes the parcel to the wrong facility before anyone notices. Checking it against a serviceability list at entry also lets you tell the shopper immediately if you cannot deliver there, which is far better than accepting the order and cancelling it later.</p>
+
+        <p><strong>Check the phone number format.</strong> A ten-digit Indian mobile has a predictable shape. Catching a nine-digit entry costs one line of validation and saves a parcel that no courier will ever be able to call about.</p>
+
+        <p><strong>Prefill for returning customers.</strong> A known-good address reused is a known-good address. This both reduces entry errors and removes the single most tedious part of checkout for your best customers.</p>
+
+        <p>Note that these add friction in the strict sense — a validation can reject an entry — and they still improve delivered conversion. That is the clearest illustration of why the single-metric view misleads.</p>
+
+        <h2 id="payment-presentation">How you present the payment choice</h2>
+
+        <p>The payment selector is where most of your order quality is decided, and small presentation differences move the mix substantially.</p>
+
+        <p>Show the real cost difference between paying now and paying later. A COD order genuinely costs you more — handling, collection charges, higher failure risk — and a visible gap between the two options shifts a share of shoppers without blocking anyone. Whether you frame it as a COD fee or a prepaid discount matters: the arithmetic is identical, the reception is not.</p>
+
+        <p>Put UPI prominently. Payment friction, not payment preference, drives a lot of COD selection in India: if prepaid means a slow redirect or a card form on a phone, shoppers take COD for reasons unrelated to trust. UPI intent flows remove most of that friction and are the single most effective prepaid enabler in this market.</p>
+
+        <p>State the collection amount next to the COD option. Surprise at the door is a refusal cause, and the cheapest place to prevent it is the place where the choice is made.</p>
+
+        <p>And consider offering a partial advance as a third option rather than a binary. Some shoppers will not pay in full upfront but will pay something, and that group is entirely lost to a prepaid-or-COD choice.</p>
+
+        <h2 id="trust">What a first-time buyer is actually worried about</h2>
+
+        <p>A shopper choosing COD on an unfamiliar brand is often not being difficult. They are managing a real risk: they do not know whether you will deliver, and cash on delivery is their insurance. Price incentives do not address that; evidence does.</p>
+
+        <p>The things that help are specific rather than decorative. A return policy stated at checkout rather than buried in a footer. Reviews with substance attached to the product, not a star average in the header. A support channel with a human on it, visible before the shopper commits. Delivery expectations given as a date range rather than "fast shipping".</p>
+
+        <p>Trust badges and padlock icons do very little. Shoppers have learned to ignore them, and in a COD market the fear is not about card security anyway — it is about whether the parcel arrives.</p>
+
+        <h2 id="mobile">Mobile is the actual checkout</h2>
+
+        <p>The majority of Indian D2C traffic is mobile, which means the mobile checkout is not a variant of your checkout — it is your checkout, and the desktop version is the variant.</p>
+
+        <p>Check the things that only break on a phone: that the numeric keypad appears for phone and pincode fields, that tap targets for payment options are comfortably large, that the price summary is visible without scrolling back up, and that autofill works rather than fighting the form. Test it on a mid-range Android handset on a slow connection, which is what a large share of your customers are using — not on a flagship over office wifi.</p>
+
+        <p>Page weight matters here more than any copy change. A checkout that takes six seconds to become interactive loses shoppers before any of the above applies.</p>
+
+        <h2 id="measure">Measuring it honestly</h2>
+
+        <p>Track these together, because any one of them alone will mislead you:</p>
+
+        <p><strong>Checkout completion rate</strong>, split by device. The conventional number, and the one that moves first.</p>
+
+        <p><strong>Prepaid share of orders</strong>, split by first-time and returning customers. Your payment-mix result, and the leading indicator for RTO.</p>
+
+        <p><strong>RTO rate by payment method.</strong> The order-quality number. This is what tells you whether a conversion gain was real.</p>
+
+        <p><strong>Address failure rate.</strong> Parcels returned for address or contact reasons rather than refusal. This isolates the checkout-data problem from the intent problem, and they need different fixes.</p>
+
+        <p><strong>Contribution margin per order.</strong> Revenue minus product cost, shipping both ways where applicable, payment or collection fees, and RTO losses. The number that settles arguments, and the only one that cannot be gamed by a change that converts more bad orders.</p>
+
+        <p>Change one thing at a time, give it enough volume to mean something, and read the pair of numbers rather than the headline one.</p>
+
+        <h2 id="order">Where to start</h2>
+
+        <p>Validate pincode and phone at entry. Make UPI the obvious prepaid path. State the COD collection amount at the point of choice. Put a real return policy in front of first-time buyers. Then test the price gap between COD and prepaid, and only after that consider whether your checkout architecture itself needs to change.</p>
+
+        <p>COD King works inside Shopify's native checkout rather than replacing it, and covers the payment-side controls above — COD fees and rules, partial payments, prefilled addresses and pincode-level serviceability. The page-weight and mobile work is yours, and it sits upstream of everything else here.</p>
       </div>
 
       <div className="ck-more">
@@ -78,7 +156,7 @@ hideFooterPagination: true
 
         <div className="ck-grid">
           <a href="/blog/payment-options-indian-ecommerce" className="ck-card">
-            <div className="ck-card-media ck-cover--payments">
+            <div className="ck-card-media ck-cover--payments" style={{background:'#EDE9FF','--ck-cover-fg':'#241C57','--ck-cover-accent':'#5B3FD6',aspectRatio:'2 / 1'}}>
               <div className="ck-cover-art">
                 <div className="ck-cover-rule" />
 
@@ -93,7 +171,7 @@ hideFooterPagination: true
           </a>
 
           <a href="/blog/understanding-cod-verification" className="ck-card">
-            <div className="ck-card-media ck-cover--verification">
+            <div className="ck-card-media ck-cover--verification" style={{background:'#EEF6E7','--ck-cover-fg':'#2E4A18','--ck-cover-accent':'#6FBE3A',aspectRatio:'2 / 1'}}>
               <div className="ck-cover-art">
                 <div className="ck-cover-rule" />
 
@@ -115,10 +193,14 @@ hideFooterPagination: true
         <div className="ck-toc-label">On this page</div>
 
         <div className="ck-toc">
-          <a href="#clarity">Prioritize clarity</a>
-          <a href="#friction">Remove unnecessary friction</a>
-          <a href="#mobile">Design for mobile</a>
-          <a href="#measure">Measure the journey</a>
+          <a href="#two-jobs">The two jobs</a>
+          <a href="#native">Native checkout or not</a>
+          <a href="#address">Address quality</a>
+          <a href="#payment-presentation">Presenting payment</a>
+          <a href="#trust">First-time buyers</a>
+          <a href="#mobile">Mobile is the checkout</a>
+          <a href="#measure">Measuring honestly</a>
+          <a href="#order">Where to start</a>
         </div>
 
         <div className="ck-cta">

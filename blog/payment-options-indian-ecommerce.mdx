@@ -12,7 +12,7 @@ hideFooterPagination: true
   <div className="ck-head">
     <div className="ck-eyebrow">Payments · July 2026</div>
     <h1 className="ck-title">Managing Payment Options for Indian E-commerce</h1>
-    <div className="ck-readtime">6 minutes read</div>
+    <div className="ck-readtime">11 minutes read</div>
   </div>
 
   <div className="ck-layout">
@@ -62,15 +62,77 @@ hideFooterPagination: true
       </div>
 
       <div className="ck-body">
-        <p className="ck-lede">Indian e-commerce shoppers may prefer different payment methods depending on trust, convenience, order value, and familiarity. A good checkout presents those choices clearly without overwhelming the customer.</p>
-        <h2 id="choices">Present choices clearly</h2>
-        <p>Use familiar labels and make the difference between prepaid and Cash on Delivery easy to understand.</p>
-        <h2 id="costs">Explain costs before confirmation</h2>
-        <p>If a payment method changes the payable amount or delivery terms, communicate that before the final action.</p>
-        <h2 id="trust">Support shopper trust</h2>
-        <p>Keep payment messaging consistent with the rest of the storefront.</p>
-        <h2 id="review">Review payment behavior</h2>
-        <p>Understand which choices shoppers use and where confusion appears.</p>
+        <p className="ck-lede">Offering every payment method is not a strategy. Each one carries a different cost, a different failure rate, and a different kind of customer, and a checkout that lists eight options without ordering them well converts worse than one that presents three in the right sequence. This is about what each method actually costs you and who it brings.</p>
+
+        <h2 id="landscape">The methods, and what each one is for</h2>
+
+        <p><strong>UPI.</strong> Operated by NPCI, UPI has become the dominant retail payment rail in India, and for e-commerce it is the most important prepaid option you can offer. It settles instantly, costs little or nothing to accept for most merchants, and — critically — the intent flow takes seconds on a phone. If you are trying to move customers off Cash on Delivery, UPI is the single most effective enabler, because it removes the friction that pushes people to COD in the first place.</p>
+
+        <p><strong>Cards.</strong> Credit and debit cards carry a processing fee and a meaningfully higher failure rate than UPI, largely because of the authentication step. Card failures are not neutral: a shopper whose payment fails once will often switch to COD rather than retry. Keep cards, but do not make them the first thing a mobile shopper sees.</p>
+
+        <p><strong>Netbanking.</strong> Still used, particularly for higher-value orders and by older customers, and it has the worst completion rate of the prepaid methods — the shopper leaves your checkout for a bank portal and a share of them never come back. Worth offering, not worth promoting.</p>
+
+        <p><strong>Wallets.</strong> A shrinking share since UPI took over the same use case. Offer them if your customers ask; do not spend checkout real estate on them.</p>
+
+        <p><strong>Buy now, pay later and EMI.</strong> Relevant above a certain order value, and essentially irrelevant below it. These raise average order value where the basket is large enough to justify instalments, and add clutter where it is not. Gate them by cart value rather than showing them always.</p>
+
+        <p><strong>Cash on delivery.</strong> The reason the rest of this blog exists. It converts the best and costs the most, and both of those facts are structural rather than fixable.</p>
+
+        <h2 id="costs">The cost of a method is not its processing fee</h2>
+
+        <p>Merchants compare payment methods on the gateway fee, which is the smallest of the costs involved and the only one printed on an invoice.</p>
+
+        <p>The real cost of a method is the processing fee, plus the failure rate multiplied by the orders you lose to failures, plus — for COD specifically — collection charges and the losses from returned parcels. A method with no processing fee and a high refusal rate is far more expensive than one charging a couple of percent and delivering reliably.</p>
+
+        <p>Work out the per-order figure for your own store. Take your COD RTO rate, multiply by forward shipping plus return shipping plus packaging, add the courier's collection charge, and divide across all COD orders rather than only the failed ones. That number is what COD costs you per order, and it is usually several times whatever your COD fee currently is — which means prepaid orders have been quietly subsidising cash ones.</p>
+
+        <p>Once you have it, decisions that were previously instinct become arithmetic: how large a prepaid discount is justified, whether a COD fee is a penalty or a recovery, and at what order value COD stops being worth offering at all.</p>
+
+        <h2 id="ordering">Ordering the options</h2>
+
+        <p>The sequence is itself a design decision, and most stores get it by default rather than by choice.</p>
+
+        <p>Put the fastest, cheapest, most reliable method first — in India that is almost always UPI. Shoppers scan from the top and take the first acceptable option; whatever sits at position one gets disproportionate selection for no reason other than position.</p>
+
+        <p>Group prepaid methods together and present COD as a distinct choice rather than one item in a list of seven. The decision a shopper is actually making is pay now or pay later, and a flat list obscures it.</p>
+
+        <p>Show the price difference at the point of choice, not on a later screen. If prepaid saves money or COD adds a fee, that information is only useful while the choice is still open.</p>
+
+        <p>And resist offering everything. Each additional option is a decision, and decisions slow a checkout down. Three well-chosen methods convert better than eight comprehensive ones.</p>
+
+        <h2 id="segment">Not every customer should see the same options</h2>
+
+        <p>A single payment configuration for the whole catalogue and every customer leaves value on the table in both directions.</p>
+
+        <p><strong>By order value.</strong> Risk scales with the amount. A partial advance above one threshold and prepaid-only above a higher one is a reasonable structure, because a single refused high-value parcel costs more than many small ones. Your own refusal data will show where the thresholds belong.</p>
+
+        <p><strong>By customer history.</strong> A customer with three successful deliveries is not the risk a first-time buyer is. Restricting their options — or charging them a COD fee designed to deter strangers — taxes your best relationships for a problem they are not causing.</p>
+
+        <p><strong>By category.</strong> Apparel and footwear carry higher refusal rates than categories where the product is unambiguous, because fit and colour create expectation mismatch. Tighter COD rules there are defensible on the numbers.</p>
+
+        <p><strong>By pincode.</strong> Where your own history shows chronic failure, COD restrictions earn their keep. This has to come from your order data rather than assumption — the pattern is usually narrower than merchants expect, and blanket regional rules block far more good orders than they prevent bad ones.</p>
+
+        <h2 id="trust">Trust is a payment feature</h2>
+
+        <p>A first-time buyer choosing COD is frequently buying insurance, not expressing a preference. They do not know whether you will deliver, and paying on arrival is how they manage that. No discount addresses that fear; evidence does.</p>
+
+        <p>A return policy stated plainly at checkout, reviews with substance attached to the product, a support channel with a human on it, and delivery dates given as real ranges all move prepaid share among new customers. Recognisable payment marks help too — a shopper who sees UPI and their own bank listed is reassured in a way that a generic security badge does not achieve.</p>
+
+        <p>Target this effort at first-time buyers specifically, which is where the trust gap actually is. A blanket incentive spends money on returning customers who had already decided to trust you.</p>
+
+        <h2 id="review">What to watch</h2>
+
+        <p><strong>Share of orders by method</strong>, split by first-time and returning customers. The headline mix, and the split is where the insight is.</p>
+
+        <p><strong>Payment failure rate by method.</strong> Failures are silent lost revenue and they push shoppers to COD. A card failure rate drifting upward is a gateway problem presenting as a payment-mix problem.</p>
+
+        <p><strong>RTO rate by payment method.</strong> Prepaid, partial and full COD tracked separately. Blending them hides the entire economics of the question.</p>
+
+        <p><strong>Contribution margin per order by method.</strong> Revenue minus product cost, shipping both ways where applicable, processing or collection fees, and RTO losses. This is the ranking that matters, and it frequently puts a discounted prepaid order above a full-price COD one.</p>
+
+        <p>Review it quarterly rather than once. Payment behaviour shifts with your product mix, your ad channels and the season, and a configuration set a year ago describes a store you no longer run.</p>
+
+        <p>COD King handles the COD side of this — fees, rules by pincode, category and order value, partial payments and prepaid conversion inside Shopify's own checkout. Which prepaid methods you offer, and in what order, sits with your gateway.</p>
       </div>
 
       <div className="ck-more">
@@ -78,7 +140,7 @@ hideFooterPagination: true
 
         <div className="ck-grid">
           <a href="/blog/shopify-checkout-optimization" className="ck-card">
-            <div className="ck-card-media ck-cover--checkout">
+            <div className="ck-card-media ck-cover--checkout" style={{background:'#F4F4F7','--ck-cover-fg':'#1A1A22','--ck-cover-accent':'#3613B6',aspectRatio:'2 / 1'}}>
               <div className="ck-cover-art">
                 <div className="ck-cover-rule" />
 
@@ -93,7 +155,7 @@ hideFooterPagination: true
           </a>
 
           <a href="/blog/reduce-rto-for-cod-orders" className="ck-card">
-            <div className="ck-card-media ck-cover--rto">
+            <div className="ck-card-media ck-cover--rto" style={{background:'#F1ECFF','--ck-cover-fg':'#2A1E5C','--ck-cover-accent':'#734DFF',aspectRatio:'2 / 1'}}>
               <div className="ck-cover-art">
                 <div className="ck-cover-rule" />
 
@@ -115,10 +177,12 @@ hideFooterPagination: true
         <div className="ck-toc-label">On this page</div>
 
         <div className="ck-toc">
-          <a href="#choices">Present choices clearly</a>
-          <a href="#costs">Explain costs</a>
-          <a href="#trust">Support shopper trust</a>
-          <a href="#review">Review behavior</a>
+          <a href="#landscape">The methods</a>
+          <a href="#costs">What a method costs</a>
+          <a href="#ordering">Ordering the options</a>
+          <a href="#segment">Segmenting customers</a>
+          <a href="#trust">Trust as a feature</a>
+          <a href="#review">What to watch</a>
         </div>
 
         <div className="ck-cta">
