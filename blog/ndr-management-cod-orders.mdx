@@ -1,0 +1,195 @@
+---
+title: "NDR Management: Recovering Failed COD Deliveries"
+sidebarTitle: "NDR Management"
+description: "An NDR is a question with a deadline, not a return. How to triage failed delivery attempts by reason, work the queue inside the courier's attempt budget, and feed what you learn back into checkout."
+mode: "custom"
+public: true
+isPublic: true
+hideFooterPagination: true
+tag: "COD & RTO"
+---
+
+<div className="ck-shell">
+  <a href="/blog" className="ck-back">← All articles</a>
+
+  <div className="ck-head">
+    <div className="ck-eyebrow">COD & RTO · November 2026</div>
+    <h1 className="ck-title">NDR Management: Recovering Failed COD Deliveries</h1>
+    <div className="ck-readtime">11 minutes read</div>
+  </div>
+
+  <div className="ck-layout">
+    <div className="ck-col-left">
+      <div className="ck-sticky">
+        <div className="ck-author-mount" data-category="COD & RTO" data-slug="ndr-management-cod-orders" />
+
+        <div className="ck-navlabel" style={{marginTop:'32px',paddingTop:'24px',borderTop:'1px solid var(--ck-border)'}}>COD & RTO</div>
+
+        <div className="ck-nav">
+          <a href="/blog/reduce-rto-for-cod-orders">Reducing RTO</a>
+          <a href="/blog/ndr-management-cod-orders" className="is-current">NDR Management</a>
+          <a href="/blog/rto-benchmarks-india">RTO Benchmarks</a>
+          <a href="/blog/understanding-cod-verification">COD Verification</a>
+        </div>
+
+        <div className="ck-navlabel" style={{marginTop:'24px'}}>Payments & Pricing</div>
+
+        <div className="ck-nav">
+          <a href="/blog/cod-to-prepaid-conversion">COD to Prepaid</a>
+          <a href="/blog/partial-cod-payment-advance-amount">COD Advance Amount</a>
+          <a href="/blog/payment-options-indian-ecommerce">Payment Options</a>
+        </div>
+
+        <div className="ck-navlabel" style={{marginTop:'24px'}}>Tooling & Checkout</div>
+
+        <div className="ck-nav">
+          <a href="/blog/best-cod-verification-apps-shopify">Choosing a COD App</a>
+          <a href="/blog/native-checkout-vs-cod-order-form">Checkout vs COD Form</a>
+          <a href="/blog/how-to-reduce-cod-cancellations">COD Cancellations</a>
+          <a href="/blog/shopify-checkout-optimization">Checkout Optimization</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="ck-col-main">
+      <div className="ck-cover ck-cover--rto" style={{background:'#F1ECFF','--ck-cover-fg':'#2A1E5C','--ck-cover-accent':'#734DFF',aspectRatio:'2 / 1'}}><div className="ck-cover-art"><svg viewBox="0 0 620 300" style={{width:'100%',height:'auto'}} role="img" aria-label="Two paths after an NDR is raised: reaching the buyer and fixing the cause leads to delivery, while a blind reattempt repeats the same failure and ends in RTO."><defs><marker id="ndrArrowHead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#667085" /></marker></defs><rect x="10" y="122" width="114" height="54" rx="9" fill="#734DFF" /><text x="67" y="144" textAnchor="middle" fontSize="13" fontWeight="700" fill="#FFFFFF">NDR raised</text><text x="67" y="162" textAnchor="middle" fontSize="11" fill="#E6DCFF">attempt 1 failed</text><path d="M124 149 H150 V79 H166" fill="none" stroke="#667085" strokeWidth="1.6" markerEnd="url(#ndrArrowHead)" /><path d="M124 149 H150 V219 H166" fill="none" stroke="#667085" strokeWidth="1.6" markerEnd="url(#ndrArrowHead)" /><text x="174" y="36" fontSize="11" fontWeight="600" fill="#734DFF">Worked inside the attempt window</text><rect x="174" y="56" width="124" height="46" rx="8" fill="#FFFFFF" stroke="#734DFF" strokeWidth="1.4" /><text x="236" y="77" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">Reach the buyer</text><text x="236" y="93" textAnchor="middle" fontSize="11" fill="#667085">call, then WhatsApp</text><path d="M298 79 H330" fill="none" stroke="#667085" strokeWidth="1.6" markerEnd="url(#ndrArrowHead)" /><rect x="336" y="56" width="124" height="46" rx="8" fill="#FFFFFF" stroke="#734DFF" strokeWidth="1.4" /><text x="398" y="77" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">Fix the cause</text><text x="398" y="93" textAnchor="middle" fontSize="11" fill="#667085">landmark, slot, amount</text><path d="M460 79 H492" fill="none" stroke="#667085" strokeWidth="1.6" markerEnd="url(#ndrArrowHead)" /><rect x="498" y="56" width="112" height="46" rx="8" fill="#7CD548" /><text x="554" y="84" textAnchor="middle" fontSize="13" fontWeight="700" fill="#17300A">Delivered</text><rect x="174" y="196" width="124" height="46" rx="8" fill="#FFFFFF" stroke="#C9CEDA" strokeWidth="1.4" /><text x="236" y="217" textAnchor="middle" fontSize="12" fontWeight="600" fill="#667085">Blind reattempt</text><text x="236" y="233" textAnchor="middle" fontSize="11" fill="#667085">no new information</text><path d="M298 219 H330" fill="none" stroke="#667085" strokeWidth="1.6" markerEnd="url(#ndrArrowHead)" /><rect x="336" y="196" width="124" height="46" rx="8" fill="#FFFFFF" stroke="#C9CEDA" strokeWidth="1.4" /><text x="398" y="217" textAnchor="middle" fontSize="12" fontWeight="600" fill="#667085">Same failure</text><text x="398" y="233" textAnchor="middle" fontSize="11" fill="#667085">attempts 2 and 3</text><path d="M460 219 H492" fill="none" stroke="#667085" strokeWidth="1.6" markerEnd="url(#ndrArrowHead)" /><rect x="498" y="196" width="112" height="46" rx="8" fill="#FFFFFF" stroke="#667085" strokeWidth="1.6" /><text x="554" y="224" textAnchor="middle" fontSize="13" fontWeight="700" fill="#3613B6">RTO</text><text x="174" y="268" fontSize="11" fontWeight="600" fill="#667085">Window missed, or no contact made</text></svg></div></div>
+      <div className="ck-summary"><div className="ck-summary-label">Summary</div><p>A failed delivery attempt is not a return. It is a question from your courier with a short deadline attached, and the parcel is already in the buyer's city with the shipping cost sunk. This is how to triage NDRs by what each reason actually requires, run the queue inside the courier's attempt budget, and turn the reason codes into checkout fixes.</p></div>
+
+      <div className="ck-body">
+        <p className="ck-lede">An NDR — a non-delivery report — is the cheapest recovery opportunity in the whole COD lifecycle, and most brands waste it. The parcel is in the buyer's city. You have already paid to get it there. The customer wanted it enough to place the order. What stands between that and a delivery is usually one phone call, and what stands between it and an RTO is usually nobody making that call before the courier runs out of attempts.</p>
+
+        <h2 id="what-it-is">What an NDR actually represents</h2>
+
+        <p>When a rider cannot complete a delivery, the courier raises an NDR against the shipment with a reason attached and waits for your instruction. That is the whole mechanism: a status, a reason, and a request for a decision. It is not a return, and it is not a cancellation. It is the courier asking whether to try again and, if so, with what new information.</p>
+
+        <p>The decision has a deadline because reattempts are finite. Shiprocket states that a maximum of three delivery attempts are made before a shipment is marked RTO. Amazon Shipping India similarly describes most Indian couriers making two to three attempts in total, and says courier SLAs in India typically allow 24 to 48 hours between attempts. Your own courier contracts will differ in the details, and you should know the exact number and interval for each one you use — but the shape is the same everywhere: a small, fixed budget of attempts, each one consumed whether or not you gave the rider anything new to work with.</p>
+
+        <p>That is the frame that makes everything else follow. You are not managing a queue of problems. You are spending a budget of attempts, and an attempt made without new information is an attempt thrown away.</p>
+
+        <h2 id="the-clock">The clock decides your process design</h2>
+
+        <p>Because attempts are consumed on a courier's schedule rather than yours, an NDR left until tomorrow morning is not an NDR with one day less — it may be an NDR with one of its two remaining attempts already burned, made blind, by a rider who had no more to go on than the day before.</p>
+
+        <p>This single fact rules out the way most small teams handle NDRs, which is to look at the panel when someone has time. The queue has to be worked the day it lands, in a defined window, by a named person. If your volumes are small, that might be twenty minutes at noon and twenty minutes at five. If they are large, it is a shift. Either way it is scheduled, because the alternative is a queue that silently converts itself into returns.</p>
+
+        <p>Two practical consequences. First, your NDR alerts need to reach a human quickly — a panel someone remembers to open is not an alert. Second, your courier's own automated outreach is running in parallel. Many couriers fire an automated SMS or IVR call to the buyer when an NDR is raised; Shiprocket, for example, describes doing exactly that for reasons like the buyer being uncontactable or the premises being closed. Your call is not the first contact the buyer gets, which is an argument for making yours recognisably different: a human, naming your brand and the product, rather than another automated voice about a shipment number.</p>
+
+        <h2 id="triage">Triage by what the reason requires, not by its name</h2>
+
+        <p>Couriers attach a reason to every NDR, and the reason names are reasonably consistent across Indian carriers — customer not available, incomplete or incorrect address, phone unreachable, premises closed, delivery refused, pincode unserviceable. The names are less useful than the grouping, because what matters operationally is what each reason needs from you.</p>
+
+        <p><strong>Address problems need new data.</strong> Incomplete or incorrect address, and confusion between a pincode and the locality actually named. These are the highest-recovery bucket, because the fix is entirely in your hands once you have the buyer on the phone. What you want is not a longer address but a locatable one: a landmark, a nearby shop, a building name as neighbours would say it, a floor. Riders navigate by landmark, not by line two.</p>
+
+        <p><strong>Availability problems need a time.</strong> Customer not available, premises closed. The buyer's address is fine and their intent is fine; they were at work. Asking for a preferred window is obvious. Asking for a fallback recipient — a neighbour, a guard, a shop downstairs, a family member — is what actually converts these, because a second attempt into the same empty flat is another wasted attempt. Confirm the fallback by name and get the buyer to confirm that person can pay.</p>
+
+        <p><strong>Contactability problems need a different channel.</strong> Phone unreachable, phone switched off. The number on the order may be wrong, dormant, or simply screening unknown callers. Try WhatsApp on the same number, since a message lands even when a call does not. Check whether the order carries a second number, and check the email. If the customer has ordered before, you may have a working number on an older order that is not on this one.</p>
+
+        <p><strong>Intent problems are not logistics problems.</strong> Delivery refused, customer asked to cancel. This is the bucket most teams handle worst, because the instinct is to reattempt and hope. A buyer who refused the parcel at the door will refuse it again, and you will pay for two more attempts and the return leg to learn that. Either resolve the actual objection — they didn't recognise the brand, the amount was more than they expected, they ordered twice by accident, they have been waiting too long and bought elsewhere — or release the shipment to RTO deliberately and early, which at least saves the remaining attempt costs. Choosing the return consciously is a better outcome than drifting into it.</p>
+
+        <p>There is a fifth bucket worth separating: shipments where the buyer insists nobody came. It is a real failure mode, it needs a different response, and it is covered below.</p>
+
+        <h2 id="sequence">The contact sequence</h2>
+
+        <p>Call first. Voice is the only channel that reliably extracts new information — a landmark, a window, a fallback recipient — because it is a conversation rather than a form. Text is for the record and for buyers you cannot reach by voice.</p>
+
+        <p>If the first call goes unanswered, the second call should come from a different number. Indian buyers screen unknown numbers heavily, and a repeat from the same unrecognised caller ID reads as spam. Space the two calls by hours rather than minutes; back-to-back rings annoy without informing.</p>
+
+        <p>Then WhatsApp, and make the message do work the courier's SMS cannot. Name your brand, name the product, state the amount payable, and ask one question with the answers offered as options: today evening, tomorrow morning, or cancel. A message with a single closed question gets replies; a message asking the buyer to compose a new address does not. If your courier or app supports it, include the tracking link so the buyer can see the parcel is real.</p>
+
+        <p>SMS is a third channel, not a second one — it is worth sending because it costs almost nothing, not because it converts.</p>
+
+        <p>Log the outcome against the order itself, not in a separate sheet. The person handling the reattempt, the person handling tomorrow's repeat offender, and the person reviewing recovery rates at the end of the month all need the same record, and a spreadsheet that lives on one laptop serves none of them.</p>
+
+        <h2 id="what-to-say">What to say when they pick up</h2>
+
+        <p>Lead with the order, not the failure. "This is <em>brand</em> calling about your order of <em>product</em> — our delivery partner tried to reach you today and couldn't." The buyer now knows who you are, what the parcel is, and that you are not a scam. Nothing in that sentence accuses them of anything, which matters more than it sounds: a buyer who feels blamed for a missed delivery cancels.</p>
+
+        <p>Then one closed question, and options. "Can we try again tomorrow morning, or would evening suit you better?" Open questions produce vague answers that the rider cannot act on.</p>
+
+        <p>Confirm the amount payable out loud. Surprise at the door is a refusal cause in its own right, especially where shipping or a COD handling fee was added at checkout and the buyer remembers the product price. Saying the number now removes that failure mode entirely.</p>
+
+        <p>And this is the single best moment in the entire order lifecycle to offer the prepaid switch. The buyer is already thinking about the parcel, already mildly inconvenienced, and already on the phone. A payment link sent while you are talking to them converts an order you were about to send out on a second risky attempt into a prepaid order, removes the cash-handling step at the door, and makes the reattempt materially more likely to succeed. A small discount for paying now is usually cheaper than the return leg you are trying to avoid. Of all the places to run prepaid conversion, this one has the most willing audience.</p>
+
+        <h2 id="fake-attempts">When the attempt did not happen</h2>
+
+        <p>Some share of your NDRs will be marked as a failed attempt when the buyer says no one called and no one came. This is a known failure mode in Indian last-mile delivery, and arguing with the customer about it is both futile and insulting.</p>
+
+        <p>Handle it in two tracks. With the buyer, accept their account, apologise, and reschedule — they are not the problem and they are still willing. With the courier, raise it per shipment with whatever evidence you can assemble: the NDR timestamp, the buyer's statement, whether any call to the buyer's number is logged, and the attempt location if your courier exposes it.</p>
+
+        <p>The part that actually changes anything is the tally. One disputed attempt is noise. The same hub producing disputed attempts week after week is a pattern, and a pattern is a conversation with your account manager that you can win because you brought shipment IDs rather than a complaint. If it does not improve, it is a reason to shift that lane to another courier — which is slower and less satisfying than escalating, and the only lever that reliably works.</p>
+
+        <h2 id="queue">Running the queue</h2>
+
+        <p>Give it an owner. NDR handling fails when it is everybody's secondary task, because its deadline is invisible until the RTOs appear two weeks later.</p>
+
+        <p>Prioritise within the day, because attempts are scarce and time is the binding constraint. High order value first, since the loss is largest and the effort per order is the same. Then oldest NDR, since those have the fewest attempts left. Then the reason buckets with the best recovery odds — address and availability problems — ahead of refusals, which need more time and convert less often.</p>
+
+        <p>Write down the give-up rule before you need it. Something like: two voice attempts from different numbers, one WhatsApp, and if there is no response within a defined number of hours, release to RTO. Without a written rule the queue fills with orders nobody will close and nobody will kill, and the team's time goes to the hopeless ones rather than the winnable ones. Releasing early also returns stock to the saleable pool sooner, which matters during a festive run when the same SKU is selling.</p>
+
+        <p>Decide in advance who can authorise what. If the agent on the phone cannot offer a discount, waive a handling fee, or push the reattempt to a different courier, every interesting case becomes an escalation and the clock runs out during it. Small, bounded authority at the point of contact is worth more than perfect control.</p>
+
+        <h2 id="measure">What to measure</h2>
+
+        <p>Four numbers, and they answer different questions.</p>
+
+        <p><strong>NDR rate</strong> — NDRs as a share of shipments — is an upstream quality signal. It tells you about address quality, phone quality and courier performance, not about your NDR team.</p>
+
+        <p><strong>Contact rate</strong> — the share of NDRs where you reached an actual human — is your process signal. It is the number your channel mix and your calling discipline move, and it caps everything downstream.</p>
+
+        <p><strong>Recovery rate</strong> — the share of NDRs eventually delivered — is the outcome. Track it separately for orders where you made contact and orders where you did not; the gap between those two is the clearest statement of what the function is worth.</p>
+
+        <p><strong>Time to first contact</strong> is the lever. Of everything in this article, this is the variable most directly under your control and most tightly coupled to recovery, because it determines whether your information reaches the rider before the next attempt or after it.</p>
+
+        <p>Split all four by courier, by lane, by reason, and by first-time versus repeat buyer. The comparison that teaches you the most is the same lane across two couriers: when identical pincodes produce materially different NDR rates with different carriers, the difference is the carrier, and you can act on it. Where you have the volume, that is also the honest way to decide courier allocation — on your own delivery data rather than on rate cards.</p>
+
+        <h2 id="upstream">Feed the reasons back upstream</h2>
+
+        <p>Your NDR reason mix is a free diagnostic report on your checkout, and it is the part of NDR management with compounding returns. Recovery saves one order. Prevention saves every future order with the same defect.</p>
+
+        <p>A high share of address-quality NDRs points at your address capture — missing landmark field, no pincode-to-locality check, no validation on a suspiciously short address, an autofill that produces plausible nonsense. A high share of unreachable-phone NDRs points at number capture: no format validation, no verification step, numbers typed with a digit missing. Refusals point further upstream still — at product page expectations, at sizing information, at dispatch speed, at whether the total shown at checkout matches what the rider asks for at the door.</p>
+
+        <p>Repeat offenders deserve their own treatment. A buyer with multiple refused COD parcels across orders is not a recovery problem, they are a rules problem: prepaid-only, or a required advance, or a block. Pulling that pattern out of your own order history is more reliable than any shared blocklist, because it is your catalogue and your lanes.</p>
+
+        <p>The frame worth holding onto: an NDR you recover costs a phone call and a reattempt. An NDR you prevent costs nothing at all, and the reasons stacking up in your panel are telling you precisely which ones were preventable.</p>
+
+        <p>COD King sits at the prevention end of this — verifying COD orders, collecting an advance, and applying rules by pincode and customer history before a parcel is dispatched, so that fewer orders reach the NDR queue in the first place. The recovery work itself still belongs to your team and your courier panel, and it is worth staffing properly either way.</p>
+      </div>
+    </div>
+
+    <div className="ck-col-right"><div className="ck-sticky"><div className="ck-toc-label">On this page</div><div className="ck-toc"><a href="#what-it-is">What an NDR is</a><a href="#the-clock">The clock</a><a href="#triage">Triage by reason</a><a href="#sequence">Contact sequence</a><a href="#what-to-say">What to say</a><a href="#fake-attempts">Disputed attempts</a><a href="#queue">Running the queue</a><a href="#measure">What to measure</a><a href="#upstream">Feed it upstream</a></div><div className="ck-cta"><input type="email" placeholder="Email address" /><a href="https://codking.tech" className="ck-btn-primary">Start for free</a><a href="https://codking.tech" className="ck-btn-secondary">Contact sales</a></div></div></div>
+  </div>
+
+  <div className="ck-footer">
+    <div className="ck-footer-inner">
+      <div className="ck-footer-brand">
+        <div className="ck-footer-logo">COD King</div>
+        <p className="ck-footer-tagline">Practical guides, strategies, and product insights for Shopify merchants managing Cash on Delivery.</p>
+      </div>
+
+      <div className="ck-footer-cols">
+        <div className="ck-footer-col">
+          <div className="ck-footer-head">Blog</div>
+          <a href="/blog">All articles</a>
+          <a href="/blog/understanding-cod-verification">Understanding COD Verification</a>
+          <a href="/blog/reduce-rto-for-cod-orders">How to Reduce RTO for COD Orders</a>
+          <a href="/blog/ndr-management-cod-orders">NDR Management</a>
+          <a href="/blog/rto-benchmarks-india">RTO Benchmarks for Indian D2C</a>
+          <a href="/blog/cod-to-prepaid-conversion">COD to Prepaid Conversion</a>
+          <a href="/blog/partial-cod-payment-advance-amount">How Much COD Advance to Collect</a>
+          <a href="/blog/best-cod-verification-apps-shopify">Best COD Verification Apps</a>
+          <a href="/blog/native-checkout-vs-cod-order-form">Native Checkout vs COD Form</a>
+          <a href="/blog/how-to-reduce-cod-cancellations">How to Reduce COD Cancellations</a>
+          <a href="/blog/shopify-checkout-optimization">Checkout Optimization for Shopify Stores</a>
+          <a href="/blog/payment-options-indian-ecommerce">Payment Options for Indian E-commerce</a>
+        </div>
+
+        <div className="ck-footer-col">
+          <div className="ck-footer-head">COD King</div>
+          <a href="https://apps.shopify.com/cash-on-delivery-cod-order-confirmation" target="_blank" rel="noreferrer">Shopify App Store</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="ck-footer-bottom">© 2026 COD King</div>
+  </div>
+</div>

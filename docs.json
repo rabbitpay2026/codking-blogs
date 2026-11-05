@@ -30,7 +30,8 @@
               "blog/cod-rto",
               "blog/payments",
               "blog/tooling",
-              "blog/native-checkout-vs-cod-order-form"
+              "blog/native-checkout-vs-cod-order-form",
+              "blog/ndr-management-cod-orders"
             ]
           }
         ]
