@@ -1,0 +1,205 @@
+---
+title: "Courier Allocation for COD Orders: Route by Lane, Not by Rate Card"
+sidebarTitle: "Courier Allocation"
+description: "Most Shopify brands pick a courier per order by price or by habit. The couriers that deliver COD best are lane-specific. How to build an allocation table from your own delivery data."
+mode: "custom"
+public: true
+isPublic: true
+hideFooterPagination: true
+tag: "COD & RTO"
+---
+
+<div className="ck-shell">
+  <a href="/blog" className="ck-back">← All articles</a>
+
+  <div className="ck-head">
+    <div className="ck-eyebrow">COD & RTO · November 2026</div>
+    <h1 className="ck-title">Courier Allocation for COD Orders: Route by Lane, Not by Rate Card</h1>
+    <div className="ck-readtime">11 minutes read</div>
+  </div>
+
+  <div className="ck-layout">
+    <div className="ck-col-left">
+      <div className="ck-sticky">
+        <div className="ck-author-mount" data-category="COD & RTO" data-slug="courier-allocation-cod-orders" />
+
+        <div className="ck-navlabel" style={{marginTop:'32px',paddingTop:'24px',borderTop:'1px solid var(--ck-border)'}}>COD & RTO</div>
+
+        <div className="ck-nav">
+          <a href="/blog/reduce-rto-for-cod-orders">Reducing RTO</a>
+          <a href="/blog/ndr-management-cod-orders">NDR Management</a>
+          <a href="/blog/courier-allocation-cod-orders" className="is-current">Courier Allocation</a>
+          <a href="/blog/rto-benchmarks-india">RTO Benchmarks</a>
+          <a href="/blog/understanding-cod-verification">COD Verification</a>
+        </div>
+
+        <div className="ck-navlabel" style={{marginTop:'24px'}}>Payments & Pricing</div>
+
+        <div className="ck-nav">
+          <a href="/blog/cod-to-prepaid-conversion">COD to Prepaid</a>
+          <a href="/blog/partial-cod-payment-advance-amount">COD Advance Amount</a>
+          <a href="/blog/payment-options-indian-ecommerce">Payment Options</a>
+        </div>
+
+        <div className="ck-navlabel" style={{marginTop:'24px'}}>Tooling & Checkout</div>
+
+        <div className="ck-nav">
+          <a href="/blog/best-cod-verification-apps-shopify">Choosing a COD App</a>
+          <a href="/blog/native-checkout-vs-cod-order-form">Checkout vs COD Form</a>
+          <a href="/blog/how-to-reduce-cod-cancellations">COD Cancellations</a>
+          <a href="/blog/shopify-checkout-optimization">Checkout Optimization</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="ck-col-main">
+      <div className="ck-cover ck-cover--codrto" style={{background:'#F1ECFF','--ck-cover-fg':'#2A1E5C','--ck-cover-accent':'#734DFF',aspectRatio:'2 / 1'}}><div className="ck-cover-art"><svg viewBox="0 0 660 330" style={{width:'100%',height:'auto'}} role="img" aria-label="Allocation loop: classify the lane, score couriers on that lane, allocate, log the outcome back into the lane record"><defs><marker id="ckArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#734DFF" /></marker></defs><rect x="20" y="46" width="130" height="56" rx="10" fill="#FFFFFF" stroke="#734DFF" strokeWidth="1.5" /><text x="85" y="79" textAnchor="middle" fontSize="13" fontWeight="600" fill="#111111">COD order</text><rect x="186" y="46" width="130" height="56" rx="10" fill="#FFFFFF" stroke="#734DFF" strokeWidth="1.5" /><text x="251" y="71" textAnchor="middle" fontSize="13" fontWeight="600" fill="#111111">Classify</text><text x="251" y="88" textAnchor="middle" fontSize="13" fontWeight="600" fill="#111111">the lane</text><rect x="352" y="46" width="130" height="56" rx="10" fill="#FFFFFF" stroke="#734DFF" strokeWidth="1.5" /><text x="417" y="71" textAnchor="middle" fontSize="13" fontWeight="600" fill="#111111">Score couriers</text><text x="417" y="88" textAnchor="middle" fontSize="13" fontWeight="600" fill="#111111">on that lane</text><rect x="518" y="46" width="130" height="56" rx="10" fill="#3613B6" stroke="#3613B6" strokeWidth="1.5" /><text x="583" y="79" textAnchor="middle" fontSize="13" fontWeight="600" fill="#FFFFFF">Allocate</text><path d="M 150 74 H 180" stroke="#734DFF" strokeWidth="1.5" fill="none" markerEnd="url(#ckArrow)" /><path d="M 316 74 H 346" stroke="#734DFF" strokeWidth="1.5" fill="none" markerEnd="url(#ckArrow)" /><path d="M 482 74 H 512" stroke="#734DFF" strokeWidth="1.5" fill="none" markerEnd="url(#ckArrow)" /><text x="196" y="128" fontSize="11" fill="#667085">zone</text><text x="196" y="146" fontSize="11" fill="#667085">pincode tier</text><text x="196" y="164" fontSize="11" fill="#667085">weight band</text><text x="362" y="128" fontSize="11" fill="#667085">delivery rate</text><text x="362" y="146" fontSize="11" fill="#667085">RTO rate</text><text x="362" y="164" fontSize="11" fill="#667085">NDR recovery</text><text x="362" y="182" fontSize="11" fill="#667085">transit days</text><rect x="240" y="228" width="240" height="52" rx="10" fill="#EEF6E7" stroke="#7CD548" strokeWidth="1.5" /><text x="360" y="249" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">Log the outcome against the lane</text><text x="360" y="266" textAnchor="middle" fontSize="11" fill="#667085">delivered · RTO · NDR reason code</text><path d="M 583 102 V 254 H 486" stroke="#734DFF" strokeWidth="1.5" fill="none" markerEnd="url(#ckArrow)" /><path d="M 240 254 H 165 V 74 H 180" stroke="#7CD548" strokeWidth="1.5" fill="none" markerEnd="url(#ckArrow)" /><text x="30" y="250" fontSize="11" fill="#667085">The table is rebuilt</text><text x="30" y="266" fontSize="11" fill="#667085">from your own outcomes</text><text x="30" y="310" fontSize="11" fontWeight="600" fill="#2A1E5C">ALLOCATION IS A LOOP, NOT A SETTING</text></svg></div></div>
+      <div className="ck-summary"><div className="ck-summary-label">Summary</div><p>Courier performance on COD is not a property of the courier. It is a property of the courier on a specific lane, at a specific weight, in a specific month. Allocation that ignores that is leaving delivery percentage on the table — and the fix is a table you build from your own shipment outcomes, not from a rate card.</p></div>
+
+      <div className="ck-body">
+        <p className="ck-lede">Ask ten Shopify operators how they choose a courier for a COD order and most will describe one of two systems. Either everything goes to one partner because that is who they onboarded, or the aggregator picks the cheapest serviceable option and nobody looks again. Both systems are allocating on the one variable that barely matters for COD, and ignoring the one that decides whether the parcel comes back.</p>
+
+        <p>On a prepaid order, shipping cost is close to the whole story. The money is already collected; the parcel either arrives or it is a service problem. On a COD order, allocation is a revenue decision. A courier that delivers eight parcels out of ten on a route where another delivers nine is not a few rupees cheaper — it is costing you a tenth of your orders on that route, plus the return leg, plus the stock sitting in transit for a fortnight. A rate difference of a few rupees per shipment is noise against that.</p>
+
+        <h2 id="lane">What a lane actually is</h2>
+
+        <p>A lane is the combination of attributes that determines which physical network handles your parcel. At minimum it is three things.</p>
+
+        <p><strong>Origin and destination zone.</strong> Where the parcel is picked up and where it is going. A courier that is excellent on a metro-to-metro route may be running a franchise or a third-party last mile on an intercity route, and the delivery experience is not comparable.</p>
+
+        <p><strong>Destination pincode tier.</strong> Metro, tier-2 city, small town, rural. This matters more than the zone does. Most couriers in India operate their own last mile in large cities and some form of partner arrangement beyond that, and the quality of the partner arrangement varies by region and by courier. Two couriers can both report a pincode as serviceable and mean quite different things by it.</p>
+
+        <p><strong>Weight and dimension band.</strong> The handling path for a 300g polybag is not the handling path for a 4kg box. Couriers that handle light apparel well are not necessarily the ones that handle bulky parcels without damage, and damage on a COD parcel usually becomes a refusal at the door.</p>
+
+        <p>You can add more dimensions later — product category, order value band, whether the address is residential or commercial — but those three produce most of the available gain. Resist the urge to start with twelve dimensions. The constraint on this exercise is sample size, and every dimension you add splits your data.</p>
+
+        <h2 id="signals">The four signals worth scoring</h2>
+
+        <p>For each courier on each lane, four numbers tell you almost everything. Pull them from your own shipment history, not from a courier's reported SLA.</p>
+
+        <p><strong>Delivered share.</strong> Of parcels handed to this courier on this lane, what proportion ended as a successful delivery. This is the number that matters most and the one most often replaced by a proxy.</p>
+
+        <p><strong>RTO share.</strong> Of the same set, what proportion came back. Delivered share and RTO share do not sum to one, because parcels can also be lost, damaged, or sitting unresolved — and the gap between them is itself informative. A courier with a low RTO share and a mediocre delivered share is often one that leaves parcels in limbo rather than returning them, which is worse for your cash position than a clean return.</p>
+
+        <p><strong>NDR recovery rate.</strong> Of the parcels that hit a non-delivery event on this lane, what share were eventually delivered on a reattempt. This separates couriers whose field staff will genuinely retry from couriers whose reattempt is a phone call that goes unanswered. If you have invested in NDR handling, this number tells you which partner your effort actually works with.</p>
+
+        <p><strong>Median transit days to first attempt.</strong> Not average — median, because a few stuck parcels will drag an average and hide the typical experience. Transit time matters on COD beyond customer patience: the longer the gap between order and doorstep, the more time there is for the purchase intent to decay, for the customer to buy the item elsewhere, or for them simply to be away when the parcel arrives.</p>
+
+        <p>Note what is absent from that list. Cost is not a scoring signal; it is a tie-breaker applied after the delivery signals have narrowed the field. And courier-reported SLA percentages are not on the list at all, because they are measured against the courier's own definitions and aggregated across a national network that includes none of your specific lanes.</p>
+
+        <h2 id="table">Building the table</h2>
+
+        <p>Export your shipment history — every COD order with its destination pincode, weight, assigned courier, and final status. Twelve months is ideal; six is workable. Then do the following.</p>
+
+        <p><strong>Map pincodes to tiers.</strong> You need a tier label on every destination. Most aggregators expose some classification, and if yours does not, a crude three-way split by city population is enough to start. Precision here matters less than consistency.</p>
+
+        <p><strong>Bucket the weights.</strong> Two or three bands, chosen where your catalogue actually clusters rather than at round numbers. If nearly everything you ship is under 500g, splitting at 500g gives you one meaningful bucket and one empty one.</p>
+
+        <p><strong>Group and count.</strong> Pivot by courier, zone, tier, and weight band, then compute the four signals for each cell. The output is a table with one row per courier per lane.</p>
+
+        <p><strong>Discard thin cells.</strong> This is the step people skip and it is the one that decides whether the exercise helps or hurts. A cell with eleven shipments does not tell you a courier's delivery rate on that lane; it tells you what happened to eleven parcels. Set a minimum — a few hundred shipments per cell is comfortable, a hundred is defensible, anything in the dozens is a story you are telling yourself. Where cells are too thin, collapse a dimension: merge weight bands first, then tiers, and keep the zone split, because zone is where the real network differences sit.</p>
+
+        <p>What you will find, almost always, is that no courier wins everywhere. One partner is reliably strongest into tier-2 and tier-3 destinations in one region, another dominates metro deliveries, a third is unremarkable on average but has the best NDR recovery in exactly the places where your refusals concentrate. That pattern is the whole reason allocation beats a default.</p>
+
+        <h2 id="scoring">Turning the table into a decision</h2>
+
+        <p>Once you have per-lane signals, allocation is mechanical. For each lane, rank couriers on delivered share, then apply three adjustments.</p>
+
+        <p><strong>Treat differences inside the noise band as ties.</strong> If two couriers are within a point or two of each other on a cell with a few hundred shipments, you do not have a winner. Call it a tie and let cost decide — this is where rate cards belong in the process.</p>
+
+        <p><strong>Penalise slow transit, not just failure.</strong> A courier with the best delivered share and a transit time several days longer than the alternative is not obviously the right pick for a COD parcel, because the delay is itself a refusal risk and a working-capital cost. Weight transit time explicitly rather than letting it in through the back door.</p>
+
+        <p><strong>Keep a second courier live on every lane.</strong> Never allocate a lane entirely to one partner, however good the numbers look. Send a minority share to the runner-up. This costs you a little delivery percentage and buys three things: a live comparison that keeps your table honest, a fallback when the primary has a regional disruption, and negotiating position. A courier that knows it holds all your volume on a route behaves differently from one that can see it slipping.</p>
+
+        <h2 id="exceptions">The overrides worth hard-coding</h2>
+
+        <p>A few rules should sit above the scoring table, because they encode things the averages cannot see.</p>
+
+        <p><strong>High-value orders.</strong> On a parcel where a single RTO is genuinely painful, take the most reliable courier on that lane regardless of cost. The rate difference is irrelevant against the downside.</p>
+
+        <p><strong>Repeat customers.</strong> A proven buyer deserves your best delivery experience, not your cheapest. These are the orders where the lifetime value is real and a bad delivery costs you more than the margin on the order.</p>
+
+        <p><strong>Reattempts and reshipments.</strong> If a parcel failed with one courier and you are sending it again, send it with a different one. The reason the first attempt failed may have been the address, but it may equally have been that branch, that rider, or that partner's local arrangement — and reusing the same path reruns the same risk.</p>
+
+        <p><strong>Known-difficult pincodes.</strong> Where your own data shows a destination with chronically poor outcomes across every courier, the answer is usually not a better courier. It is a verification step, an advance payment, or a prepaid-only rule — covered in more depth in our guides on <a href="/blog/understanding-cod-verification">COD verification</a> and <a href="/blog/partial-cod-payment-advance-amount">partial advances</a>.</p>
+
+        <h2 id="drift">Why this decays if you leave it alone</h2>
+
+        <p>The hardest thing to internalise about courier performance is that it is not a fixed property. It moves, and it moves for reasons you will not be told about.</p>
+
+        <p>Couriers change last-mile partners in a region. A hub reaches capacity and starts holding parcels. A franchise changes hands. Pricing pressure in one market leads to thinner staffing. Festive season volumes overwhelm networks unevenly, so the ranking that held in August does not hold in October. None of this appears in an announcement; it appears as a quiet drift in your delivery percentage on specific lanes, which is invisible if you only look at a store-wide average.</p>
+
+        <p>So rebuild the table on a schedule — monthly if your volume supports it, quarterly at minimum — and look at the trend per lane rather than the level. A courier whose delivered share on one lane has slid for three consecutive periods is telling you something about that lane, and it is worth acting on before the gap gets wide. Keep the previous versions of the table. The history is what lets you distinguish a seasonal dip from a structural decline.</p>
+
+        <p>It also helps to watch NDR reason codes by courier on the same cadence. A rising share of one particular code on one courier's lane — customer unreachable, address incomplete, customer refused — is a more specific diagnosis than a falling delivery rate, and it usually points at whether the problem is the network, your address capture, or your order quality.</p>
+
+        <h2 id="measuring">Proving it worked</h2>
+
+        <p>Allocation changes are easy to fool yourself about, because delivery percentage moves for many reasons at once. Two habits make the measurement honest.</p>
+
+        <p>First, measure at the lane level, not the store level. Store-wide delivered share is a weighted average of your lane mix, so a marketing campaign that shifts your geography can move it without any change in operational performance. Lane-level numbers are comparable period to period.</p>
+
+        <p>Second, keep the minority split running and compare within the lane and the period. If the primary courier is beating the secondary on the same lane in the same month, that is a clean comparison, with seasonality, your address quality, and your own verification process held constant. It is the closest thing to a controlled test that courier allocation allows, and it is free — you are shipping those parcels anyway.</p>
+
+        <p>One warning on expectations. Allocation is a compounding, unglamorous gain. It will not halve your RTO rate, because the largest drivers of COD failure sit upstream of the courier: order intent, address quality, verification, and dispatch speed. What it does is stop you giving away delivery percentage for no reason, every day, on routes where a better option was already available at a similar price.</p>
+
+        <h2 id="failures">Four ways this goes wrong</h2>
+
+        <p><strong>Deciding on thin data.</strong> The most common failure. A courier has a bad week on a lane with forty shipments, gets demoted, and the brand concludes a partner is unreliable. Sample size discipline is the difference between allocation and superstition.</p>
+
+        <p><strong>Optimising only on cost once the table exists.</strong> Having done the work, it is tempting to use the table to justify moving everything to the cheapest option that is not clearly terrible. That inverts the point of the exercise.</p>
+
+        <p><strong>Too many dimensions, too early.</strong> Category, value band, residential flag, time of day — each one halves your cells and doubles your certainty while removing the basis for it.</p>
+
+        <p><strong>Treating a courier's serviceability list as a delivery promise.</strong> Serviceable means the courier will accept the parcel. It carries no commitment about reattempts, cash handling, or whether the last mile is staffed by people whose incentives align with delivering a COD parcel. Your own outcome data is the only answer to that question.</p>
+
+        <h2 id="start">Where to start if you have never done this</h2>
+
+        <p>Do not try to build the full matrix in week one. Take your single highest-volume lane — most brands have one destination zone and tier that accounts for a large share of shipments — and run the comparison there with two couriers. One lane, two partners, four signals, a few months of history.</p>
+
+        <p>If the two are genuinely equivalent, you have learned something cheap and you can route on price with confidence. If they are not, you have found a gap that is applying to a meaningful share of your order book right now, and the fix is a routing rule rather than a project.</p>
+
+        <p>Then add the second lane.</p>
+
+        <p>COD King sits upstream of this: it verifies orders and converts them to prepaid before they are packed, so fewer doubtful parcels enter the network at all. Which courier carries the ones that do ship is a decision your aggregator or shipping app makes — and it is worth making it on your own delivery data rather than a rate card.</p>
+      </div>
+    </div>
+
+    <div className="ck-col-right"><div className="ck-sticky"><div className="ck-toc-label">On this page</div><div className="ck-toc"><a href="#lane">What a lane is</a><a href="#signals">Four signals</a><a href="#table">Building the table</a><a href="#scoring">Making the decision</a><a href="#exceptions">Overrides</a><a href="#drift">Why it decays</a><a href="#measuring">Proving it worked</a><a href="#failures">Failure modes</a><a href="#start">Where to start</a></div><div className="ck-cta"><input type="email" placeholder="Email address" /><a href="https://codking.tech" className="ck-btn-primary">Start for free</a><a href="https://codking.tech" className="ck-btn-secondary">Contact sales</a></div></div></div>
+  </div>
+
+  <div className="ck-footer">
+    <div className="ck-footer-inner">
+      <div className="ck-footer-brand">
+        <div className="ck-footer-logo">COD King</div>
+        <p className="ck-footer-tagline">Practical guides, strategies, and product insights for Shopify merchants managing Cash on Delivery.</p>
+      </div>
+
+      <div className="ck-footer-cols">
+        <div className="ck-footer-col">
+          <div className="ck-footer-head">Blog</div>
+          <a href="/blog">All articles</a>
+          <a href="/blog/understanding-cod-verification">Understanding COD Verification</a>
+          <a href="/blog/reduce-rto-for-cod-orders">How to Reduce RTO for COD Orders</a>
+          <a href="/blog/ndr-management-cod-orders">NDR Management</a>
+          <a href="/blog/courier-allocation-cod-orders">Courier Allocation for COD Orders</a>
+          <a href="/blog/rto-benchmarks-india">RTO Benchmarks for Indian D2C</a>
+          <a href="/blog/cod-to-prepaid-conversion">COD to Prepaid Conversion</a>
+          <a href="/blog/partial-cod-payment-advance-amount">How Much COD Advance to Collect</a>
+          <a href="/blog/best-cod-verification-apps-shopify">Best COD Verification Apps</a>
+          <a href="/blog/native-checkout-vs-cod-order-form">Native Checkout vs COD Form</a>
+          <a href="/blog/how-to-reduce-cod-cancellations">How to Reduce COD Cancellations</a>
+          <a href="/blog/shopify-checkout-optimization">Checkout Optimization for Shopify Stores</a>
+          <a href="/blog/payment-options-indian-ecommerce">Payment Options for Indian E-commerce</a>
+        </div>
+
+        <div className="ck-footer-col">
+          <div className="ck-footer-head">COD King</div>
+          <a href="https://apps.shopify.com/cash-on-delivery-cod-order-confirmation" target="_blank" rel="noreferrer">Shopify App Store</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="ck-footer-bottom">© 2026 COD King</div>
+  </div>
+</div>

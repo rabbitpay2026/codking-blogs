@@ -31,7 +31,8 @@
               "blog/payments",
               "blog/tooling",
               "blog/native-checkout-vs-cod-order-form",
-              "blog/ndr-management-cod-orders"
+              "blog/ndr-management-cod-orders",
+              "blog/courier-allocation-cod-orders"
             ]
           }
         ]
