@@ -32,7 +32,8 @@
               "blog/tooling",
               "blog/native-checkout-vs-cod-order-form",
               "blog/ndr-management-cod-orders",
-              "blog/courier-allocation-cod-orders"
+              "blog/courier-allocation-cod-orders",
+              "blog/whatsapp-vs-sms-vs-ivr-cod-verification"
             ]
           }
         ]

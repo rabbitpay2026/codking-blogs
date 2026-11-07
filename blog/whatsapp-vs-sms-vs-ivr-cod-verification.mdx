@@ -1,0 +1,201 @@
+---
+title: "WhatsApp vs SMS vs IVR for COD Verification: Reach, Cost and Compliance"
+sidebarTitle: "WhatsApp vs SMS vs IVR"
+description: "The three COD verification channels are not substitutes. What Meta actually charges for WhatsApp templates, what TRAI's DLT rules require of SMS and voice, and how to sequence all three instead of picking one."
+mode: "custom"
+public: true
+isPublic: true
+hideFooterPagination: true
+tag: "Tooling & Checkout"
+---
+
+<div className="ck-shell">
+  <a href="/blog" className="ck-back">← All articles</a>
+
+  <div className="ck-head">
+    <div className="ck-eyebrow">Tooling & Checkout · November 2026</div>
+    <h1 className="ck-title">WhatsApp vs SMS vs IVR for COD Verification: Reach, Cost and Compliance</h1>
+    <div className="ck-readtime">11 minutes read</div>
+  </div>
+
+  <div className="ck-layout">
+    <div className="ck-col-left">
+      <div className="ck-sticky">
+        <div className="ck-author-mount" data-category="Tooling & Checkout" data-slug="whatsapp-vs-sms-vs-ivr-cod-verification" />
+
+        <div className="ck-navlabel" style={{marginTop:'32px',paddingTop:'24px',borderTop:'1px solid var(--ck-border)'}}>COD & RTO</div>
+
+        <div className="ck-nav">
+          <a href="/blog/reduce-rto-for-cod-orders">Reducing RTO</a>
+          <a href="/blog/ndr-management-cod-orders">NDR Management</a>
+          <a href="/blog/courier-allocation-cod-orders">Courier Allocation</a>
+          <a href="/blog/rto-benchmarks-india">RTO Benchmarks</a>
+          <a href="/blog/understanding-cod-verification">COD Verification</a>
+        </div>
+
+        <div className="ck-navlabel" style={{marginTop:'24px'}}>Payments & Pricing</div>
+
+        <div className="ck-nav">
+          <a href="/blog/cod-to-prepaid-conversion">COD to Prepaid</a>
+          <a href="/blog/partial-cod-payment-advance-amount">COD Advance Amount</a>
+          <a href="/blog/payment-options-indian-ecommerce">Payment Options</a>
+        </div>
+
+        <div className="ck-navlabel" style={{marginTop:'24px'}}>Tooling & Checkout</div>
+
+        <div className="ck-nav">
+          <a href="/blog/best-cod-verification-apps-shopify">Choosing a COD App</a>
+          <a href="/blog/native-checkout-vs-cod-order-form">Checkout vs COD Form</a>
+          <a href="/blog/whatsapp-vs-sms-vs-ivr-cod-verification" className="is-current">WhatsApp vs SMS vs IVR</a>
+          <a href="/blog/how-to-reduce-cod-cancellations">COD Cancellations</a>
+          <a href="/blog/shopify-checkout-optimization">Checkout Optimization</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="ck-col-main">
+      <div className="ck-cover ck-cover--verification" style={{background:'#EEF6E7','--ck-cover-fg':'#2E4A18','--ck-cover-accent':'#6FBE3A',aspectRatio:'2 / 1'}}><div className="ck-cover-art"><svg viewBox="0 0 660 330" style={{width:'100%',height:'auto'}} role="img" aria-label="Three verification channels compared on reach, how they are priced and what they must be registered with, resolving into a fallback ladder rather than a single choice"><defs><marker id="ckArrowG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#6FBE3A" /></marker></defs><rect x="140" y="26" width="160" height="40" rx="9" fill="#3613B6" /><text x="220" y="51" textAnchor="middle" fontSize="13" fontWeight="600" fill="#FFFFFF">WhatsApp</text><rect x="312" y="26" width="160" height="40" rx="9" fill="#3613B6" /><text x="392" y="51" textAnchor="middle" fontSize="13" fontWeight="600" fill="#FFFFFF">SMS</text><rect x="484" y="26" width="156" height="40" rx="9" fill="#3613B6" /><text x="562" y="51" textAnchor="middle" fontSize="13" fontWeight="600" fill="#FFFFFF">IVR / voice</text><text x="20" y="98" fontSize="11" fontWeight="600" fill="#2E4A18">REACHES</text><text x="148" y="98" fontSize="11" fontWeight="600" fill="#111111">Installed users</text><text x="320" y="98" fontSize="11" fontWeight="600" fill="#111111">Every handset</text><text x="492" y="98" fontSize="11" fontWeight="600" fill="#111111">Non-readers too</text><line x1="20" y1="112" x2="640" y2="112" stroke="#D6E8C4" strokeWidth="1" /><text x="20" y="136" fontSize="11" fontWeight="600" fill="#2E4A18">PRICED ON</text><text x="148" y="136" fontSize="11" fontWeight="600" fill="#111111">Delivered message</text><text x="320" y="136" fontSize="11" fontWeight="600" fill="#111111">Message sent</text><text x="492" y="136" fontSize="11" fontWeight="600" fill="#111111">Call duration</text><line x1="20" y1="150" x2="640" y2="150" stroke="#D6E8C4" strokeWidth="1" /><text x="20" y="174" fontSize="11" fontWeight="600" fill="#2E4A18">REGISTER</text><text x="148" y="174" fontSize="11" fontWeight="600" fill="#111111">Template category</text><text x="320" y="174" fontSize="11" fontWeight="600" fill="#111111">DLT header + body</text><text x="492" y="174" fontSize="11" fontWeight="600" fill="#111111">DLT + dialer rules</text><line x1="20" y1="188" x2="640" y2="188" stroke="#D6E8C4" strokeWidth="1" /><rect x="20" y="214" width="620" height="58" rx="10" fill="#FFFFFF" stroke="#6FBE3A" strokeWidth="1.5" /><text x="40" y="238" fontSize="12" fontWeight="600" fill="#111111">Order</text><path d="M 84 234 H 112" stroke="#6FBE3A" strokeWidth="1.5" fill="none" markerEnd="url(#ckArrowG)" /><text x="120" y="238" fontSize="12" fontWeight="600" fill="#111111">WhatsApp</text><path d="M 194 234 H 222" stroke="#6FBE3A" strokeWidth="1.5" fill="none" markerEnd="url(#ckArrowG)" /><text x="230" y="238" fontSize="12" fontWeight="600" fill="#111111">SMS</text><path d="M 266 234 H 294" stroke="#6FBE3A" strokeWidth="1.5" fill="none" markerEnd="url(#ckArrowG)" /><text x="302" y="238" fontSize="12" fontWeight="600" fill="#111111">IVR</text><path d="M 334 234 H 362" stroke="#6FBE3A" strokeWidth="1.5" fill="none" markerEnd="url(#ckArrowG)" /><text x="370" y="238" fontSize="12" fontWeight="600" fill="#111111">Human call or hold</text><text x="40" y="258" fontSize="11" fill="#667085">Each step runs only on the parcels the step before it did not resolve</text><text x="20" y="304" fontSize="11" fontWeight="600" fill="#2E4A18">NOT A CHOICE OF CHANNEL — AN ORDER OF ATTEMPTS</text></svg></div></div>
+      <div className="ck-summary"><div className="ck-summary-label">Summary</div><p>WhatsApp, SMS and automated voice are usually presented as three options for the same job. They are not: they differ in who they reach, in what triggers a charge, and in what you must register before you can send anything. Treating them as a sequence rather than a choice is what separates a verification step that recovers orders from one that quietly discards them.</p></div>
+
+      <div className="ck-body">
+        <p className="ck-lede">The question operators ask is "which verification channel converts best?" It is the wrong question, and the reason it is wrong shows up in the data: the channel that performs best on your confirmed-order rate is usually the one you tried first, because it got the easy orders. The customers who did not respond to it are a different population, and the only honest way to find out what reaches them is to try something else on exactly those parcels.</p>
+
+        <p>So the useful framing is not comparison but sequencing. What follows is what each channel is structurally good at, what each one actually costs you and when, what each one requires you to register before you can send a single message, and how to build the ladder.</p>
+
+        <h2 id="same-job">Three channels, three different populations</h2>
+
+        <p>The three channels fail for unrelated reasons, which is the whole basis for running them in sequence.</p>
+
+        <p><strong>WhatsApp fails on install and notification state.</strong> It reaches a customer who has the app, has it signed in on the number they typed at checkout, and has notifications surfacing. When it misses, it usually misses silently — delivered but unread, buried under group chats, or sitting on a device the customer no longer uses for that number.</p>
+
+        <p><strong>SMS fails on attention, not delivery.</strong> It arrives on any handset including a feature phone, which is its one structural advantage. What it competes with is a dense stream of promotional and transactional traffic, and on many Android handsets an automatic categorisation that may file your confirmation somewhere the customer never opens.</p>
+
+        <p><strong>IVR fails on pickup and patience.</strong> An automated call demands a response in the moment, from someone who may be driving, working, or simply unwilling to press a key for a machine. But it is the only one of the three that requires nothing of the customer except answering a phone — no app, no data connection, and no reading. For a buyer who is not comfortable in English or Hindi text, or who is older, or who shares a handset, it is frequently the only channel that works at all.</p>
+
+        <p>Notice that the failure modes do not overlap much. A customer who ignored WhatsApp because they never open it is a strong candidate for SMS. A customer who ignored both because they do not read notifications is the exact person a voice call reaches. This is why single-channel verification caps out: it is not that the channel is bad, it is that the residual population after one attempt is structurally unlike the population that responded.</p>
+
+        <h2 id="whatsapp">WhatsApp: what Meta actually charges for</h2>
+
+        <p>WhatsApp is the default first attempt for most Indian brands, and the economics are more specific than "a few paise a message". Meta's own pricing documentation is worth reading rather than relying on a reseller's summary, because several of the rules change the design of your verification flow.</p>
+
+        <p>Meta states that, effective 1 July 2025, it charges on a <strong>per-message basis</strong> rather than per conversation, and that it charges <strong>only for messages from businesses to users</strong> — messages from a WhatsApp user to a business are not charged. It also states that businesses are charged only when a message is <em>delivered</em>, not when it is sent.</p>
+
+        <p>That last point matters operationally. A verification template sent to a number that is not on WhatsApp costs you nothing, which means there is no financial reason to pre-screen numbers before attempting WhatsApp first. Try WhatsApp, pay only for the ones that land, and let the undelivered ones fall through to the next rung immediately rather than waiting out a response window.</p>
+
+        <p>Meta splits business-initiated template messages into categories with different rates that, in Meta's words, vary by market. The three relevant to this discussion are <strong>authentication</strong> ("template messages for identity verification objectives"), <strong>utility</strong> ("template messages for transactional or informational objectives") and <strong>marketing</strong> ("template messages for promotional objectives"). A fourth category, <strong>service</strong>, covers non-template messages, which Meta says can only be sent inside an open 24-hour customer service window.</p>
+
+        <p>Which category your verification message lands in is a real cost lever, and it is determined by how the template is written, not by what you intend it for. A template that confirms an order and asks the customer to accept or cancel is utility work. The same template with a discount offer bolted on is arguably promotional, and promotional pricing is typically the dearest band. Keeping the verification template clean of marketing content is the cheapest optimisation available in this entire article, and brands routinely give it away by adding an upsell line.</p>
+
+        <p>Two further rules from Meta's documentation are worth knowing. Volume tiers — discounts at higher monthly volumes — apply to utility and authentication messages, and India is named as a standalone market on Meta's rate card rather than being bundled into a regional "rest of" bucket, so the rates you pay are specific to India rather than averaged across a region. And Meta states it provides each business phone number with <strong>1,000 free service messages per month</strong>, which reset monthly and do not roll over, with charging resuming from the 1,001st service message; that free tier accompanied the resumption of charging for service messages as of 1 October 2026.</p>
+
+        <p>Finally, a planning note rather than a pricing one: Meta says it may update pricing only on the first day of each quarter — 1 January, 1 April, 1 July or 1 October — with a month's notice for rate-card changes. If you are modelling verification cost, that is the cadence to review it on. Meta also states that for businesses whose Sold-To country is India, Messaging accounts must be migrated to INR billing by 31 December 2026, after which it will no longer deliver messages for non-INR accounts of eligible customers. If nobody at your company has checked which currency your WhatsApp billing sits in, that is worth doing this quarter.</p>
+
+        <h2 id="sms">SMS: the floor you can always reach</h2>
+
+        <p>SMS is the channel people dismiss and then quietly depend on. Its response rate on a first attempt is generally the weakest of the three, and that is the wrong way to judge it. Its job in the ladder is not to be the best performer; it is to be the attempt that cannot fail for structural reasons. There is no install to check, no data connection, no app state. If the number is live, the message arrives.</p>
+
+        <p>That makes SMS the right second rung and a poor first one. On the parcels WhatsApp did not resolve — undelivered, or delivered and ignored — SMS is reaching a population you have no other cheap way to touch.</p>
+
+        <p>Two design points decide whether it works. The first is the sender header, which under India's rules is a registered alphanumeric string of up to eleven characters. Customers read the header before the body, and a header that is recognisably your brand gets opened where a generic one does not. The second is length: a confirmation that needs scrolling, or that pushes the action past the notification preview, has lost. The entire decision — your brand, the order, and how to confirm or cancel — should be legible without opening the message.</p>
+
+        <h2 id="ivr">IVR: the rung most brands skip</h2>
+
+        <p>Automated voice is the least used of the three and the one with the clearest role. It belongs at the bottom of the ladder, on the orders that two text attempts failed to resolve, where the alternative is either shipping a doubtful parcel or cancelling a possibly-good order.</p>
+
+        <p>Its cost structure is different in kind from the other two. WhatsApp and SMS are priced per message, so cost scales with the number of attempts. IVR is priced on call duration, which means cost scales with how long your script takes — and a script that recites the full order contents before offering the keypress costs multiples of one that gets to the decision in a few seconds. Write for the impatient listener: who is calling, what the order is in one clause, and the keypress, immediately. Repeat the options once, then end the call rather than looping.</p>
+
+        <p>The honest case against IVR is that a robotic call from an unknown number is, to many people, indistinguishable from a scam, and answer rates reflect that. The honest case for it is that it is the only channel in the set that works on a customer who does not read. If a meaningful share of your buyers are in tier-3 towns and smaller, that is not an edge case — and this is the one place where the channel you skipped is probably costing you real orders. Our guidance on <a href="/blog/how-to-reduce-cod-cancellations">reducing COD cancellations</a> covers what to do with the orders that still do not resolve after all three.</p>
+
+        <h2 id="compliance">The compliance surface is not the same for each</h2>
+
+        <p>This is where the three channels diverge most and where operators are most often surprised, because SMS and voice in India are governed by a regulatory regime that WhatsApp is not.</p>
+
+        <p>Under TRAI's Telecom Commercial Communications Customer Preference Regulations, 2018 — notified on 19 July 2018 and amended several times since — commercial communication in India runs through a registration system that TRAI's regulation requires access providers to implement on Distributed Ledger Technology, in its words "permissioned and private DLT networks". What gets registered is not just your company: the regulation provides for registering the entity, the sender, the headers assigned to that sender, content templates, and consent. Commercial communication may only be sent using registered headers assigned to the sender, and the header itself is defined in the regulation as an alphanumeric string of a maximum of eleven characters or numbers.</p>
+
+        <p>The regulation also draws distinctions that matter for how you classify a verification message. It defines a <strong>transactional message</strong> as one sent within thirty minutes of the transaction being performed and directly related to it; a <strong>service message</strong> as one sent with consent or using a registered template to facilitate or confirm a transaction the recipient previously agreed to; and <strong>promotional</strong> messages as those where explicit consent has not been taken by the sender. TRAI's own definition of unsolicited commercial communication excludes transactional and service messages — which is precisely the category an order confirmation should sit in, and a reason not to decorate it with an offer.</p>
+
+        <p>For voice specifically, the regulation addresses automated dialling directly. It defines <strong>robo calls</strong> as calls using an artificial or prerecorded voice with no human on the calling side, and it provides that no sender registered for commercial communication shall initiate calls with an auto dialler that may result in silent or abandoned calls, with a proviso requiring advance notice to the originating access provider. If you are running IVR verification, this is a conversation to have with your telephony provider about how your campaign is configured, not an assumption to make.</p>
+
+        <p>One live item to track. TRAI notified a Fourth Amendment to these regulations on 4 November 2026, whose operative provision is that regulation 35A — inserted by the Third Amendment, released 18 September 2026 — will come into effect on a date TRAI notifies in the Gazette. We have not read the text of regulation 35A, so we are not going to characterise what it does. If your verification depends on SMS or voice, that is a specific thing to read on TRAI's own site rather than in a vendor summary, and a date worth watching.</p>
+
+        <p>The contrast with WhatsApp is the practical takeaway: WhatsApp's gatekeeping is Meta's template approval and category assignment, which is fast and self-serve; SMS and voice gatekeeping is a regulatory registration with headers and templates that must exist before you can send, and which takes real time to set up. That difference in lead time is a reason to register SMS and voice capability before you need them, rather than when a WhatsApp outage or a policy change leaves you with no fallback.</p>
+
+        <h2 id="sequence">Designing the ladder</h2>
+
+        <p>The sequence itself is simple. The decisions inside it are where the value sits.</p>
+
+        <p><strong>Order the rungs by cost per resolved order, not by cost per message.</strong> Cheapest-first is the intuitive rule and it is usually right, but the thing you are buying is a resolved order. A channel twice the price that resolves four times as many of the parcels in front of it is the cheaper option on the only metric that matters.</p>
+
+        <p><strong>Set escalation windows against your dispatch clock, not round numbers.</strong> The ladder has to finish before the parcel would otherwise be packed. Work backwards: if you pick at a cut-off time, every rung has to complete before it. That constraint, not a preference for neat intervals, is what sets how long you wait for a WhatsApp reply before firing the SMS.</p>
+
+        <p><strong>Escalate on undelivered immediately; wait only on delivered-and-silent.</strong> If WhatsApp reports the message as undelivered, there is nothing to wait for — drop to SMS now. Reserve the waiting window for the case where the message landed and the customer has simply not acted, which is the only case where more time plausibly helps.</p>
+
+        <p><strong>Stop escalating when the customer acts, in either direction.</strong> An explicit cancellation is a successful outcome of the ladder and should halt it. Continuing to chase a customer who has already said no is how a verification flow turns into a complaint.</p>
+
+        <p><strong>Decide what non-response means before you build any of it.</strong> This is the single most consequential setting in the system and it is usually left implicit. Auto-cancelling silence will discard good orders, because plenty of people who intend to pay never answer unknown numbers. Shipping all silence unverified defeats the purpose. The defensible answer is conditional: ship the silent orders that look low-risk on your own history and hold the ones that do not, which is the same risk logic discussed in our guide to <a href="/blog/understanding-cod-verification">COD verification</a>.</p>
+
+        <h2 id="measure">Measuring channels without fooling yourself</h2>
+
+        <p>Channel comparisons go wrong in one specific way: the first rung gets credit for the easy orders. Three habits fix it.</p>
+
+        <p><strong>Measure each rung only on the parcels it actually received.</strong> SMS's response rate is its performance on the residual population after WhatsApp, not on all orders. Comparing a second-rung number against a first-rung number is comparing two different populations and will always flatter the first rung.</p>
+
+        <p><strong>Rotate the order on a small share of volume.</strong> Keep a slice of traffic where SMS goes first, or where IVR is attempted earlier. Without it you cannot tell whether WhatsApp is genuinely your best first attempt or merely your incumbent one, and the answer shifts as your customer mix shifts into smaller towns.</p>
+
+        <p><strong>Track cost per resolved order per rung, and watch the marginal rung.</strong> The useful question is whether the last rung still pays for itself: what it costs to run on the parcels that reach it, against the contribution of the orders it saves and the RTO cost of the parcels it stops. That number decides whether the bottom rung should be an IVR call, a human call, or simply a hold for manual review — and it is a number you can compute from your own data rather than take on faith.</p>
+
+        <h2 id="wrong">When each channel is the wrong answer</h2>
+
+        <p><strong>WhatsApp is wrong as your only channel.</strong> Not because it underperforms — it is usually the strongest single channel in India — but because single-channel verification leaves the entire non-responding population untouched, and a platform policy change or template rejection takes your verification offline with no fallback registered.</p>
+
+        <p><strong>SMS is wrong as a first attempt</strong> in most Indian catalogues, and wrong anywhere you need a conversation rather than a confirmation. It is a notification channel, not a dialogue.</p>
+
+        <p><strong>IVR is wrong at the top of the ladder,</strong> wrong if your script is long, and wrong if nobody has checked how your dialler is configured against the auto-dialler provisions described above. It is also an odd choice for a young, metro, app-native customer base, where the people it uniquely reaches barely exist.</p>
+
+        <p><strong>All three are wrong at very low volume.</strong> Under a few dozen COD orders a day, a person messaging customers by hand outperforms any automated ladder, costs nothing to set up, and teaches you which objections are actually coming back. Automate when the manual version is working and the volume makes it impractical — not before.</p>
+
+        <p>COD King runs OTP and WhatsApp verification inside Shopify's native checkout, alongside COD rules by pincode and order value, COD fees, partial payments and prepaid conversion. We do not offer IVR, so if automated voice is central to your ladder you will need it from a telephony provider or an app that does — which is a reasonable thing to build around rather than against.</p>
+
+        <p>Sources for the platform and regulatory facts above: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noreferrer">Meta's WhatsApp Business Platform pricing documentation</a>, and TRAI's own <a href="https://www.trai.gov.in/telecom/consumer-initiatives/unsolicited-commercial-communication" target="_blank" rel="noreferrer">unsolicited commercial communication page</a>, which carries the text of the Telecom Commercial Communications Customer Preference Regulations, 2018 and its amendments. Both were checked on 7 November 2026; platform pricing and regulatory provisions change, so verify against the primary source before acting on anything here.</p>
+      </div>
+    </div>
+
+    <div className="ck-col-right"><div className="ck-sticky"><div className="ck-toc-label">On this page</div><div className="ck-toc"><a href="#same-job">Three populations</a><a href="#whatsapp">WhatsApp costs</a><a href="#sms">SMS as the floor</a><a href="#ivr">The IVR rung</a><a href="#compliance">Compliance surface</a><a href="#sequence">Designing the ladder</a><a href="#measure">Measuring honestly</a><a href="#wrong">When each is wrong</a></div><div className="ck-cta"><input type="email" placeholder="Email address" /><a href="https://codking.tech" className="ck-btn-primary">Start for free</a><a href="https://codking.tech" className="ck-btn-secondary">Contact sales</a></div></div></div>
+  </div>
+
+  <div className="ck-footer">
+    <div className="ck-footer-inner">
+      <div className="ck-footer-brand">
+        <div className="ck-footer-logo">COD King</div>
+        <p className="ck-footer-tagline">Practical guides, strategies, and product insights for Shopify merchants managing Cash on Delivery.</p>
+      </div>
+
+      <div className="ck-footer-cols">
+        <div className="ck-footer-col">
+          <div className="ck-footer-head">Blog</div>
+          <a href="/blog">All articles</a>
+          <a href="/blog/understanding-cod-verification">Understanding COD Verification</a>
+          <a href="/blog/reduce-rto-for-cod-orders">How to Reduce RTO for COD Orders</a>
+          <a href="/blog/ndr-management-cod-orders">NDR Management</a>
+          <a href="/blog/courier-allocation-cod-orders">Courier Allocation</a>
+          <a href="/blog/rto-benchmarks-india">RTO Benchmarks for Indian D2C</a>
+          <a href="/blog/cod-to-prepaid-conversion">COD to Prepaid Conversion</a>
+          <a href="/blog/partial-cod-payment-advance-amount">How Much COD Advance to Collect</a>
+          <a href="/blog/best-cod-verification-apps-shopify">Best COD Verification Apps</a>
+          <a href="/blog/native-checkout-vs-cod-order-form">Native Checkout vs COD Form</a>
+          <a href="/blog/whatsapp-vs-sms-vs-ivr-cod-verification">WhatsApp vs SMS vs IVR</a>
+          <a href="/blog/how-to-reduce-cod-cancellations">How to Reduce COD Cancellations</a>
+          <a href="/blog/shopify-checkout-optimization">Checkout Optimization for Shopify Stores</a>
+          <a href="/blog/payment-options-indian-ecommerce">Payment Options for Indian E-commerce</a>
+        </div>
+
+        <div className="ck-footer-col">
+          <div className="ck-footer-head">COD King</div>
+          <a href="https://apps.shopify.com/cash-on-delivery-cod-order-confirmation" target="_blank" rel="noreferrer">Shopify App Store</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="ck-footer-bottom">© 2026 COD King</div>
+  </div>
+</div>
