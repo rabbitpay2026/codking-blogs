@@ -1,0 +1,211 @@
+---
+title: "Address Quality for COD Orders: Fix the Field, Not the Follow-Up"
+sidebarTitle: "Address Quality"
+description: "Address problems are the cheapest COD failure to prevent and the most expensive to chase. How to score an address before you pack, repair it inside the window, and measure whether any of it worked."
+mode: "custom"
+public: true
+isPublic: true
+hideFooterPagination: true
+tag: "COD & RTO"
+---
+
+<div className="ck-shell">
+  <a href="/blog" className="ck-back">← All articles</a>
+
+  <div className="ck-head">
+    <div className="ck-eyebrow">COD & RTO · November 2026</div>
+    <h1 className="ck-title">Address Quality for COD Orders: Fix the Field, Not the Follow-Up</h1>
+    <div className="ck-readtime">11 minutes read</div>
+  </div>
+
+  <div className="ck-layout">
+    <div className="ck-col-left">
+      <div className="ck-sticky">
+        <div className="ck-author-mount" data-category="COD & RTO" data-slug="address-quality-cod-orders" />
+
+        <div className="ck-navlabel" style={{marginTop:'32px',paddingTop:'24px',borderTop:'1px solid var(--ck-border)'}}>COD & RTO</div>
+
+        <div className="ck-nav">
+          <a href="/blog/reduce-rto-for-cod-orders">Reducing RTO</a>
+          <a href="/blog/ndr-management-cod-orders">NDR Management</a>
+          <a href="/blog/courier-allocation-cod-orders">Courier Allocation</a>
+          <a href="/blog/rto-benchmarks-india">RTO Benchmarks</a>
+          <a href="/blog/understanding-cod-verification">COD Verification</a>
+          <a href="/blog/address-quality-cod-orders" className="is-current">Address Quality</a>
+        </div>
+
+        <div className="ck-navlabel" style={{marginTop:'24px'}}>Payments & Pricing</div>
+
+        <div className="ck-nav">
+          <a href="/blog/cod-to-prepaid-conversion">COD to Prepaid</a>
+          <a href="/blog/partial-cod-payment-advance-amount">COD Advance Amount</a>
+          <a href="/blog/payment-options-indian-ecommerce">Payment Options</a>
+        </div>
+
+        <div className="ck-navlabel" style={{marginTop:'24px'}}>Tooling & Checkout</div>
+
+        <div className="ck-nav">
+          <a href="/blog/best-cod-verification-apps-shopify">Choosing a COD App</a>
+          <a href="/blog/native-checkout-vs-cod-order-form">Checkout vs COD Form</a>
+          <a href="/blog/whatsapp-vs-sms-vs-ivr-cod-verification">WhatsApp vs SMS vs IVR</a>
+          <a href="/blog/how-to-reduce-cod-cancellations">COD Cancellations</a>
+          <a href="/blog/shopify-checkout-optimization">Checkout Optimization</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="ck-col-main">
+      <div className="ck-cover ck-cover--codrto" style={{background:'#F1ECFF','--ck-cover-fg':'#2A1E5C','--ck-cover-accent':'#734DFF',aspectRatio:'2 / 1'}}><div className="ck-cover-art"><svg viewBox="0 0 660 330" style={{width:'100%',height:'auto'}} role="img" aria-label="Two sequences for the same order. Without an address gate: address typed, packed, shipped, NDR address incomplete, RTO. With an address gate: address typed, scored at order, repaired before packing, shipped, delivered."><defs><marker id="ckArrowA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#667085" /></marker><marker id="ckArrowB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#734DFF" /></marker></defs><text x="24" y="34" fontSize="11" fontWeight="600" fill="#667085">NO GATE — THE ADDRESS IS READ FOR THE FIRST TIME AT THE DOOR</text><rect x="24" y="50" width="108" height="46" rx="9" fill="#FFFFFF" stroke="#667085" strokeWidth="1.3" /><text x="78" y="78" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">Address typed</text><rect x="150" y="50" width="108" height="46" rx="9" fill="#FFFFFF" stroke="#667085" strokeWidth="1.3" /><text x="204" y="78" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">Packed</text><rect x="276" y="50" width="108" height="46" rx="9" fill="#FFFFFF" stroke="#667085" strokeWidth="1.3" /><text x="330" y="78" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">Shipped</text><rect x="402" y="50" width="108" height="46" rx="9" fill="#FFFFFF" stroke="#667085" strokeWidth="1.3" /><text x="456" y="71" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">NDR: address</text><text x="456" y="87" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">incomplete</text><rect x="528" y="50" width="108" height="46" rx="9" fill="#F1ECFF" stroke="#667085" strokeWidth="1.3" /><text x="582" y="78" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">RTO</text><path d="M 134 73 H 146" stroke="#667085" strokeWidth="1.3" fill="none" markerEnd="url(#ckArrowA)" /><path d="M 260 73 H 272" stroke="#667085" strokeWidth="1.3" fill="none" markerEnd="url(#ckArrowA)" /><path d="M 386 73 H 398" stroke="#667085" strokeWidth="1.3" fill="none" markerEnd="url(#ckArrowA)" /><path d="M 512 73 H 524" stroke="#667085" strokeWidth="1.3" fill="none" markerEnd="url(#ckArrowA)" /><text x="402" y="116" fontSize="11" fill="#667085">two shipping legs already paid</text><path d="M 24 142 H 636" stroke="#E4DCFA" strokeWidth="1" fill="none" /><text x="24" y="176" fontSize="11" fontWeight="600" fill="#2A1E5C">WITH A GATE — THE ADDRESS IS READ BEFORE THE PARCEL EXISTS</text><rect x="24" y="192" width="108" height="46" rx="9" fill="#FFFFFF" stroke="#734DFF" strokeWidth="1.5" /><text x="78" y="220" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">Address typed</text><rect x="150" y="192" width="108" height="46" rx="9" fill="#FFFFFF" stroke="#734DFF" strokeWidth="1.5" /><text x="204" y="213" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">Scored at</text><text x="204" y="229" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">order time</text><rect x="276" y="192" width="108" height="46" rx="9" fill="#3613B6" stroke="#3613B6" strokeWidth="1.5" /><text x="330" y="213" textAnchor="middle" fontSize="12" fontWeight="600" fill="#FFFFFF">Repaired</text><text x="330" y="229" textAnchor="middle" fontSize="12" fontWeight="600" fill="#FFFFFF">before packing</text><rect x="402" y="192" width="108" height="46" rx="9" fill="#FFFFFF" stroke="#734DFF" strokeWidth="1.5" /><text x="456" y="220" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">Shipped</text><rect x="528" y="192" width="108" height="46" rx="9" fill="#EEF6E7" stroke="#7CD548" strokeWidth="1.5" /><text x="582" y="220" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">Delivered</text><path d="M 134 215 H 146" stroke="#734DFF" strokeWidth="1.5" fill="none" markerEnd="url(#ckArrowB)" /><path d="M 260 215 H 272" stroke="#734DFF" strokeWidth="1.5" fill="none" markerEnd="url(#ckArrowB)" /><path d="M 386 215 H 398" stroke="#734DFF" strokeWidth="1.5" fill="none" markerEnd="url(#ckArrowB)" /><path d="M 512 215 H 524" stroke="#734DFF" strokeWidth="1.5" fill="none" markerEnd="url(#ckArrowB)" /><text x="150" y="258" fontSize="11" fill="#667085">pincode consistency · house number · landmark · phone shape</text><text x="150" y="276" fontSize="11" fill="#667085">one message, one editable link, a stated cut-off</text><text x="24" y="312" fontSize="11" fontWeight="600" fill="#2A1E5C">SAME ORDER. THE ONLY DIFFERENCE IS WHEN SOMEONE READ THE ADDRESS.</text></svg></div></div>
+      <div className="ck-summary"><div className="ck-summary-label">Summary</div><p>Address failure is the one COD loss you can prevent with no discount, no extra shipping spend and no courier negotiation — because the address is created in your own checkout. The work is a scoring rule at order time, a narrow repair window before packing, and a measurement that separates address failure from the other reasons parcels come back.</p></div>
+
+      <div className="ck-body">
+        <p className="ck-lede">Of the things that make a Cash on Delivery parcel come back, most are expensive to fix. Weak intent costs you a discount or an advance. A poor courier lane costs you a rate increase. Slow dispatch costs you warehouse capacity. Address quality is the exception: the address is created inside your own checkout, by your own form, and almost everything that goes wrong with it is visible before anyone picks a parcel off a shelf.</p>
+
+        <p>Most brands do not look. The address is captured, printed on a label, and read for the first time by a rider standing in a lane with a phone that is not being answered. By then the repair costs two shipping legs and a fortnight of locked stock, and the odds are poor. The same defect, caught the morning after the order, costs one WhatsApp message.</p>
+
+        <h2 id="anatomy">What a bad address actually is</h2>
+
+        <p>"Incomplete address" is a single NDR code covering four different problems that need four different responses. Separating them is the first useful step.</p>
+
+        <p><strong>Unlocatable.</strong> Everything present is true, and none of it is enough to find a door. No house or flat number, no floor, no building name, no landmark — a street and a locality in a dense area where neither narrows the search below a few hundred addresses. This is the most common form and the most repairable, because the customer knows the missing piece perfectly well and has simply not been asked for it.</p>
+
+        <p><strong>Ambiguous.</strong> The address resolves to more than one place. Repeated locality names within a city, a sector number that exists in several phases, a building name shared by three towers in one complex. The rider makes a reasonable choice and it is the wrong one.</p>
+
+        <p><strong>Internally inconsistent.</strong> The pincode does not belong to the city, or the city does not belong to the state. This is usually a typo or a stale autofill, and it is the one defect you can detect mechanically with no customer contact at all. It is also the most dangerous, because the parcel routes to the wrong hub before anybody notices, and a misrouted COD parcel burns days it will not get back.</p>
+
+        <p><strong>Unreachable.</strong> The address is fine and the phone is not — mistyped, switched off, or belonging to somebody who did not place the order. On a prepaid parcel this is survivable. On COD, where nearly every recovery path runs through a phone call, it converts a minor obstacle into a return.</p>
+
+        <p>These fail at different rates and respond to different fixes. A brand that tracks them as one number will keep applying one remedy to four problems.</p>
+
+        <h2 id="checkout">Addresses are manufactured at checkout</h2>
+
+        <p>Before any validation logic, look at the form. Most address defects are design outputs, not customer errors.</p>
+
+        <p><strong>Ask for the pincode first, then fill the rest.</strong> A pincode-first field that populates city and state is faster for the customer and removes the single largest source of inconsistency, because the city is no longer typed. It also gives you a cheap integrity check: if the customer later edits the city away from the one the pincode produced, something is wrong with one of the two.</p>
+
+        <p><strong>Separate the house number from the street.</strong> A single free-text address box invites a single line of prose, and the house number is the part most often left out of prose. Two fields — one short, one long — produce a materially better address for the same typing effort. Label the short one in the words a customer would use, not in the words a logistics system would.</p>
+
+        <p><strong>Ask for a landmark, and say why.</strong> A landmark field with a placeholder like "near Axis Bank ATM" gets filled; one labelled "Landmark (optional)" gets skipped. It is the field riders actually use in dense localities, and a one-line explanation of that fact raises completion more than any amount of asterisking.</p>
+
+        <p><strong>Set the phone field to a numeric keypad and check the shape.</strong> Ten digits, a valid leading digit for an Indian mobile number, no obviously fabricated run of repeated digits. A shape check is not a reachability check, but it catches the careless half for free at the point of entry, where correction costs the customer two seconds.</p>
+
+        <p><strong>Watch what autofill is doing.</strong> Browser and keyboard autofill will happily put a two-year-old address into a form, and a customer who has moved will not necessarily re-read a field that already looks filled. A short, explicit confirmation step on a COD order — showing the address back as a block, with an obvious way to change it — catches more of this than people expect, because it asks the customer to read rather than to type.</p>
+
+        <p>None of this is exotic. It is worth auditing precisely because it is boring: these fields are usually set once when the store is built and never revisited, while the order mix they serve has changed completely.</p>
+
+        <h2 id="pincode">Pincode truth versus pincode guess</h2>
+
+        <p>Most merchants validate pincodes against a courier serviceability list. That list answers a different question: it tells you whether a courier will accept the parcel, not whether the pincode is the right one for the address attached to it.</p>
+
+        <p>For the second question there is now an official reference. India's Department of Posts, in a Press Information Bureau release dated 27 May 2025, launched two web portals — "Know Your DIGIPIN" and "Know Your PIN Code" — alongside a national geofencing exercise that produced geo-referenced PIN code boundaries; the release notes the six-digit PIN code system itself was introduced in 1972, and says the resulting "All India PIN Code Boundary geo-json" dataset has been published on data.gov.in. The same release describes DIGIPIN as "an open-source, interoperable, geo-coded, grid-based digital address system developed by the Department of Posts in collaboration with IIT Hyderabad and NRSC, ISRO", with its technical documentation and source code published on GitHub.</p>
+
+        <p>Two practical uses follow. First, an authoritative pincode-to-area reference lets you check consistency — pincode against city, city against state — without depending on a courier's commercial serviceability file, and without maintaining a scraped list that goes stale. Second, a geocoded grid reference is a way to store what a customer actually means by a location, independently of how they chose to write it out. Neither of these replaces a good address; both narrow the gap between the address you were given and the place it refers to.</p>
+
+        <p>Treat it as reference data, not as a gate. An address that disagrees with an official boundary file is a flag worth a question, not a reason to refuse an order.</p>
+
+        <h2 id="gate">Scoring the address before you pack</h2>
+
+        <p>The gate is a rule that runs on every COD order between capture and packing, and sorts it into three lanes. Start with rules that are cheap to compute and hard to argue with.</p>
+
+        <p><strong>Mechanical checks.</strong> Pincode present and six digits. Pincode consistent with city and state. Phone the right length and shape. Address line containing at least one digit — a crude but effective proxy for a house or flat number. Total address length above a floor you set by reading your own data rather than by guessing. Address text not identical to the city name. These need no customer contact and no judgement.</p>
+
+        <p><strong>History checks.</strong> Has this exact address string, or this phone number, previously produced a refusal or a return? A repeat address with a bad outcome behind it is the strongest single signal available to you, and it is sitting in your own order table. The same applies in the other direction: an address with three successful deliveries behind it should pass the gate untouched, whatever its length.</p>
+
+        <p><strong>Then three lanes.</strong> <em>Pass</em> goes straight to packing — the majority, and keeping it large is the point. <em>Repair</em> goes to a queue for one contact attempt before packing. <em>Hold</em> is the small set where the address is unusable rather than incomplete, and packing it would be throwing stock at a problem.</p>
+
+        <p>The temptation is to make the gate clever. Resist it for a quarter. A handful of mechanical rules plus address history catches most of what is catchable, and every additional rule is another thing that can hold a good order.</p>
+
+        <h2 id="repair">The repair window</h2>
+
+        <p>Between the order and the label there is a window — usually hours, sometimes a day — in which an address can be changed for free. Everything about the repair process should be designed around how short that window is.</p>
+
+        <p><strong>One message, not a conversation.</strong> State what is missing in specific terms. "We have your address in Indiranagar but no house or flat number" produces an answer; "please confirm your address" produces nothing, because the customer believes they already did that.</p>
+
+        <p><strong>Make the reply a tap, not a task.</strong> A link that opens the address prefilled and editable, with the missing field highlighted, collects far more corrections than asking someone to retype an address into a chat window on a phone.</p>
+
+        <p><strong>State the cut-off, and mean it.</strong> "We are packing this at 4pm today" gives the customer a reason to act now rather than later, and it gives your team a rule rather than a judgement call. It also keeps the repair queue from becoming a holding pen that quietly adds two days to dispatch — which, as covered in <a href="/blog/reduce-rto-for-cod-orders">reducing RTO</a>, creates its own failures.</p>
+
+        <p><strong>Decide the no-response policy in advance.</strong> Three defensible answers, and the right one depends on the order. Ship it anyway and accept the risk, which is usually correct for a low-value order to a strong lane. Offer prepaid conversion or a partial advance, which is reasonable where the address is weak and the value is high. Cancel, which should be rare and reserved for addresses that are genuinely unusable. What matters is that the rule exists before the queue fills, because ad-hoc decisions on a Friday afternoon default to shipping everything.</p>
+
+        <h2 id="postfail">After a failed attempt it is a different job</h2>
+
+        <p>Once a parcel is in the network with a bad address, you are no longer doing address quality — you are doing NDR recovery, against a courier's attempt budget and a clock you do not control. The playbook is different and we have covered it separately in <a href="/blog/ndr-management-cod-orders">NDR management</a>. One point belongs here: if a reattempt is going out, send the corrected address to the courier explicitly, and send the parcel with a different partner where you can, as discussed in <a href="/blog/courier-allocation-cod-orders">courier allocation</a>. A reattempt on the same route with the same data reruns the same failure.</p>
+
+        <h2 id="measure">Measuring whether any of it worked</h2>
+
+        <p>Address work is easy to feel good about and hard to prove, so pick numbers that can embarrass you.</p>
+
+        <p><strong>Address-attributable failure rate.</strong> The share of COD shipments whose terminal or NDR reason is address-related, out of all COD shipments. This is the headline. Watch it monthly, and watch it per lane as well as store-wide, because a shift in your geography will move the store-wide figure without anything having improved.</p>
+
+        <p><strong>Gate volumes.</strong> What share of orders land in pass, repair and hold. If repair is growing past a modest fraction of orders, your rules are too tight and you are taxing good customers with a message they do not need.</p>
+
+        <p><strong>Repair response rate and post-repair outcome.</strong> Of the orders you contacted, how many replied, and of those, how many then delivered successfully. The second number is the one that justifies the exercise. If repaired orders deliver at roughly the rate of ungated orders, your repair is cosmetic.</p>
+
+        <p><strong>Segment by where the order came from.</strong> Address quality varies sharply by traffic source, by device, and by new versus repeat buyer. Cold social traffic on mobile tends to produce the thinnest addresses, and that is often where a confirmation step earns most. Segmenting tells you where to spend effort instead of applying the same friction everywhere.</p>
+
+        <p>One caution on the source data. Courier NDR reason codes are entered by field staff under time pressure, and "address incomplete" is a convenient code for several situations that are not about the address at all. Before building a programme on those codes, read fifty raw addresses from orders coded that way. You will find out quickly whether the code is telling you the truth, and the reading itself usually reveals which checkout field is responsible.</p>
+
+        <h2 id="overdoing">Where this goes wrong</h2>
+
+        <p><strong>Blocking checkout on validation.</strong> The single most expensive mistake. A customer stopped at checkout by a rule they cannot satisfy does not correct the address — they leave. Validation belongs after the order, where a failed check costs a message instead of a sale. The only checks that belong in the checkout itself are the ones a customer can always pass: field shape, pincode format, a confirmation they can read.</p>
+
+        <p><strong>Rules built for a different country's addresses.</strong> Indian addresses legitimately include building names without numbers, plot and survey numbers, village and post-office lines, and locality names that repeat. A strict pattern match written against a Western address format will flag a large volume of perfectly deliverable addresses, and the team will learn to ignore the flag. Calibrate every threshold against your own order history.</p>
+
+        <p><strong>Silent third-party rewriting.</strong> Tools that normalise or correct addresses automatically are useful, and they are occasionally confidently wrong. Keep the customer's original text alongside the corrected version, print both on the label where you can, and never discard the original — a rider who can see what the customer wrote has a chance of resolving a mismatch that a cleaned-up address has hidden.</p>
+
+        <p><strong>Treating a weak address as fraud.</strong> They are different problems with different remedies. A short address is usually a hurried customer on a small screen. Cancelling orders on an address score, rather than asking a question, loses real revenue to solve an imagined problem.</p>
+
+        <h2 id="start">Where to start</h2>
+
+        <p>A first pass takes about a week and needs no new software.</p>
+
+        <p>Pull ninety days of COD shipments with their final status and NDR reason. Read fifty of the raw addresses behind the address-coded failures — actually read them, not a summary. Classify each into the four types above. You will almost always find that one type dominates and that it maps onto one weakness in your form: a missing house-number field, a skipped landmark, an autofilled city, a phone with no shape check.</p>
+
+        <p>Fix that one field. Then add two mechanical gate rules — pincode-city consistency and a digit in the address line — and run a repair queue by hand for a fortnight before automating anything. Hand-running it is what teaches you the message that gets replies and the cut-off your warehouse can live with.</p>
+
+        <p>Then widen the rules.</p>
+
+        <p>COD King runs the order-time part of this: it checks and confirms COD orders before they are packed, so a doubtful address or an unreachable phone surfaces inside the repair window rather than at the door. The checkout fields that create the address in the first place are yours, and they are where the cheapest gains sit.</p>
+      </div>
+    </div>
+
+    <div className="ck-col-right"><div className="ck-sticky"><div className="ck-toc-label">On this page</div><div className="ck-toc"><a href="#anatomy">What a bad address is</a><a href="#checkout">Made at checkout</a><a href="#pincode">Pincode truth</a><a href="#gate">Scoring before packing</a><a href="#repair">The repair window</a><a href="#postfail">After a failed attempt</a><a href="#measure">Measuring it</a><a href="#overdoing">Where it goes wrong</a><a href="#start">Where to start</a></div><div className="ck-cta"><input type="email" placeholder="Email address" /><a href="https://codking.tech" className="ck-btn-primary">Start for free</a><a href="https://codking.tech" className="ck-btn-secondary">Contact sales</a></div></div></div>
+  </div>
+
+  <div className="ck-footer">
+    <div className="ck-footer-inner">
+      <div className="ck-footer-brand">
+        <div className="ck-footer-logo">COD King</div>
+        <p className="ck-footer-tagline">Practical guides, strategies, and product insights for Shopify merchants managing Cash on Delivery.</p>
+      </div>
+
+      <div className="ck-footer-cols">
+        <div className="ck-footer-col">
+          <div className="ck-footer-head">Blog</div>
+          <a href="/blog">All articles</a>
+          <a href="/blog/understanding-cod-verification">Understanding COD Verification</a>
+          <a href="/blog/reduce-rto-for-cod-orders">How to Reduce RTO for COD Orders</a>
+          <a href="/blog/ndr-management-cod-orders">NDR Management</a>
+          <a href="/blog/courier-allocation-cod-orders">Courier Allocation for COD Orders</a>
+          <a href="/blog/address-quality-cod-orders">Address Quality for COD Orders</a>
+          <a href="/blog/rto-benchmarks-india">RTO Benchmarks for Indian D2C</a>
+          <a href="/blog/cod-to-prepaid-conversion">COD to Prepaid Conversion</a>
+          <a href="/blog/partial-cod-payment-advance-amount">How Much COD Advance to Collect</a>
+          <a href="/blog/best-cod-verification-apps-shopify">Best COD Verification Apps</a>
+          <a href="/blog/native-checkout-vs-cod-order-form">Native Checkout vs COD Form</a>
+          <a href="/blog/whatsapp-vs-sms-vs-ivr-cod-verification">WhatsApp vs SMS vs IVR</a>
+          <a href="/blog/how-to-reduce-cod-cancellations">How to Reduce COD Cancellations</a>
+          <a href="/blog/shopify-checkout-optimization">Checkout Optimization for Shopify Stores</a>
+          <a href="/blog/payment-options-indian-ecommerce">Payment Options for Indian E-commerce</a>
+        </div>
+
+        <div className="ck-footer-col">
+          <div className="ck-footer-head">COD King</div>
+          <a href="https://apps.shopify.com/cash-on-delivery-cod-order-confirmation" target="_blank" rel="noreferrer">Shopify App Store</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="ck-footer-bottom">© 2026 COD King</div>
+  </div>
+</div>
