@@ -34,7 +34,8 @@
               "blog/ndr-management-cod-orders",
               "blog/courier-allocation-cod-orders",
               "blog/whatsapp-vs-sms-vs-ivr-cod-verification",
-              "blog/address-quality-cod-orders"
+              "blog/address-quality-cod-orders",
+              "blog/cod-risk-scoring"
             ]
           }
         ]

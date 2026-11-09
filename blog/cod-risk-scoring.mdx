@@ -1,0 +1,213 @@
+---
+title: "COD Risk Scoring: Deciding Which Orders Get Friction"
+sidebarTitle: "COD Risk Scoring"
+description: "Verification, advance payment and prepaid nudges all cost you something. A risk score is how you spend that friction on the orders that need it instead of on every order equally."
+mode: "custom"
+public: true
+isPublic: true
+hideFooterPagination: true
+tag: "COD & RTO"
+---
+
+<div className="ck-shell">
+  <a href="/blog" className="ck-back">← All articles</a>
+
+  <div className="ck-head">
+    <div className="ck-eyebrow">COD & RTO · November 2026</div>
+    <h1 className="ck-title">COD Risk Scoring: Deciding Which Orders Get Friction</h1>
+    <div className="ck-readtime">12 minutes read</div>
+  </div>
+
+  <div className="ck-layout">
+    <div className="ck-col-left">
+      <div className="ck-sticky">
+        <div className="ck-author-mount" data-category="COD & RTO" data-slug="cod-risk-scoring" />
+
+        <div className="ck-navlabel" style={{marginTop:'32px',paddingTop:'24px',borderTop:'1px solid var(--ck-border)'}}>COD & RTO</div>
+
+        <div className="ck-nav">
+          <a href="/blog/reduce-rto-for-cod-orders">Reducing RTO</a>
+          <a href="/blog/ndr-management-cod-orders">NDR Management</a>
+          <a href="/blog/courier-allocation-cod-orders">Courier Allocation</a>
+          <a href="/blog/address-quality-cod-orders">Address Quality</a>
+          <a href="/blog/cod-risk-scoring" className="is-current">COD Risk Scoring</a>
+          <a href="/blog/rto-benchmarks-india">RTO Benchmarks</a>
+          <a href="/blog/understanding-cod-verification">COD Verification</a>
+        </div>
+
+        <div className="ck-navlabel" style={{marginTop:'24px'}}>Payments & Pricing</div>
+
+        <div className="ck-nav">
+          <a href="/blog/cod-to-prepaid-conversion">COD to Prepaid</a>
+          <a href="/blog/partial-cod-payment-advance-amount">COD Advance Amount</a>
+          <a href="/blog/payment-options-indian-ecommerce">Payment Options</a>
+        </div>
+
+        <div className="ck-navlabel" style={{marginTop:'24px'}}>Tooling & Checkout</div>
+
+        <div className="ck-nav">
+          <a href="/blog/best-cod-verification-apps-shopify">Choosing a COD App</a>
+          <a href="/blog/native-checkout-vs-cod-order-form">Checkout vs COD Form</a>
+          <a href="/blog/whatsapp-vs-sms-vs-ivr-cod-verification">WhatsApp vs SMS vs IVR</a>
+          <a href="/blog/how-to-reduce-cod-cancellations">COD Cancellations</a>
+          <a href="/blog/shopify-checkout-optimization">Checkout Optimization</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="ck-col-main">
+      <div className="ck-cover ck-cover--codrto" style={{background:'#F1ECFF','--ck-cover-fg':'#2A1E5C','--ck-cover-accent':'#734DFF',aspectRatio:'2 / 1'}}><div className="ck-cover-art"><svg viewBox="0 0 660 340" style={{width:'100%',height:'auto'}} role="img" aria-label="Four signal groups you already hold — order and cart shape, address and phone, buyer history, destination lane — feed a COD risk score. The score sorts orders into three bands: low ships as is with no contact, medium goes to verification, high asks for an advance or prepaid before packing. Delivery outcomes feed back and re-weight the signals."><defs><marker id="ckRsA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#667085" /></marker><marker id="ckRsB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#734DFF" /></marker></defs><text x="24" y="26" fontSize="11" fontWeight="600" fill="#667085">SIGNALS YOU ALREADY HOLD</text><rect x="24" y="38" width="152" height="40" rx="9" fill="#FFFFFF" stroke="#667085" strokeWidth="1.3" /><text x="100" y="63" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">Order & cart shape</text><rect x="24" y="86" width="152" height="40" rx="9" fill="#FFFFFF" stroke="#667085" strokeWidth="1.3" /><text x="100" y="111" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">Address & phone</text><rect x="24" y="134" width="152" height="40" rx="9" fill="#FFFFFF" stroke="#667085" strokeWidth="1.3" /><text x="100" y="159" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">Buyer history</text><rect x="24" y="182" width="152" height="40" rx="9" fill="#FFFFFF" stroke="#667085" strokeWidth="1.3" /><text x="100" y="207" textAnchor="middle" fontSize="12" fontWeight="600" fill="#111111">Destination lane</text><path d="M 178 58 H 194" stroke="#667085" strokeWidth="1.3" fill="none" /><path d="M 178 106 H 194" stroke="#667085" strokeWidth="1.3" fill="none" /><path d="M 178 154 H 194" stroke="#667085" strokeWidth="1.3" fill="none" /><path d="M 178 202 H 194" stroke="#667085" strokeWidth="1.3" fill="none" /><path d="M 194 58 V 202" stroke="#667085" strokeWidth="1.3" fill="none" /><path d="M 194 130 H 210" stroke="#734DFF" strokeWidth="1.6" fill="none" markerEnd="url(#ckRsB)" /><rect x="214" y="104" width="96" height="52" rx="9" fill="#3613B6" stroke="#3613B6" strokeWidth="1.5" /><text x="262" y="125" textAnchor="middle" fontSize="12" fontWeight="700" fill="#FFFFFF">COD risk</text><text x="262" y="141" textAnchor="middle" fontSize="12" fontWeight="700" fill="#FFFFFF">score</text><path d="M 312 130 C 332 130 330 76 346 76" stroke="#734DFF" strokeWidth="1.6" fill="none" markerEnd="url(#ckRsB)" /><path d="M 312 130 H 346" stroke="#734DFF" strokeWidth="1.6" fill="none" markerEnd="url(#ckRsB)" /><path d="M 312 130 C 332 130 330 196 346 196" stroke="#734DFF" strokeWidth="1.6" fill="none" markerEnd="url(#ckRsB)" /><rect x="350" y="52" width="132" height="48" rx="9" fill="#EEF6E7" stroke="#7CD548" strokeWidth="1.5" /><text x="366" y="72" fontSize="11" fontWeight="700" fill="#2E4A18">LOW</text><text x="366" y="89" fontSize="12" fontWeight="600" fill="#111111">ship as is</text><rect x="350" y="106" width="132" height="48" rx="9" fill="#F1ECFF" stroke="#734DFF" strokeWidth="1.5" /><text x="366" y="126" fontSize="11" fontWeight="700" fill="#2A1E5C">MEDIUM</text><text x="366" y="143" fontSize="12" fontWeight="600" fill="#111111">confirm first</text><rect x="350" y="172" width="132" height="48" rx="9" fill="#FFFFFF" stroke="#3613B6" strokeWidth="1.8" /><text x="366" y="192" fontSize="11" fontWeight="700" fill="#3613B6">HIGH</text><text x="366" y="209" fontSize="12" fontWeight="600" fill="#111111">change the terms</text><text x="496" y="72" fontSize="11" fill="#667085">no message, no call,</text><text x="496" y="88" fontSize="11" fill="#667085">no delay to dispatch</text><text x="496" y="126" fontSize="11" fill="#667085">WhatsApp, then SMS,</text><text x="496" y="142" fontSize="11" fill="#667085">then one call</text><text x="496" y="192" fontSize="11" fill="#667085">advance or prepaid</text><text x="496" y="208" fontSize="11" fill="#667085">asked before packing</text><path d="M 416 222 V 262 H 262 V 162" stroke="#667085" strokeWidth="1.3" fill="none" strokeDasharray="4 3" markerEnd="url(#ckRsA)" /><text x="278" y="282" fontSize="11" fill="#667085">every delivered / returned parcel re-weights the signals that predicted it</text><path d="M 24 302 H 636" stroke="#E4DCFA" strokeWidth="1" fill="none" /><text x="24" y="326" fontSize="11" fontWeight="600" fill="#2A1E5C">THE SCORE DOES NOT PREDICT FRAUD. IT DECIDES WHERE TO SPEND FRICTION.</text></svg></div></div>
+      <div className="ck-summary"><div className="ck-summary-label">Summary</div><p>Every COD control you have — verification, an advance, a prepaid nudge, a slower courier with better delivery odds — costs either margin or orders. A risk score is the mechanism that applies each control to the slice of orders where it pays for itself. Build it from signals already in your order table, keep it as points rather than a model, and let delivery outcomes recalibrate it.</p></div>
+
+      <div className="ck-body">
+        <p className="ck-lede">Most brands running Cash on Delivery apply their controls uniformly. Everyone gets the confirmation message, or nobody does. The advance is on for all COD orders or off for all of them. This is the one decision where uniformity is clearly wrong, because the orders are not alike: a repeat buyer in a lane you deliver reliably and a first-time buyer on a thin address in a lane that returns a quarter of what you send are the same row in your dashboard and completely different bets.</p>
+
+        <p>A risk score fixes that. Not because scoring is sophisticated, but because it lets you answer a narrower and much more useful question than "is COD risky": <em>which of today's COD orders should I treat differently, and how?</em></p>
+
+        <h2 id="budget">Friction is a budget, and you are already overspending it somewhere</h2>
+
+        <p>Start from the premise that every control is a cost, not a safeguard.</p>
+
+        <p>A verification message costs a per-message fee, a delay to dispatch while you wait for an answer, and a small share of orders that would have delivered fine but now get cancelled because the customer read a confirmation request as a reason to reconsider. An advance payment costs you the orders that abandon rather than pay it. A prepaid-only policy on a weak pincode costs you that pincode's revenue. A slower courier with better COD performance costs you delivery days, which has its own return cost.</p>
+
+        <p>So the question is never "should we verify." It is "on which orders is the expected saving from verifying larger than what verifying costs." That ratio varies enormously across your order book, and a score is simply the instrument that sorts orders by it.</p>
+
+        <p>This also explains why uniform policies feel like they stop working. A store that puts a confirmation message on every COD order spends most of its message budget and most of its dispatch delay on orders that were never going to come back, and the arithmetic looks mediocre. The same spend, concentrated on the worst-scoring fifth of orders, looks completely different.</p>
+
+        <h2 id="signals">The signals are already in your order table</h2>
+
+        <p>You do not need a data vendor to start. Four groups of signals sit in Shopify and your courier reports already, and between them they carry most of what is predictable.</p>
+
+        <p><strong>Order and cart shape.</strong> Order value relative to your own average — the tails matter in both directions, since unusually large COD orders carry more loss per failure and unusually small ones often carry more casual intent. Quantity of a single size or variant, which in apparel frequently means a customer who intends to keep one and refuse the rest. Whether a discount code was used, and which one; codes from broad paid campaigns behave differently from codes given to an email list. Time of order, which is a weak signal on its own and a useful one in combination. Whether the cart was assembled over a session or added and checked out in under a minute.</p>
+
+        <p><strong>Address and phone quality.</strong> The mechanical checks covered in <a href="/blog/address-quality-cod-orders">address quality</a>: pincode consistent with city and state, a digit present in the address line, address length above your own floor, phone number of a plausible shape. These are cheap to compute and they are the signals least likely to be unfair to a customer, because they describe the data rather than the person.</p>
+
+        <p><strong>Buyer history.</strong> The strongest group, and the most underused. Has this phone number ordered before, and what happened? Has this address delivered successfully before? Has either previously produced a refusal or a return? A phone number with two prior returns behind it is worth more than every other signal combined. A phone number with three successful deliveries should move an order to the bottom of your friction queue regardless of what the rest of the score says — and most stores never check, because the lookup is on phone and address strings rather than on a customer record.</p>
+
+        <p><strong>Destination lane.</strong> Pincode-level and region-level delivery outcomes from your own courier data, which you need anyway for <a href="/blog/courier-allocation-cod-orders">courier allocation</a>. Lane is a property of the shipment, not the customer, and it belongs in the score because it changes the expected cost of shipping the order unverified.</p>
+
+        <p>Four groups, perhaps a dozen fields. That is a complete first-generation score.</p>
+
+        <h2 id="shopify">What Shopify's own risk tooling does and does not cover</h2>
+
+        <p>Shopify has risk machinery built in, and it is worth being precise about what it addresses, because the overlap with COD is smaller than the name suggests.</p>
+
+        <p>Shopify's Help Center documentation on fraud analysis states that "Fraud analysis includes fraud indicators and, for eligible orders, a fraud recommendation", and that "the fraud recommendation indicates whether an order has a low, medium, or high risk of a chargeback due to fraud." The indicators it lists are payment-instrument signals — whether the card passes Address Verification System checks, whether the correct Card Verification Value was supplied, whether the customer's location matches the payment method, unusual device or network activity, and attempts with more than one card. The documentation also notes a scope limit: "Fraud analysis works with online credit card orders that Shopify can verify."</p>
+
+        <p>Read that carefully. The thing being predicted is a chargeback, and the evidence is drawn from a card transaction. A COD order has no card, no AVS result, no CVV, and cannot produce a chargeback. The failure mode you care about — a parcel that is shipped, refused at the door, and returned — is a different event with different causes, and Shopify's documentation does not claim to predict it.</p>
+
+        <p>What Shopify does provide is somewhere to put your own assessment. Its Admin GraphQL API documents an <code>OrderRiskAssessment</code> object described as "A risk assessment for an order", carrying a <code>riskLevel</code> and <code>facts</code>, where "Fact values are specific to the provider", plus a <code>provider</code> field that is "The app that provided the assessment, <code>null</code> if the assessment was provided by Shopify." The documented risk levels are <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code>, <code>NONE</code> and <code>PENDING</code>. The Help Center adds that indicators and recommendations from fraud-prevention apps can be viewed alongside Shopify's own, and that "When an order has assessments from multiple providers, select the provider whose assessment you want to review."</p>
+
+        <p>The practical consequence: a COD risk score is a thing you or an app computes, and the platform's contribution is the place to surface it so your fulfilment team sees it on the order rather than in a spreadsheet. Do not treat the built-in fraud recommendation as a COD signal. Equally, do not ignore it — on your prepaid orders it is doing a job your COD score is not.</p>
+
+        <h2 id="build">Build it as points, not as a model</h2>
+
+        <p>The instinct is to train something. Resist it for the first two quarters, for three reasons: you will not have enough labelled failures to train on until you have run COD at volume for a while, you cannot explain a model's output to a support agent who has to make a call, and you cannot audit a model for the kinds of unfairness that get a brand into trouble.</p>
+
+        <p>Use additive points instead. Each rule adds or subtracts; the total lands in a band.</p>
+
+        <p>A workable starting shape, with weights you will change within a month:</p>
+
+        <p><strong>Subtract</strong> for successful history — a delivered order on this phone or address, more for several. This is the single most important line in the table, and most scores omit it because they are built as fraud detectors rather than as friction allocators.</p>
+
+        <p><strong>Add heavily</strong> for a prior refusal or return on this phone or address. Add heavily for an address that fails a mechanical check. Add heavily for a lane whose COD return rate is in your worst decile.</p>
+
+        <p><strong>Add moderately</strong> for order value far above your average, for multiple units of one variant, for a first-time buyer with no history at all, and for a high-discount code from a broad acquisition campaign.</p>
+
+        <p><strong>Add slightly</strong> for the weak signals — odd-hour orders, a one-minute session, a free-text address with no landmark. Keep these small. Their job is to break ties, not to decide cases.</p>
+
+        <p>Write the table down somewhere a human can read it, in a spreadsheet if nothing else, and version it. The moment you cannot reconstruct why an order scored what it did three weeks ago, you have lost the ability to improve the score.</p>
+
+        <h2 id="bands">Three bands, three different actions</h2>
+
+        <p>A score with no attached action is a report. The bands are the product.</p>
+
+        <p><strong>Low — ship as is.</strong> No message, no call, no delay. The discipline here is keeping this band large, because every order you move out of it is an order you are taxing. If low is not the clear majority of your COD volume, your thresholds are wrong, not your customers.</p>
+
+        <p><strong>Medium — confirm, then ship.</strong> One verification attempt on the cheapest channel that works, escalating only on silence, in the sequence set out in <a href="/blog/whatsapp-vs-sms-vs-ivr-cod-verification">WhatsApp vs SMS vs IVR</a>. The decision this band needs made in advance is the no-response policy: ship anyway, or hold. For most stores, shipping a medium-band order after a silent verification attempt is correct, because silence is weak evidence and holding costs a dispatch day.</p>
+
+        <p><strong>High — change the terms.</strong> Not "verify harder." Ask for an advance or offer prepaid with an incentive, as covered in <a href="/blog/partial-cod-payment-advance-amount">how much COD advance to collect</a> and <a href="/blog/cod-to-prepaid-conversion">COD to prepaid conversion</a>. The point of this band is that a conversation does not fix it — the economics of shipping this parcel unsecured are bad, so either the terms change or you accept a known loss rate on a small, deliberately chosen slice.</p>
+
+        <p>Cancellation is not a band. Keep it as an exception, used on a handful of orders a month, with a named person responsible. Teams that cancel on a score drift upward in how readily they do it, and the cost of that drift is invisible because cancelled orders leave no return to count.</p>
+
+        <h2 id="calibrate">Calibration is the whole job</h2>
+
+        <p>The weights do not matter much. The thresholds do, and they are set from your own outcomes.</p>
+
+        <p>Score your last ninety days of COD orders retrospectively, with the outcome already known but not used as an input. Then build one table: score band on one axis, actual outcome on the other. You want to see the return rate rise monotonically as the score rises. If it does not — if your middle band returns at the same rate as your low band — the score is not separating anything and you should stop and look at which single signal does carry separation. Usually it is buyer history, and usually the rest of the table is decoration.</p>
+
+        <p>Then set thresholds by cost, not by percentile. For each band you can compute, from your own numbers, the expected loss of shipping unverified: the return rate times the cost of a return — forward freight, return freight, handling, and the capital locked in stock for the round trip. Compare that against the cost of the control: message fees plus the dispatch delay plus the share of verified orders that cancel. The threshold belongs where those two cross.</p>
+
+        <p>Run it as a holdout for the first month. Let a random tenth of medium-band and high-band orders through untreated, and compare. Without a holdout you cannot distinguish a score that works from a season that was going to be good anyway, and you will end up defending a number you cannot support.</p>
+
+        <h2 id="feedback">Closing the loop</h2>
+
+        <p>The score has to eat its own results, and this is where most implementations quietly die.</p>
+
+        <p>Write the score and the band onto the order record at the moment of scoring, not computed later on demand. When the parcel resolves — delivered, refused, returned, undelivered-and-recovered — you need the score as it stood at decision time, or you cannot measure anything. Re-scoring with today's rules against last month's orders will flatter you every time.</p>
+
+        <p>Once outcomes are attached, two things become possible. You can refresh the weights monthly on real labels. And you can maintain the one list that pays for all of this: addresses and phone numbers with repeat bad outcomes, which should route straight to the high band. Keep that list bounded and expiring — a single refusal eighteen months ago should not follow a customer forever, and a customer who later takes three deliveries has earned their way out.</p>
+
+        <h2 id="wrong">Where this goes wrong</h2>
+
+        <p><strong>Scoring people instead of orders.</strong> Build the score from order and shipment properties and from this store's own transaction history with this phone or address. Keep protected and quasi-protected attributes out of it entirely — and note that in India some geographic signals correlate closely with community, so a rule that penalises a locality rather than its measured delivery performance is both unfair and a worse predictor. Lane performance from your own courier data is a legitimate operational input. "This kind of area" is not.</p>
+
+        <p><strong>Letting the score reach the customer.</strong> Nothing in the score belongs in a message. A customer told they have been flagged responds badly and reasonably. The band changes what you ask for, not how you speak.</p>
+
+        <p><strong>Thresholds that drift upward.</strong> Friction is satisfying to add, and each addition looks locally justified. Review band volumes monthly against the same chart you set them from, and treat a growing high band as a problem to investigate rather than a sign of vigilance.</p>
+
+        <p><strong>Scoring an order you have already shipped.</strong> The score is only worth computing inside the window where you can still act on it — between order capture and the label. If the score arrives after packing, you have built a report, and you should either move it earlier or stop paying for it.</p>
+
+        <p><strong>Treating a high score as proof.</strong> A score is a distribution, not a verdict. A meaningful share of your high band would have delivered perfectly. That is expected and it is priced in; it only becomes a problem if you start cancelling.</p>
+
+        <h2 id="start">Where to start</h2>
+
+        <p>Pull ninety days of COD orders with their final delivery outcome. Add three columns: has this phone ordered before, did it deliver, did it ever come back. Sort by that alone and look at the return rate in each group. For most stores this single split does more work than the rest of the score put together, and it takes an afternoon.</p>
+
+        <p>Then add the mechanical address checks and one lane column from your courier reports. Score the ninety days retrospectively, build the band-versus-outcome table, and set two thresholds. Run the three bands by hand for a fortnight with a holdout before automating anything — doing it by hand is what tells you which band your team actually struggles to action, which is almost never the one you expect.</p>
+
+        <p>COD King handles the acting-on-it part: it scores and confirms COD orders before they are packed, so the medium band gets its verification attempt and the high band gets an advance or prepaid request inside the window where either still changes the outcome. The signal table and the thresholds are yours, and they are the part worth your own time.</p>
+      </div>
+    </div>
+
+    <div className="ck-col-right"><div className="ck-sticky"><div className="ck-toc-label">On this page</div><div className="ck-toc"><a href="#budget">Friction is a budget</a><a href="#signals">The signals you hold</a><a href="#shopify">What Shopify covers</a><a href="#build">Points, not a model</a><a href="#bands">Three bands</a><a href="#calibrate">Calibration</a><a href="#feedback">Closing the loop</a><a href="#wrong">Where it goes wrong</a><a href="#start">Where to start</a></div><div className="ck-cta"><input type="email" placeholder="Email address" /><a href="https://codking.tech" className="ck-btn-primary">Start for free</a><a href="https://codking.tech" className="ck-btn-secondary">Contact sales</a></div></div></div>
+  </div>
+
+  <div className="ck-footer">
+    <div className="ck-footer-inner">
+      <div className="ck-footer-brand">
+        <div className="ck-footer-logo">COD King</div>
+        <p className="ck-footer-tagline">Practical guides, strategies, and product insights for Shopify merchants managing Cash on Delivery.</p>
+      </div>
+
+      <div className="ck-footer-cols">
+        <div className="ck-footer-col">
+          <div className="ck-footer-head">Blog</div>
+          <a href="/blog">All articles</a>
+          <a href="/blog/understanding-cod-verification">Understanding COD Verification</a>
+          <a href="/blog/reduce-rto-for-cod-orders">How to Reduce RTO for COD Orders</a>
+          <a href="/blog/ndr-management-cod-orders">NDR Management</a>
+          <a href="/blog/courier-allocation-cod-orders">Courier Allocation for COD Orders</a>
+          <a href="/blog/address-quality-cod-orders">Address Quality for COD Orders</a>
+          <a href="/blog/cod-risk-scoring">COD Risk Scoring</a>
+          <a href="/blog/rto-benchmarks-india">RTO Benchmarks for Indian D2C</a>
+          <a href="/blog/cod-to-prepaid-conversion">COD to Prepaid Conversion</a>
+          <a href="/blog/partial-cod-payment-advance-amount">How Much COD Advance to Collect</a>
+          <a href="/blog/best-cod-verification-apps-shopify">Best COD Verification Apps</a>
+          <a href="/blog/native-checkout-vs-cod-order-form">Native Checkout vs COD Form</a>
+          <a href="/blog/whatsapp-vs-sms-vs-ivr-cod-verification">WhatsApp vs SMS vs IVR</a>
+          <a href="/blog/how-to-reduce-cod-cancellations">How to Reduce COD Cancellations</a>
+          <a href="/blog/shopify-checkout-optimization">Checkout Optimization for Shopify Stores</a>
+          <a href="/blog/payment-options-indian-ecommerce">Payment Options for Indian E-commerce</a>
+        </div>
+
+        <div className="ck-footer-col">
+          <div className="ck-footer-head">COD King</div>
+          <a href="https://apps.shopify.com/cash-on-delivery-cod-order-confirmation" target="_blank" rel="noreferrer">Shopify App Store</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="ck-footer-bottom">© 2026 COD King</div>
+  </div>
+</div>
