@@ -60,53 +60,82 @@ tag: "Payments"
     <div className="ck-col-main">
       <div className="ck-cover ck-cover--payments" style={{background:'#EDE9FF','--ck-cover-fg':'#241C57','--ck-cover-accent':'#5B3FD6',aspectRatio:'2 / 1'}}>
         <div className="ck-cover-art">
-          <svg viewBox="0 0 640 300" style={{width:'100%',display:'block'}} role="img" aria-label="Timeline showing cash leaving on day zero and COD cash returning only after delivery, courier reconciliation and remittance">
-            <text x="28" y="36" fill="#241C57" fontSize="12" fontWeight="700" letterSpacing="1.4">THE COD CASH CYCLE</text>
+          <div style={{width:'100%',boxSizing:'border-box',padding:'22px 26px',color:'#111111'}}>
+            <div style={{fontSize:'11px',fontWeight:'700',letterSpacing:'1.4px',color:'#241C57'}}>THE COD CASH CYCLE</div>
 
-            <rect x="28" y="54" width="168" height="48" rx="8" fill="#FFFFFF" stroke="#5B3FD6" strokeWidth="1.5" />
-            <text x="42" y="74" fill="#241C57" fontSize="11" fontWeight="700">CASH OUT — DAY 0</text>
-            <text x="42" y="91" fill="#667085" fontSize="11">Ads · stock · freight</text>
-            <path d="M112 102 L112 150" stroke="#5B3FD6" strokeWidth="1.5" strokeDasharray="4 3" />
-            <polygon points="112,158 107,147 117,147" fill="#5B3FD6" />
+            <div style={{display:'flex',alignItems:'center',gap:'10px',marginTop:'12px'}}>
+              <div style={{background:'#FFFFFF',border:'1.5px solid #5B3FD6',borderRadius:'8px',padding:'7px 11px'}}>
+                <div style={{fontSize:'11px',fontWeight:'700',color:'#241C57',lineHeight:'1.35'}}>CASH OUT — DAY 0</div>
+                <div style={{fontSize:'11px',color:'#667085',lineHeight:'1.35'}}>Ads · stock · freight</div>
+              </div>
 
-            <path d="M330 142 L330 128 L556 128 L556 142" fill="none" stroke="#5B3FD6" strokeWidth="1.5" />
-            <text x="443" y="120" fill="#241C57" fontSize="11" fontWeight="700" textAnchor="middle">days you fund yourself</text>
+              <div style={{flex:'1',height:'0',borderTop:'1.5px dashed #5B3FD6'}} />
 
-            <line x1="28" y1="168" x2="612" y2="168" stroke="#241C57" strokeWidth="2" />
+              <div style={{fontSize:'11px',fontWeight:'700',color:'#5B3FD6'}}>you fund the gap</div>
+            </div>
 
-            <circle cx="112" cy="168" r="6" fill="#5B3FD6" />
-            <circle cx="222" cy="168" r="6" fill="#5B3FD6" />
-            <circle cx="330" cy="168" r="6" fill="#5B3FD6" />
-            <circle cx="443" cy="168" r="6" fill="#5B3FD6" />
-            <circle cx="556" cy="168" r="7" fill="#7CD548" stroke="#241C57" strokeWidth="1.5" />
+            <div style={{display:'flex',alignItems:'stretch',gap:'5px',marginTop:'12px'}}>
+              <div style={{flex:'1',background:'#FFFFFF',border:'1px solid #CFC2FA',borderRadius:'8px',padding:'9px 6px',textAlign:'center'}}>
+                <div style={{fontSize:'11px',fontWeight:'700',color:'#241C57',lineHeight:'1.3'}}>Order placed</div>
+                <div style={{fontSize:'11px',color:'#667085',lineHeight:'1.3',marginTop:'2px'}}>confirm, pick, pack</div>
+              </div>
 
-            <text x="112" y="192" fill="#241C57" fontSize="11" fontWeight="700" textAnchor="middle">Order placed</text>
-            <text x="112" y="207" fill="#667085" fontSize="11" textAnchor="middle">confirm, pick, pack</text>
+              <div style={{alignSelf:'center',fontSize:'13px',color:'#5B3FD6',fontWeight:'700'}}>›</div>
 
-            <text x="222" y="192" fill="#241C57" fontSize="11" fontWeight="700" textAnchor="middle">Dispatched</text>
-            <text x="222" y="207" fill="#667085" fontSize="11" textAnchor="middle">in transit</text>
+              <div style={{flex:'1',background:'#FFFFFF',border:'1px solid #CFC2FA',borderRadius:'8px',padding:'9px 6px',textAlign:'center'}}>
+                <div style={{fontSize:'11px',fontWeight:'700',color:'#241C57',lineHeight:'1.3'}}>Dispatched</div>
+                <div style={{fontSize:'11px',color:'#667085',lineHeight:'1.3',marginTop:'2px'}}>in transit</div>
+              </div>
 
-            <text x="330" y="192" fill="#241C57" fontSize="11" fontWeight="700" textAnchor="middle">Delivered</text>
-            <text x="330" y="207" fill="#667085" fontSize="11" textAnchor="middle">cash collected</text>
+              <div style={{alignSelf:'center',fontSize:'13px',color:'#5B3FD6',fontWeight:'700'}}>›</div>
 
-            <text x="443" y="192" fill="#241C57" fontSize="11" fontWeight="700" textAnchor="middle">Courier cycle</text>
-            <text x="443" y="207" fill="#667085" fontSize="11" textAnchor="middle">charges netted off</text>
+              <div style={{flex:'1',background:'#FFFFFF',border:'1px solid #CFC2FA',borderRadius:'8px',padding:'9px 6px',textAlign:'center'}}>
+                <div style={{fontSize:'11px',fontWeight:'700',color:'#241C57',lineHeight:'1.3'}}>Delivered</div>
+                <div style={{fontSize:'11px',color:'#667085',lineHeight:'1.3',marginTop:'2px'}}>cash collected</div>
+              </div>
 
-            <text x="556" y="192" fill="#241C57" fontSize="11" fontWeight="700" textAnchor="middle">Cash in bank</text>
-            <text x="556" y="207" fill="#667085" fontSize="11" textAnchor="middle">then reconciled</text>
+              <div style={{alignSelf:'center',fontSize:'13px',color:'#5B3FD6',fontWeight:'700'}}>›</div>
 
-            <text x="28" y="248" fill="#241C57" fontSize="11" fontWeight="700" letterSpacing="1.2">WHAT SHORTENS IT</text>
-            <rect x="28" y="258" width="150" height="28" rx="14" fill="#FFFFFF" stroke="#5B3FD6" strokeWidth="1.2" />
-            <text x="103" y="276" fill="#241C57" fontSize="11" textAnchor="middle">Faster dispatch</text>
-            <rect x="190" y="258" width="150" height="28" rx="14" fill="#FFFFFF" stroke="#5B3FD6" strokeWidth="1.2" />
-            <text x="265" y="276" fill="#241C57" fontSize="11" textAnchor="middle">Lower RTO</text>
-            <rect x="352" y="258" width="150" height="28" rx="14" fill="#FFFFFF" stroke="#5B3FD6" strokeWidth="1.2" />
-            <text x="427" y="276" fill="#241C57" fontSize="11" textAnchor="middle">More prepaid</text>
-            <rect x="514" y="258" width="98" height="28" rx="14" fill="#FFFFFF" stroke="#5B3FD6" strokeWidth="1.2" />
-            <text x="563" y="276" fill="#241C57" fontSize="11" textAnchor="middle">Paid early</text>
-          </svg>
+              <div style={{flex:'1',background:'#FFFFFF',border:'1px solid #CFC2FA',borderRadius:'8px',padding:'9px 6px',textAlign:'center'}}>
+                <div style={{fontSize:'11px',fontWeight:'700',color:'#241C57',lineHeight:'1.3'}}>Courier cycle</div>
+                <div style={{fontSize:'11px',color:'#667085',lineHeight:'1.3',marginTop:'2px'}}>charges netted off</div>
+              </div>
+
+              <div style={{alignSelf:'center',fontSize:'13px',color:'#5B3FD6',fontWeight:'700'}}>›</div>
+
+              <div style={{flex:'1',background:'#FFFFFF',border:'1.5px solid #7CD548',borderRadius:'8px',padding:'9px 6px',textAlign:'center'}}>
+                <div style={{fontSize:'11px',fontWeight:'700',color:'#241C57',lineHeight:'1.3'}}>Cash in bank</div>
+                <div style={{fontSize:'11px',color:'#667085',lineHeight:'1.3',marginTop:'2px'}}>then reconciled</div>
+              </div>
+            </div>
+
+            <div style={{display:'flex',marginTop:'7px'}}>
+              <div style={{flex:'2'}} />
+
+              <div style={{flex:'3',borderLeft:'1.5px solid #5B3FD6',borderRight:'1.5px solid #5B3FD6',borderBottom:'1.5px solid #5B3FD6',borderRadius:'0 0 6px 6px',height:'9px'}} />
+            </div>
+
+            <div style={{display:'flex'}}>
+              <div style={{flex:'2'}} />
+
+              <div style={{flex:'3',textAlign:'center',fontSize:'11px',fontWeight:'700',color:'#241C57',paddingTop:'5px'}}>days you fund yourself</div>
+            </div>
+
+            <div style={{fontSize:'11px',fontWeight:'700',letterSpacing:'1.2px',color:'#241C57',marginTop:'16px'}}>WHAT SHORTENS IT</div>
+
+            <div style={{display:'flex',gap:'8px',marginTop:'8px'}}>
+              <div style={{flex:'1',background:'#FFFFFF',border:'1.2px solid #5B3FD6',borderRadius:'14px',padding:'6px 4px',textAlign:'center',fontSize:'11px',color:'#241C57'}}>Faster dispatch</div>
+
+              <div style={{flex:'1',background:'#FFFFFF',border:'1.2px solid #5B3FD6',borderRadius:'14px',padding:'6px 4px',textAlign:'center',fontSize:'11px',color:'#241C57'}}>Lower RTO</div>
+
+              <div style={{flex:'1',background:'#FFFFFF',border:'1.2px solid #5B3FD6',borderRadius:'14px',padding:'6px 4px',textAlign:'center',fontSize:'11px',color:'#241C57'}}>More prepaid</div>
+
+              <div style={{flex:'1',background:'#FFFFFF',border:'1.2px solid #5B3FD6',borderRadius:'14px',padding:'6px 4px',textAlign:'center',fontSize:'11px',color:'#241C57'}}>Paid early</div>
+            </div>
+          </div>
         </div>
       </div>
+
       <div className="ck-summary"><div className="ck-summary-label">Summary</div><p>Your courier publishes one number. Your actual COD cash cycle is five intervals stacked end to end, and only one of them belongs to the courier. Here is how to measure the whole thing, what each day of it costs, and how to decide whether paying for early remittance is sensible or expensive.</p></div>
 
       <div className="ck-body">
@@ -164,7 +193,7 @@ tag: "Payments"
 
         <p>That netting has two consequences people miss.</p>
 
-        <p>First, your <strong>net remittance is a smaller share of your COD order value</strong> than your margin sheet implies, and the gap widens as RTO rises. Growth financed by COD at a high refusal rate consumes cash faster than it produces it, which is the mechanism behind brands that look profitable on a P&L and cannot pay a supplier.</p>
+        <p>First, your <strong>net remittance is a smaller share of your COD order value</strong> than your margin sheet implies, and the gap widens as RTO rises. Growth financed by COD at a high refusal rate consumes cash faster than it produces it, which is the mechanism behind brands that look profitable on a P\&L and cannot pay a supplier.</p>
 
         <p>Second, charges and credits share a queue. Delhivery's own documentation describes remittance being held to the next cycle while the wallet balance is negative. Read that operationally: a bad RTO week can delay the cash from a good week. The cost of RTO is not only the freight — it is the freight plus a delay applied to unrelated, perfectly good orders.</p>
 
