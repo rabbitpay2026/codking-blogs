@@ -42,6 +42,7 @@ tag: "COD & RTO"
           <a href="/blog/cod-to-prepaid-conversion">COD to Prepaid</a>
           <a href="/blog/partial-cod-payment-advance-amount">COD Advance Amount</a>
           <a href="/blog/payment-options-indian-ecommerce">Payment Options</a>
+          <a href="/blog/cod-remittance-cycle-cash-flow">COD Remittance Cycle</a>
         </div>
 
         <div className="ck-navlabel" style={{marginTop:'24px'}}>Tooling & Checkout</div>
@@ -79,9 +80,9 @@ tag: "COD & RTO"
 
         <p>It is worth being precise about the platform's own postal-code machinery, because it is more capable than most merchants realise and narrower than they assume.</p>
 
-        <p>Shopify's Help Center documentation on local delivery (checked 10 November 2026) states that "You can offer delivery within a set distance from your location, or for certain postal codes", and that "You can set up local delivery for specific areas using postal codes for your location." On the mechanics it says "You can enter a list of postal codes, up to a maximum of 3,000 characters" and "You can add up to 10 delivery zones per location." Usefully, it documents prefix matching: enter "the starting characters followed by an asterisk" or a space, with the examples that "<code>9732*</code> or <code>9732</code> (with space) includes all codes from <code>97320</code> to <code>97329</code>".</p>
+        <p>Shopify's Help Center documentation on local delivery (checked 10 November 2026) states that "You can offer delivery within a set distance from your location, or for certain postal codes", and that "You can set up local delivery for specific areas using postal codes for your location." On the mechanics it says "You can enter a list of postal codes, up to a maximum of 3,000 characters" and "You can add up to 10 delivery zones per location." Usefully, it documents prefix matching: enter "the starting characters followed by an asterisk" or a space, with the examples that "<code>9732\*</code> or <code>9732</code> (with space) includes all codes from <code>97320</code> to <code>97329</code>".</p>
 
-        <p>Prefix matching matters more in India than it does in most markets, because the Indian PIN code is hierarchical from the left. The leading digit is a postal region, the first three digits identify a sorting district, and the remaining digits narrow to a delivery post office. That means a prefix is a geographic selector you get for free: <code>56*</code> and <code>560*</code> and <code>5600*</code> are progressively tighter rings around the same place. Any list you build — serviceability, restriction, courier preference — should be expressible in prefixes, not only in six-digit literals, or it will be unmaintainable within a quarter.</p>
+        <p>Prefix matching matters more in India than it does in most markets, because the Indian PIN code is hierarchical from the left. The leading digit is a postal region, the first three digits identify a sorting district, and the remaining digits narrow to a delivery post office. That means a prefix is a geographic selector you get for free: <code>56\*</code> and <code>560\*</code> and <code>5600\*</code> are progressively tighter rings around the same place. Any list you build — serviceability, restriction, courier preference — should be expressible in prefixes, not only in six-digit literals, or it will be unmaintainable within a quarter.</p>
 
         <p>The limit to note is scope. The documented feature governs where a delivery method is offered, and the 3,000-character and ten-zone ceilings are real. It is not a mechanism for deciding which payment method appears for a given pincode, and Shopify's local delivery documentation does not describe payment-method gating at all. That is why per-pincode COD control in practice comes from an app or from a replacement order form rather than from shipping settings.</p>
 
@@ -213,6 +214,7 @@ tag: "COD & RTO"
           <a href="/blog/how-to-reduce-cod-cancellations">How to Reduce COD Cancellations</a>
           <a href="/blog/shopify-checkout-optimization">Checkout Optimization for Shopify Stores</a>
           <a href="/blog/payment-options-indian-ecommerce">Payment Options for Indian E-commerce</a>
+          <a href="/blog/cod-remittance-cycle-cash-flow">COD Remittance Cycles and Cash Flow</a>
         </div>
 
         <div className="ck-footer-col">
