@@ -61,78 +61,89 @@ tag: "COD & RTO"
     <div className="ck-col-main">
       <div className="ck-cover ck-cover--codrto" style={{background:'#F1ECFF','--ck-cover-fg':'#2A1E5C','--ck-cover-accent':'#734DFF',aspectRatio:'2 / 1'}}>
         <div className="ck-cover-art">
-          <svg viewBox="0 0 680 340" style={{width:'100%',height:'auto',display:'block'}} role="img" aria-label="Two dispatch sequences compared: confirmation in series misses the pickup cut-off, confirmation in parallel clears it">
-            <text x="24" y="26" fontSize="12" fontWeight="700" letterSpacing="1.3" fill="#2A1E5C">ONE CLOCK, TWO SEQUENCES</text>
+          <div style={{width:'100%',boxSizing:'border-box',padding:'22px 26px',color:'#111111'}}>
+            <div style={{fontSize:'11px',fontWeight:'700',letterSpacing:'1.4px',color:'#2A1E5C'}}>ONE CLOCK, TWO SEQUENCES</div>
 
-            <text x="24" y="56" fontSize="11" fontWeight="700" letterSpacing="0.8" fill="#667085">CONFIRMATION IN SERIES</text>
+            <div style={{fontSize:'11px',fontWeight:'700',letterSpacing:'0.8px',color:'#667085',marginTop:'14px'}}>CONFIRMATION IN SERIES</div>
 
-            <rect x="24" y="66" width="100" height="46" rx="8" fill="#FFFFFF" stroke="#CFC2FA" strokeWidth="1" />
-            <text x="74" y="86" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Order in</text>
-            <text x="74" y="101" fontSize="11" textAnchor="middle" fill="#667085">09:40</text>
+            <div style={{display:'flex',alignItems:'stretch',gap:'5px',marginTop:'8px'}}>
+              <div style={{flex:'1',background:'#FFFFFF',border:'1px solid #CFC2FA',borderRadius:'8px',padding:'9px 6px',textAlign:'center'}}>
+                <div style={{fontSize:'11px',fontWeight:'700',color:'#2A1E5C',lineHeight:'1.3'}}>Order in</div>
+                <div style={{fontSize:'11px',color:'#667085',lineHeight:'1.3',marginTop:'2px'}}>09:40</div>
+              </div>
 
-            <text x="133" y="93" fontSize="14" fontWeight="700" fill="#734DFF">›</text>
+              <div style={{alignSelf:'center',fontSize:'13px',color:'#734DFF',fontWeight:'700'}}>›</div>
 
-            <rect x="148" y="66" width="100" height="46" rx="8" fill="#FFFFFF" stroke="#734DFF" strokeWidth="1.6" />
-            <text x="198" y="86" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Confirm</text>
-            <text x="198" y="101" fontSize="11" textAnchor="middle" fill="#667085">call, retry, wait</text>
+              <div style={{flex:'1',background:'#FFFFFF',border:'1.5px solid #734DFF',borderRadius:'8px',padding:'9px 6px',textAlign:'center'}}>
+                <div style={{fontSize:'11px',fontWeight:'700',color:'#2A1E5C',lineHeight:'1.3'}}>Confirm</div>
+                <div style={{fontSize:'11px',color:'#667085',lineHeight:'1.3',marginTop:'2px'}}>call, retry, wait</div>
+              </div>
 
-            <text x="257" y="93" fontSize="14" fontWeight="700" fill="#734DFF">›</text>
+              <div style={{alignSelf:'center',fontSize:'13px',color:'#734DFF',fontWeight:'700'}}>›</div>
 
-            <rect x="272" y="66" width="100" height="46" rx="8" fill="#FFFFFF" stroke="#CFC2FA" strokeWidth="1" />
-            <text x="322" y="86" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Pick and pack</text>
-            <text x="322" y="101" fontSize="11" textAnchor="middle" fill="#667085">starts late</text>
+              <div style={{flex:'1',background:'#FFFFFF',border:'1px solid #CFC2FA',borderRadius:'8px',padding:'9px 6px',textAlign:'center'}}>
+                <div style={{fontSize:'11px',fontWeight:'700',color:'#2A1E5C',lineHeight:'1.3'}}>Pick and pack</div>
+                <div style={{fontSize:'11px',color:'#667085',lineHeight:'1.3',marginTop:'2px'}}>starts late</div>
+              </div>
 
-            <text x="381" y="93" fontSize="14" fontWeight="700" fill="#734DFF">›</text>
+              <div style={{alignSelf:'center',fontSize:'13px',color:'#734DFF',fontWeight:'700'}}>›</div>
 
-            <rect x="396" y="66" width="100" height="46" rx="8" fill="#FFFFFF" stroke="#CFC2FA" strokeWidth="1" />
-            <text x="446" y="86" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Manifest</text>
-            <text x="446" y="101" fontSize="11" textAnchor="middle" fill="#667085">label, scan</text>
+              <div style={{flex:'1',background:'#FFFFFF',border:'1px solid #CFC2FA',borderRadius:'8px',padding:'9px 6px',textAlign:'center'}}>
+                <div style={{fontSize:'11px',fontWeight:'700',color:'#2A1E5C',lineHeight:'1.3'}}>Manifest</div>
+                <div style={{fontSize:'11px',color:'#667085',lineHeight:'1.3',marginTop:'2px'}}>label, scan</div>
+              </div>
 
-            <text x="505" y="93" fontSize="14" fontWeight="700" fill="#734DFF">›</text>
+              <div style={{alignSelf:'center',fontSize:'13px',color:'#734DFF',fontWeight:'700'}}>›</div>
 
-            <rect x="520" y="66" width="136" height="46" rx="8" fill="#FFFFFF" stroke="#667085" strokeWidth="1.4" strokeDasharray="4 3" />
-            <text x="588" y="86" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Cut-off missed</text>
-            <text x="588" y="101" fontSize="11" textAnchor="middle" fill="#667085">pickup tomorrow</text>
+              <div style={{flex:'1.3',background:'#FFFFFF',border:'1.5px dashed #667085',borderRadius:'8px',padding:'9px 6px',textAlign:'center'}}>
+                <div style={{fontSize:'11px',fontWeight:'700',color:'#2A1E5C',lineHeight:'1.3'}}>Cut-off missed</div>
+                <div style={{fontSize:'11px',color:'#667085',lineHeight:'1.3',marginTop:'2px'}}>pickup tomorrow</div>
+              </div>
+            </div>
 
-            <text x="24" y="152" fontSize="11" fontWeight="700" letterSpacing="0.8" fill="#667085">CONFIRMATION IN PARALLEL</text>
+            <div style={{fontSize:'11px',fontWeight:'700',letterSpacing:'0.8px',color:'#667085',marginTop:'16px'}}>CONFIRMATION IN PARALLEL</div>
 
-            <rect x="24" y="162" width="100" height="58" rx="8" fill="#FFFFFF" stroke="#CFC2FA" strokeWidth="1" />
-            <text x="74" y="188" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Order in</text>
-            <text x="74" y="203" fontSize="11" textAnchor="middle" fill="#667085">09:40</text>
+            <div style={{display:'flex',alignItems:'stretch',gap:'5px',marginTop:'8px'}}>
+              <div style={{flex:'1',background:'#FFFFFF',border:'1px solid #CFC2FA',borderRadius:'8px',padding:'9px 6px',textAlign:'center'}}>
+                <div style={{fontSize:'11px',fontWeight:'700',color:'#2A1E5C',lineHeight:'1.3'}}>Order in</div>
+                <div style={{fontSize:'11px',color:'#667085',lineHeight:'1.3',marginTop:'2px'}}>09:40</div>
+              </div>
 
-            <text x="133" y="196" fontSize="14" fontWeight="700" fill="#734DFF">›</text>
+              <div style={{alignSelf:'center',fontSize:'13px',color:'#734DFF',fontWeight:'700'}}>›</div>
 
-            <rect x="148" y="162" width="224" height="26" rx="6" fill="#FFFFFF" stroke="#734DFF" strokeWidth="1.6" />
-            <text x="260" y="179" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Auto confirm on a timer</text>
+              <div style={{flex:'2.3',display:'flex',flexDirection:'column',gap:'5px'}}>
+                <div style={{background:'#FFFFFF',border:'1.5px solid #734DFF',borderRadius:'6px',padding:'5px 6px',textAlign:'center',fontSize:'11px',fontWeight:'700',color:'#2A1E5C'}}>Auto confirm on a timer</div>
 
-            <rect x="148" y="194" width="224" height="26" rx="6" fill="#FFFFFF" stroke="#7CD548" strokeWidth="1.6" />
-            <text x="260" y="211" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Pick and pack, same window</text>
+                <div style={{background:'#FFFFFF',border:'1.5px solid #7CD548',borderRadius:'6px',padding:'5px 6px',textAlign:'center',fontSize:'11px',fontWeight:'700',color:'#2A1E5C'}}>Pick and pack, same window</div>
+              </div>
 
-            <text x="381" y="196" fontSize="14" fontWeight="700" fill="#734DFF">›</text>
+              <div style={{alignSelf:'center',fontSize:'13px',color:'#734DFF',fontWeight:'700'}}>›</div>
 
-            <rect x="396" y="162" width="100" height="58" rx="8" fill="#FFFFFF" stroke="#CFC2FA" strokeWidth="1" />
-            <text x="446" y="188" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Manifest</text>
-            <text x="446" y="203" fontSize="11" textAnchor="middle" fill="#667085">last reversible step</text>
+              <div style={{flex:'1',background:'#FFFFFF',border:'1px solid #CFC2FA',borderRadius:'8px',padding:'9px 6px',textAlign:'center'}}>
+                <div style={{fontSize:'11px',fontWeight:'700',color:'#2A1E5C',lineHeight:'1.3'}}>Manifest</div>
+                <div style={{fontSize:'11px',color:'#667085',lineHeight:'1.3',marginTop:'2px'}}>last reversible step</div>
+              </div>
 
-            <text x="505" y="196" fontSize="14" fontWeight="700" fill="#734DFF">›</text>
+              <div style={{alignSelf:'center',fontSize:'13px',color:'#734DFF',fontWeight:'700'}}>›</div>
 
-            <rect x="520" y="162" width="136" height="58" rx="8" fill="#FFFFFF" stroke="#7CD548" strokeWidth="1.8" />
-            <text x="588" y="188" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Cut-off cleared</text>
-            <text x="588" y="203" fontSize="11" textAnchor="middle" fill="#667085">pickup today</text>
+              <div style={{flex:'1.3',background:'#FFFFFF',border:'1.8px solid #7CD548',borderRadius:'8px',padding:'9px 6px',textAlign:'center'}}>
+                <div style={{fontSize:'11px',fontWeight:'700',color:'#2A1E5C',lineHeight:'1.3'}}>Cut-off cleared</div>
+                <div style={{fontSize:'11px',color:'#667085',lineHeight:'1.3',marginTop:'2px'}}>pickup today</div>
+              </div>
+            </div>
 
-            <text x="24" y="262" fontSize="11" fontWeight="700" letterSpacing="1.1" fill="#2A1E5C">THE DEADLINE IS A STEP, NOT A SLOPE</text>
+            <div style={{fontSize:'11px',fontWeight:'700',letterSpacing:'1.2px',color:'#2A1E5C',marginTop:'18px'}}>THE DEADLINE IS A STEP, NOT A SLOPE</div>
 
-            <rect x="24" y="276" width="196" height="30" rx="15" fill="#FFFFFF" stroke="#734DFF" strokeWidth="1.2" />
-            <text x="122" y="295" fontSize="11" textAnchor="middle" fill="#2A1E5C">Confirmation deadline</text>
+            <div style={{display:'flex',gap:'8px',marginTop:'8px'}}>
+              <div style={{flex:'1',background:'#FFFFFF',border:'1.2px solid #734DFF',borderRadius:'14px',padding:'6px 4px',textAlign:'center',fontSize:'11px',color:'#2A1E5C'}}>Confirmation deadline</div>
 
-            <rect x="236" y="276" width="196" height="30" rx="15" fill="#FFFFFF" stroke="#734DFF" strokeWidth="1.2" />
-            <text x="334" y="295" fontSize="11" textAnchor="middle" fill="#2A1E5C">Pack and manifest buffer</text>
+              <div style={{flex:'1',background:'#FFFFFF',border:'1.2px solid #734DFF',borderRadius:'14px',padding:'6px 4px',textAlign:'center',fontSize:'11px',color:'#2A1E5C'}}>Pack and manifest buffer</div>
 
-            <rect x="448" y="276" width="208" height="30" rx="15" fill="#FFFFFF" stroke="#7CD548" strokeWidth="1.6" />
-            <text x="552" y="295" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Courier pickup cut-off</text>
+              <div style={{flex:'1',background:'#FFFFFF',border:'1.6px solid #7CD548',borderRadius:'14px',padding:'6px 4px',textAlign:'center',fontSize:'11px',fontWeight:'700',color:'#2A1E5C'}}>Courier pickup cut-off</div>
+            </div>
 
-            <text x="24" y="328" fontSize="11" fill="#667085">Work backwards from the cut-off. Every interval before it is a budget, not an average.</text>
-          </svg>
+            <div style={{fontSize:'11px',color:'#667085',marginTop:'12px'}}>Work backwards from the cut-off. Every interval before it is a budget, not an average.</div>
+          </div>
         </div>
       </div>
 
