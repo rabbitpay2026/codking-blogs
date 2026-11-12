@@ -1,0 +1,297 @@
+---
+title: "Dispatch Speed for COD Orders: The Hours That Decide RTO"
+sidebarTitle: "Dispatch Speed"
+description: "In a COD business, dispatch speed is not a customer-experience metric — it is a risk control. How to find the six intervals hiding inside your dispatch clock, why the courier's pickup cut-off is the only deadline that matters, and what actually moves the number."
+mode: "custom"
+public: true
+isPublic: true
+hideFooterPagination: true
+tag: "COD & RTO"
+---
+
+<div className="ck-shell">
+  <a href="/blog" className="ck-back">← All articles</a>
+
+  <div className="ck-head">
+    <div className="ck-eyebrow">COD & RTO · November 2026</div>
+    <h1 className="ck-title">Dispatch Speed for COD Orders: The Hours That Decide RTO</h1>
+    <div className="ck-readtime">10 minutes read</div>
+  </div>
+
+  <div className="ck-layout">
+    <div className="ck-col-left">
+      <div className="ck-sticky">
+        <div className="ck-author-mount" data-category="COD & RTO" data-slug="dispatch-speed-cod-orders" />
+
+        <div className="ck-navlabel" style={{marginTop:'32px',paddingTop:'24px',borderTop:'1px solid var(--ck-border)'}}>COD & RTO</div>
+
+        <div className="ck-nav">
+          <a href="/blog/reduce-rto-for-cod-orders">Reducing RTO</a>
+          <a href="/blog/ndr-management-cod-orders">NDR Management</a>
+          <a href="/blog/courier-allocation-cod-orders">Courier Allocation</a>
+          <a href="/blog/rto-benchmarks-india">RTO Benchmarks</a>
+          <a href="/blog/understanding-cod-verification">COD Verification</a>
+          <a href="/blog/address-quality-cod-orders">Address Quality</a>
+          <a href="/blog/cod-risk-scoring">COD Risk Scoring</a>
+          <a href="/blog/cod-pincode-serviceability">Pincode Serviceability</a>
+          <a href="/blog/dispatch-speed-cod-orders" className="is-current">Dispatch Speed</a>
+        </div>
+
+        <div className="ck-navlabel" style={{marginTop:'24px'}}>Payments & Pricing</div>
+
+        <div className="ck-nav">
+          <a href="/blog/cod-to-prepaid-conversion">COD to Prepaid</a>
+          <a href="/blog/partial-cod-payment-advance-amount">COD Advance Amount</a>
+          <a href="/blog/payment-options-indian-ecommerce">Payment Options</a>
+          <a href="/blog/cod-remittance-cycle-cash-flow">COD Remittance Cycle</a>
+        </div>
+
+        <div className="ck-navlabel" style={{marginTop:'24px'}}>Tooling & Checkout</div>
+
+        <div className="ck-nav">
+          <a href="/blog/best-cod-verification-apps-shopify">Choosing a COD App</a>
+          <a href="/blog/native-checkout-vs-cod-order-form">Checkout vs COD Form</a>
+          <a href="/blog/whatsapp-vs-sms-vs-ivr-cod-verification">WhatsApp vs SMS vs IVR</a>
+          <a href="/blog/how-to-reduce-cod-cancellations">COD Cancellations</a>
+          <a href="/blog/shopify-checkout-optimization">Checkout Optimization</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="ck-col-main">
+      <div className="ck-cover ck-cover--codrto" style={{background:'#F1ECFF','--ck-cover-fg':'#2A1E5C','--ck-cover-accent':'#734DFF',aspectRatio:'2 / 1'}}>
+        <div className="ck-cover-art">
+          <svg viewBox="0 0 680 340" style={{width:'100%',height:'auto',display:'block'}} role="img" aria-label="Two dispatch sequences compared: confirmation in series misses the pickup cut-off, confirmation in parallel clears it">
+            <text x="24" y="26" fontSize="12" fontWeight="700" letterSpacing="1.3" fill="#2A1E5C">ONE CLOCK, TWO SEQUENCES</text>
+
+            <text x="24" y="56" fontSize="11" fontWeight="700" letterSpacing="0.8" fill="#667085">CONFIRMATION IN SERIES</text>
+
+            <rect x="24" y="66" width="100" height="46" rx="8" fill="#FFFFFF" stroke="#CFC2FA" strokeWidth="1" />
+            <text x="74" y="86" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Order in</text>
+            <text x="74" y="101" fontSize="11" textAnchor="middle" fill="#667085">09:40</text>
+
+            <text x="133" y="93" fontSize="14" fontWeight="700" fill="#734DFF">›</text>
+
+            <rect x="148" y="66" width="100" height="46" rx="8" fill="#FFFFFF" stroke="#734DFF" strokeWidth="1.6" />
+            <text x="198" y="86" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Confirm</text>
+            <text x="198" y="101" fontSize="11" textAnchor="middle" fill="#667085">call, retry, wait</text>
+
+            <text x="257" y="93" fontSize="14" fontWeight="700" fill="#734DFF">›</text>
+
+            <rect x="272" y="66" width="100" height="46" rx="8" fill="#FFFFFF" stroke="#CFC2FA" strokeWidth="1" />
+            <text x="322" y="86" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Pick and pack</text>
+            <text x="322" y="101" fontSize="11" textAnchor="middle" fill="#667085">starts late</text>
+
+            <text x="381" y="93" fontSize="14" fontWeight="700" fill="#734DFF">›</text>
+
+            <rect x="396" y="66" width="100" height="46" rx="8" fill="#FFFFFF" stroke="#CFC2FA" strokeWidth="1" />
+            <text x="446" y="86" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Manifest</text>
+            <text x="446" y="101" fontSize="11" textAnchor="middle" fill="#667085">label, scan</text>
+
+            <text x="505" y="93" fontSize="14" fontWeight="700" fill="#734DFF">›</text>
+
+            <rect x="520" y="66" width="136" height="46" rx="8" fill="#FFFFFF" stroke="#667085" strokeWidth="1.4" strokeDasharray="4 3" />
+            <text x="588" y="86" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Cut-off missed</text>
+            <text x="588" y="101" fontSize="11" textAnchor="middle" fill="#667085">pickup tomorrow</text>
+
+            <text x="24" y="152" fontSize="11" fontWeight="700" letterSpacing="0.8" fill="#667085">CONFIRMATION IN PARALLEL</text>
+
+            <rect x="24" y="162" width="100" height="58" rx="8" fill="#FFFFFF" stroke="#CFC2FA" strokeWidth="1" />
+            <text x="74" y="188" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Order in</text>
+            <text x="74" y="203" fontSize="11" textAnchor="middle" fill="#667085">09:40</text>
+
+            <text x="133" y="196" fontSize="14" fontWeight="700" fill="#734DFF">›</text>
+
+            <rect x="148" y="162" width="224" height="26" rx="6" fill="#FFFFFF" stroke="#734DFF" strokeWidth="1.6" />
+            <text x="260" y="179" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Auto confirm on a timer</text>
+
+            <rect x="148" y="194" width="224" height="26" rx="6" fill="#FFFFFF" stroke="#7CD548" strokeWidth="1.6" />
+            <text x="260" y="211" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Pick and pack, same window</text>
+
+            <text x="381" y="196" fontSize="14" fontWeight="700" fill="#734DFF">›</text>
+
+            <rect x="396" y="162" width="100" height="58" rx="8" fill="#FFFFFF" stroke="#CFC2FA" strokeWidth="1" />
+            <text x="446" y="188" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Manifest</text>
+            <text x="446" y="203" fontSize="11" textAnchor="middle" fill="#667085">last reversible step</text>
+
+            <text x="505" y="196" fontSize="14" fontWeight="700" fill="#734DFF">›</text>
+
+            <rect x="520" y="162" width="136" height="58" rx="8" fill="#FFFFFF" stroke="#7CD548" strokeWidth="1.8" />
+            <text x="588" y="188" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Cut-off cleared</text>
+            <text x="588" y="203" fontSize="11" textAnchor="middle" fill="#667085">pickup today</text>
+
+            <text x="24" y="262" fontSize="11" fontWeight="700" letterSpacing="1.1" fill="#2A1E5C">THE DEADLINE IS A STEP, NOT A SLOPE</text>
+
+            <rect x="24" y="276" width="196" height="30" rx="15" fill="#FFFFFF" stroke="#734DFF" strokeWidth="1.2" />
+            <text x="122" y="295" fontSize="11" textAnchor="middle" fill="#2A1E5C">Confirmation deadline</text>
+
+            <rect x="236" y="276" width="196" height="30" rx="15" fill="#FFFFFF" stroke="#734DFF" strokeWidth="1.2" />
+            <text x="334" y="295" fontSize="11" textAnchor="middle" fill="#2A1E5C">Pack and manifest buffer</text>
+
+            <rect x="448" y="276" width="208" height="30" rx="15" fill="#FFFFFF" stroke="#7CD548" strokeWidth="1.6" />
+            <text x="552" y="295" fontSize="11" fontWeight="700" textAnchor="middle" fill="#2A1E5C">Courier pickup cut-off</text>
+
+            <text x="24" y="328" fontSize="11" fill="#667085">Work backwards from the cut-off. Every interval before it is a budget, not an average.</text>
+          </svg>
+        </div>
+      </div>
+
+      <div className="ck-summary"><div className="ck-summary-label">Summary</div><p>Dispatch speed for COD is not a service metric, it is a risk control: the longer a parcel takes to reach the door, the more time the customer has to stop wanting it, and refusing costs them nothing. Six separate intervals hide inside what your dashboard calls dispatch, your only real deadline is the courier's pickup cut-off, and the interval that usually breaks the deadline is confirmation — which is also the one most easily moved off the critical path.</p></div>
+
+      <div className="ck-body">
+        <p className="ck-lede">In a prepaid business, dispatch speed is a customer-experience number. You ship faster, people are happier, reviews improve. In a Cash on Delivery business it is something else entirely: it is one of the few risk controls you own outright. A COD order is a stated intention, not a payment. Every hour between the order and the doorstep is an hour in which that intention can weaken — and when the parcel finally arrives, walking away from it costs the customer nothing at all.</p>
+
+        <p>That is the whole mechanism, and it explains why two brands with the same product, the same ad creative and the same courier can run materially different refusal rates. One of them gets the parcel in front of the customer while they still want it. The other gets there a week later, into a decision that has quietly reversed.</p>
+
+        <h2 id="why">Why the dispatch clock is a COD control, not a courtesy</h2>
+
+        <p>Intent decays for ordinary reasons. The customer found it cheaper somewhere else. The occasion they bought it for has passed. The impulse that an ad created on a Tuesday evening does not survive to the following Monday. Somebody else in the household objected to the spend. None of these are fraud and none of them are the courier's fault; they are the predictable arithmetic of giving a buyer an unlimited, penalty-free option to cancel at the door.</p>
+
+        <p>Treat the end-to-end clock as three blocks. <strong>Transit</strong> is largely lane physics — you influence it through <a href="/blog/courier-allocation-cod-orders">courier allocation</a>, but you do not control it. <strong>Remittance</strong> belongs to the courier entirely. <strong>Dispatch</strong> is yours, start to finish, and it is usually the block with the most slack in it. That is why it is the right place to work: it is the only part of the chain where effort converts directly into days.</p>
+
+        <p>And the payoff lands twice. A day removed from dispatch is a day earlier the parcel is in front of a customer who still wants it, and it is also a day earlier the cash arrives, because <a href="/blog/cod-remittance-cycle-cash-flow">the remittance clock</a> does not start until the delivery happens.</p>
+
+        <h2 id="intervals">Six intervals hide inside the word "dispatch"</h2>
+
+        <p>Almost every brand reports one dispatch number, and almost nobody can say which part of it is slow. There are six distinct intervals, and they have different owners and different fixes.</p>
+
+        <p><strong>One: order placed to order visible to operations.</strong> Sync lag between the store, the app layer and whatever your warehouse team actually looks at. Usually minutes, occasionally hours when something has quietly stopped syncing, and completely invisible because nobody monitors it.</p>
+
+        <p><strong>Two: visible to confirmed.</strong> COD only. The time spent getting an OTP entered, a WhatsApp message answered or a call picked up. This is the longest and least predictable interval in the chain, and it is the one that most often decides whether the parcel makes the day's pickup.</p>
+
+        <p><strong>Three: confirmed to allocated.</strong> Serviceability checked, courier chosen, label generated. Fast when the rules are automated. A silent half-day when a pincode turns out to be unserviceable and the order drops into a queue nobody owns.</p>
+
+        <p><strong>Four: allocated to packed.</strong> The interval everyone thinks of as dispatch. It is usually not the problem.</p>
+
+        <p><strong>Five: packed to manifested.</strong> Paperwork and scanning.</p>
+
+        <p><strong>Six: manifested to physically handed over.</strong> The parcel exists, the label is on it, the order shows as fulfilled, and it is sitting on your floor. This is where entire days disappear, because every system in your stack has already marked the order done.</p>
+
+        <p>Note where the two clocks that matter actually start and stop. The customer's clock runs from interval one. The courier's clock does not start until interval six. If your dispatch metric ends at interval five — as a "fulfilled" timestamp does — it is blind to the single most common place a COD order loses a day.</p>
+
+        <h2 id="cutoff">Your real deadline is the pickup cut-off</h2>
+
+        <p>Here is the thing that changes how you should think about the whole problem: dispatch speed is not a slope, it is a step. Orders are not dispatched continuously. They are dispatched in pickup cycles. Everything that clears today's cut-off moves together, and everything that misses it — by ten minutes or by six hours — waits for the next one.</p>
+
+        <p>Couriers are explicit that this line exists, even when they do not publish the clock time. Logistics company <strong>Delhivery</strong>, in its documentation on next-day delivery, makes the cut-off a stated eligibility condition: the service applies to "Shipments created before the daily pickup cut-off time", and the page lists "The order is created after the pickup cut-off time" among the reasons next-day delivery may not be available, along with unserviceable origin or destination pincodes and account-level eligibility. That page shows a last update of January 2026. It does not give a clock time — cut-offs are set per account and per pickup location, which is exactly why you have to go and ask for yours.</p>
+
+        <p>The practical consequences of the step are worth sitting with.</p>
+
+        <p><strong>Average pack time is close to meaningless.</strong> Taking your average from forty minutes to thirty is a real operational improvement and may buy you nothing whatsoever, if both versions land after the cut-off. Conversely, a change that moves a group of orders from just after the line to just before it is worth a full day, every time, on every one of those orders.</p>
+
+        <p><strong>The deadline has to be worked backwards, in writing.</strong> For each pickup location and each courier, establish: the cut-off time; whether the cut-off means manifest creation or physical handover, because those are different deadlines and the gap between them is yours to cover; what happens on Saturdays and Sundays; and the holiday calendar. Then subtract your handover buffer, your manifest time and your realistic pack time. What remains is your confirmation deadline — the actual number the confirmation workflow has to hit. Most brands have never calculated it, which is why their confirmation process has no deadline at all.</p>
+
+        <h2 id="measure">Two numbers, properly split</h2>
+
+        <p>Measure the step, not the slope.</p>
+
+        <p><strong>Same-cycle dispatch rate:</strong> the share of orders that go out on the first available pickup after they were placed. Binary per order, honest, and immediately actionable because every miss has a specific cause.</p>
+
+        <p><strong>Hours from order placed to first courier scan,</strong> median and 90th percentile. Use the courier's scan rather than your own fulfilled timestamp, because the scan is the one event in the chain that neither you nor your app layer can set. The gap between your fulfilled time and the first scan is interval six, measured for free.</p>
+
+        <p>Then split both, four ways.</p>
+
+        <p><strong>COD against prepaid.</strong> COD will be worse. The difference is the cost of your confirmation process, expressed in hours, and it is usually larger than anyone in the business believes.</p>
+
+        <p><strong>By hour of order placement.</strong> Orders arriving after your internal cut-off are structurally a day behind, no matter how good the warehouse is. If a large share of your volume lands in the evening — which it does, for most brands running performance ads — then the fix is a later cut-off or a second pickup, not a faster packer. This single split redirects more wasted effort than any other.</p>
+
+        <p><strong>By SKU.</strong> One slow-moving, hard-to-locate or frequently-out-of-stock item can drag the whole distribution, and it will not show up in an average.</p>
+
+        <p><strong>By whether the order needed manual intervention.</strong> Address incomplete, payment edge case, stock mismatch, pincode flagged. Anything that left the automated path.</p>
+
+        <p>Then do the diagnostic that actually sets priorities: for two weeks, tag every order that missed its cycle with the interval that blocked it. Confirmation, stock, label, or handover. Four buckets, one tally. The priority list writes itself, and for most COD brands the answer is confirmation by a wide margin — which surprises teams who have spent months optimising the packing bench.</p>
+
+        <h2 id="parallel">Take confirmation off the critical path</h2>
+
+        <p>The default COD sequence is serial: the order arrives, somebody calls, the customer confirms, and only then is the order released to picking. Every interval is added to every other one, and the longest, most variable interval sits at the front of the queue blocking the rest.</p>
+
+        <p>The alternative is to start confirmation the moment the order lands — automated, on a timer, with a fallback channel — and run picking and packing concurrently for the orders where packing something that might be cancelled is cheap. Hold the last reversible steps, not the first ones. A packed parcel can be unpacked and re-shelved. A manifested parcel is harder to pull back, and a dispatched one is a problem. So manifest is the right place to gate; picking is not.</p>
+
+        <p>The economics are usually lopsided. For an in-stock, low-value, unremarkable order, packing something that later cancels costs a few minutes of labour and a re-shelving. Waiting four hours for a confirmation costs a missed cut-off on a parcel that in all likelihood would have been accepted. For most catalogues, most orders should be packed while confirmation is still outstanding.</p>
+
+        <p>The exceptions are real and should be named rather than assumed. Hold the whole order where the loss is genuine: high ticket value, phone numbers with a history of refusals, pincodes with a materially worse record, first-time buyers whose details do not hang together. That is a <a href="/blog/cod-risk-scoring">risk scoring</a> decision, and the point of scoring is precisely that it lets you be slow about a small minority of orders instead of slow about all of them.</p>
+
+        <p>Whatever the band, confirmation needs three properties it usually lacks. It must be on a timer rather than on somebody remembering. It must escalate across channels instead of retrying the same one. And it must resolve to a hard outcome — confirmed or cancelled — by a stated time, with the cancellation actually happening. A COD order that sits in "awaiting confirmation" for two days is the most expensive state in the system: inventory committed, no cash, no dispatch, and a customer whose interest is draining away while you wait. See <a href="/blog/whatsapp-vs-sms-vs-ivr-cod-verification">the channel comparison</a> for how reach differs between WhatsApp, SMS and IVR; the sequencing above matters more than the channel choice.</p>
+
+        <h2 id="warehouse">What actually moves the number</h2>
+
+        <p><strong>Wave picking against the cut-off.</strong> Two or three named release times per day rather than a continuous trickle. Waves make the deadline visible to the people working to it, which is most of the benefit.</p>
+
+        <p><strong>A pre-cut-off sweep.</strong> Sixty minutes before the cut-off, one person's only job is to find the orders that are going to miss it and resolve or re-route them. This is the highest-return hour in a COD warehouse, because it is the only hour in the day when an order can still be moved from tomorrow's cycle into today's.</p>
+
+        <p><strong>Stock truth on the fast movers.</strong> A phantom-available SKU is a silent dispatch delay: the order is held, nobody is alerted, and it surfaces when somebody chases it. Weekly cycle counts on the top sellers remove most of these, because the top sellers cause most of them.</p>
+
+        <p><strong>Validate at checkout, not at the bench.</strong> An unserviceable pincode or an unusable address discovered at the packing table costs a cycle. Discovered at checkout it costs nothing. This is the cheapest intervention in the whole list and it belongs to the <a href="/blog/address-quality-cod-orders">address capture</a> and <a href="/blog/cod-pincode-serviceability">serviceability</a> work rather than to operations.</p>
+
+        <p><strong>Alert on label and manifest failures.</strong> These are quiet, and quiet failures are the expensive kind. An order whose label generation errored out looks identical to an order waiting its turn.</p>
+
+        <p><strong>A second daily pickup, once volume justifies it.</strong> This changes the shape of the problem rather than the speed of the team: a step function with two steps halves the average penalty for missing one. It costs something, so price it against the refusals it avoids rather than adopting it on principle.</p>
+
+        <h2 id="tradeoffs">Where fast dispatch is the wrong goal</h2>
+
+        <p>Speed is not free, and there are cases where pushing on it makes the business worse.</p>
+
+        <p><strong>Accuracy beats speed, always.</strong> A mis-picked COD parcel is a refusal at the door, plus return freight, plus a returns QC cycle, plus a customer who will not order again. Speed bought by raising the error rate is negative value, and it is an easy mistake to make when a cut-off is ten minutes away.</p>
+
+        <p><strong>Do not skip verification on genuinely high-risk orders to make a cut-off.</strong> The cut-off is worth a day of transit. An unverified high-risk COD parcel can be worth the full round-trip cost of an RTO. That trade is not close.</p>
+
+        <p><strong>Do not promise dates you only control one leg of.</strong> If transit variance on your lanes is wide, fast dispatch does not entitle you to a tight delivery promise, and a missed promise generates refusals of its own.</p>
+
+        <p><strong>Made-to-order, personalised and fragile catalogues</strong> have a genuinely long pack interval. The right response is to tell the customer clearly at the point of purchase, not to compress the interval until quality suffers.</p>
+
+        <p><strong>Very thin margins at low order values.</strong> A second pickup, extra staffing or a premium service may cost more per order than the refusals it prevents. Work the sum rather than assuming speed pays for itself.</p>
+
+        <h2 id="priority">The order to do this in</h2>
+
+        <p>Get the cut-off for every courier and every pickup location in writing, including what the cut-off refers to and what happens at weekends. Instrument order-placed to first-courier-scan, so interval six stops being invisible. Report same-cycle dispatch rate, split COD against prepaid and by hour of order placement. Put confirmation on a timer with channel escalation and a hard resolution deadline, and move picking off the confirmation dependency for your low-risk band. Add the pre-cut-off sweep, which costs one person one hour. Only after all of that, consider paying for a second pickup — by then you will know what it is worth.</p>
+
+        <p>COD King works on the interval that usually breaks the deadline: it confirms COD orders by OTP and WhatsApp automatically from the moment the order is placed, so confirmation runs on a clock rather than on somebody's call list, and unconfirmed orders resolve instead of ageing. The warehouse side of this list — the waves, the sweep, the cycle counts, the pickup negotiation — is yours.</p>
+
+        <p>The brands that run COD well are not usually the ones with the fastest warehouses. They are the ones who know exactly which line their orders have to cross, by when, and which interval is making them miss it.</p>
+      </div>
+    </div>
+
+    <div className="ck-col-right"><div className="ck-sticky"><div className="ck-toc-label">On this page</div><div className="ck-toc"><a href="#why">Why the clock is a control</a><a href="#intervals">Six hidden intervals</a><a href="#cutoff">The pickup cut-off</a><a href="#measure">Two numbers, split</a><a href="#parallel">Confirmation in parallel</a><a href="#warehouse">What moves the number</a><a href="#tradeoffs">When speed is wrong</a><a href="#priority">The order to do it in</a></div><div className="ck-cta"><input type="email" placeholder="Email address" /><a href="https://codking.tech" className="ck-btn-primary">Start for free</a><a href="https://codking.tech" className="ck-btn-secondary">Contact sales</a></div></div></div>
+  </div>
+
+  <div className="ck-footer">
+    <div className="ck-footer-inner">
+      <div className="ck-footer-brand">
+        <div className="ck-footer-logo">COD King</div>
+        <p className="ck-footer-tagline">Practical guides, strategies, and product insights for Shopify merchants managing Cash on Delivery.</p>
+      </div>
+
+      <div className="ck-footer-cols">
+        <div className="ck-footer-col">
+          <div className="ck-footer-head">Blog</div>
+          <a href="/blog">All articles</a>
+          <a href="/blog/understanding-cod-verification">Understanding COD Verification</a>
+          <a href="/blog/reduce-rto-for-cod-orders">How to Reduce RTO for COD Orders</a>
+          <a href="/blog/ndr-management-cod-orders">NDR Management</a>
+          <a href="/blog/courier-allocation-cod-orders">Courier Allocation</a>
+          <a href="/blog/address-quality-cod-orders">Address Quality for COD Orders</a>
+          <a href="/blog/cod-risk-scoring">COD Risk Scoring</a>
+          <a href="/blog/cod-pincode-serviceability">COD Pincode Serviceability</a>
+          <a href="/blog/dispatch-speed-cod-orders">Dispatch Speed for COD Orders</a>
+          <a href="/blog/rto-benchmarks-india">RTO Benchmarks for Indian D2C</a>
+          <a href="/blog/cod-to-prepaid-conversion">COD to Prepaid Conversion</a>
+          <a href="/blog/partial-cod-payment-advance-amount">How Much COD Advance to Collect</a>
+          <a href="/blog/best-cod-verification-apps-shopify">Best COD Verification Apps</a>
+          <a href="/blog/native-checkout-vs-cod-order-form">Native Checkout vs COD Form</a>
+          <a href="/blog/whatsapp-vs-sms-vs-ivr-cod-verification">WhatsApp vs SMS vs IVR</a>
+          <a href="/blog/how-to-reduce-cod-cancellations">How to Reduce COD Cancellations</a>
+          <a href="/blog/shopify-checkout-optimization">Checkout Optimization for Shopify Stores</a>
+          <a href="/blog/payment-options-indian-ecommerce">Payment Options for Indian E-commerce</a>
+          <a href="/blog/cod-remittance-cycle-cash-flow">COD Remittance Cycles and Cash Flow</a>
+        </div>
+
+        <div className="ck-footer-col">
+          <div className="ck-footer-head">COD King</div>
+          <a href="https://apps.shopify.com/cash-on-delivery-cod-order-confirmation" target="_blank" rel="noreferrer">Shopify App Store</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="ck-footer-bottom">© 2026 COD King</div>
+  </div>
+</div>
