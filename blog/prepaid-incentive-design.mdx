@@ -1,0 +1,232 @@
+---
+title: "Designing a Prepaid Incentive That Pays for Itself"
+sidebarTitle: "Prepaid Incentive Design"
+description: "Most prepaid discounts fail an arithmetic test nobody runs: you pay every prepaid buyer to move the few who switch. The break-even formula, why targeting beats discounting, and how to size the offer by value band."
+mode: "custom"
+public: true
+isPublic: true
+hideFooterPagination: true
+tag: "Payments & Pricing"
+---
+
+<div className="ck-shell">
+  <a href="/blog" className="ck-back">← All articles</a>
+
+  <div className="ck-head">
+    <div className="ck-eyebrow">Payments & Pricing · November 2026</div>
+    <h1 className="ck-title">Designing a Prepaid Incentive That Pays for Itself</h1>
+    <div className="ck-readtime">11 minutes read</div>
+  </div>
+
+  <div className="ck-layout">
+    <div className="ck-col-left">
+      <div className="ck-sticky">
+        <div className="ck-author-mount" data-category="Payments & Pricing" data-slug="prepaid-incentive-design" />
+
+        <div className="ck-navlabel" style={{marginTop:'32px',paddingTop:'24px',borderTop:'1px solid var(--ck-border)'}}>COD & RTO</div>
+
+        <div className="ck-nav">
+          <a href="/blog/apparel-sizing-cod-returns">Apparel Sizing & Returns</a>
+          <a href="/blog/cod-fraud-repeat-offenders">Fraud & Repeat Refusers</a>
+          <a href="/blog/festive-season-cod-operations">Festive COD Peak</a>
+          <a href="/blog/cod-return-cost-reverse-logistics">Cost of a COD Return</a>
+          <a href="/blog/dispatch-speed-cod-orders">Dispatch Speed</a>
+          <a href="/blog/cod-pincode-serviceability">Pincode Serviceability</a>
+          <a href="/blog/cod-risk-scoring">COD Risk Scoring</a>
+          <a href="/blog/address-quality-cod-orders">Address Quality</a>
+        </div>
+
+        <div className="ck-navlabel" style={{marginTop:'24px'}}>Payments & Pricing</div>
+
+        <div className="ck-nav">
+          <a href="/blog/prepaid-incentive-design" className="is-current">Prepaid Incentive Design</a>
+          <a href="/blog/courier-weight-disputes">Weight Disputes</a>
+          <a href="/blog/cod-to-prepaid-conversion">COD to Prepaid</a>
+          <a href="/blog/partial-cod-payment-advance-amount">COD Advance Amount</a>
+          <a href="/blog/payment-options-indian-ecommerce">Payment Options</a>
+          <a href="/blog/cod-remittance-cycle-cash-flow">COD Remittance Cycle</a>
+        </div>
+
+        <div className="ck-navlabel" style={{marginTop:'24px'}}>Tooling & Checkout</div>
+
+        <div className="ck-nav">
+          <a href="/blog/cod-king-vs-releasit">COD King vs Releasit</a>
+          <a href="/blog/cod-king-vs-hillteck">COD King vs HillTeck</a>
+          <a href="/blog/in-house-ndr-vs-3pl">In-House NDR vs 3PL</a>
+          <a href="/blog/best-cod-verification-apps-shopify">Choosing a COD App</a>
+          <a href="/blog/native-checkout-vs-cod-order-form">Checkout vs COD Form</a>
+          <a href="/blog/whatsapp-vs-sms-vs-ivr-cod-verification">WhatsApp vs SMS vs IVR</a>
+          <a href="/blog/how-to-reduce-cod-cancellations">COD Cancellations</a>
+          <a href="/blog/shopify-checkout-optimization">Checkout Optimization</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="ck-col-main">
+      <div className="ck-cover ck-cover--payments" style={{background:'#EDE9FF','--ck-cover-fg':'#241C57','--ck-cover-accent':'#5B3FD6',aspectRatio:'2 / 1'}}><div className="ck-cover-art"><svg viewBox="0 0 640 320" style={{width:'100%',height:'auto',display:'block'}} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A four-step sequence showing where a prepaid incentive should be shown, followed by the break-even ceiling every offer must clear and the three outcomes of sitting under, at or over that ceiling"><g fontFamily="system-ui, sans-serif"><text x="16" y="24" fontSize="12" fontWeight="600" fill="#5B3FD6" letterSpacing="1.3">WHERE THE OFFER GOES, AND WHAT IT HAS TO CLEAR</text><line x1="16" y1="34" x2="624" y2="34" stroke="#D6CDF7" strokeWidth="1" /><rect x="16" y="52" width="134" height="62" rx="7" fill="#FFFFFF" stroke="#D6CDF7" strokeWidth="1.5" /><text x="28" y="70" fontSize="11" fontWeight="700" fill="#5B3FD6">1</text><text x="28" y="88" fontSize="11" fontWeight="600" fill="#111111">Buyer picks COD</text><text x="28" y="104" fontSize="11" fill="#667085">at the payment step</text><path d="M152 83 L164 83" stroke="#5B3FD6" strokeWidth="1.5" /><path d="M164 83 L158 79.5 L158 86.5 Z" fill="#5B3FD6" /><rect x="170" y="52" width="134" height="62" rx="7" fill="#FFFFFF" stroke="#D6CDF7" strokeWidth="1.5" /><text x="182" y="70" fontSize="11" fontWeight="700" fill="#5B3FD6">2</text><text x="182" y="88" fontSize="11" fontWeight="600" fill="#111111">Score lane, pincode,</text><text x="182" y="104" fontSize="11" fill="#667085">buyer history</text><path d="M306 83 L318 83" stroke="#5B3FD6" strokeWidth="1.5" /><path d="M318 83 L312 79.5 L312 86.5 Z" fill="#5B3FD6" /><rect x="324" y="52" width="134" height="62" rx="7" fill="#FFFFFF" stroke="#D6CDF7" strokeWidth="1.5" /><text x="336" y="70" fontSize="11" fontWeight="700" fill="#5B3FD6">3</text><text x="336" y="88" fontSize="11" fontWeight="600" fill="#111111">Read the value band</text><text x="336" y="104" fontSize="11" fill="#667085">flat rupees, not a %</text><path d="M460 83 L472 83" stroke="#5B3FD6" strokeWidth="1.5" /><path d="M472 83 L466 79.5 L466 86.5 Z" fill="#5B3FD6" /><rect x="478" y="52" width="134" height="62" rx="7" fill="#FFFFFF" stroke="#5B3FD6" strokeWidth="2" /><text x="490" y="70" fontSize="11" fontWeight="700" fill="#5B3FD6">4</text><text x="490" y="88" fontSize="11" fontWeight="600" fill="#111111">Offer appears here</text><text x="490" y="104" fontSize="11" fill="#667085">and nowhere earlier</text><text x="16" y="148" fontSize="11" fontWeight="600" fill="#667085" letterSpacing="0.6">EVERY OFFER HAS TO CLEAR ONE CEILING</text><rect x="16" y="158" width="596" height="62" rx="8" fill="#FFFFFF" stroke="#5B3FD6" strokeWidth="2" /><text x="32" y="186" fontSize="13" fontWeight="600" fill="#241C57">Discount per prepaid order  ≤  switch yield  ×  ( COD RTO rate × cost of one failed COD delivery )</text><text x="32" y="207" fontSize="11" fill="#667085">switch yield  =  extra prepaid orders the offer created  ÷  every prepaid order that received it</text><rect x="16" y="238" width="190" height="52" rx="7" fill="#FFFFFF" stroke="#D6CDF7" strokeWidth="1.5" /><text x="28" y="259" fontSize="11" fontWeight="700" fill="#5B3FD6" letterSpacing="0.8">UNDER</text><text x="28" y="277" fontSize="11" fill="#111111">the offer pays for itself</text><rect x="219" y="238" width="190" height="52" rx="7" fill="#FFFFFF" stroke="#D6CDF7" strokeWidth="1.5" /><text x="231" y="259" fontSize="11" fontWeight="700" fill="#667085" letterSpacing="0.8">AT</text><text x="231" y="277" fontSize="11" fill="#111111">break-even, no gain</text><rect x="422" y="238" width="190" height="52" rx="7" fill="#EDE9FF" stroke="#D6CDF7" strokeWidth="1.5" /><text x="434" y="259" fontSize="11" fontWeight="700" fill="#667085" letterSpacing="0.8">OVER</text><text x="434" y="277" fontSize="11" fill="#111111">you fund your own RTO</text><text x="16" y="312" fontSize="11" fill="#667085">The leak is in the denominator: a sitewide offer pays every prepaid buyer in order to move the few who switch.</text></g></svg></div></div>
+      <div className="ck-summary"><div className="ck-summary-label">Summary</div><p>A prepaid discount is not a cost on the orders it converts. It is a cost on every prepaid order that receives it, which is usually ten times as many. That ratio — the switch yield — is what decides whether an incentive makes money, and it is almost never measured. The fix is rarely a smaller discount; it is showing the offer to far fewer people, after they have chosen COD, in flat rupees rather than percentages, and proving the effect with a holdout rather than a before-and-after chart.</p></div>
+
+      <div className="ck-body">
+        <p className="ck-lede">The prepaid discount is the most common lever in Indian D2C and the least examined. Someone picks 5%, or copies ₹50 off from a brand they admire, the prepaid share goes up over the next quarter, and the lever is declared a success. The arithmetic that would show whether it earned anything never gets run, because the number that would reveal the problem does not appear on any dashboard.</p>
+
+        <p>Here is the problem in one sentence. A sitewide prepaid discount is paid to every prepaid order, including the overwhelming majority that were always going to be prepaid. The behaviour you are buying is the switch from COD. The price you pay is spread across a much larger pool. Until you know the size of both, you do not know what a switch cost you.</p>
+
+        <h2 id="denominator">The denominator nobody looks at</h2>
+
+        <p>Work it through with round numbers. A store does 1,000 orders a month at an average of ₹1,200. Before any incentive, 550 are prepaid and 450 are COD. The team introduces a flat 5% prepaid discount, and over the next two months prepaid settles at 620 orders. Prepaid share is up seven points, from 55% to 62%, and that is the slide that goes to the founder.</p>
+
+        <p>Now price it. The discount is ₹60 on a ₹1,200 order, and it is paid on all 620 prepaid orders, not on the 70 that moved. That is ₹37,200 a month of margin given away. Divided by the 70 switched orders, each switch cost ₹531.</p>
+
+        <p>What is a switch worth? It is worth the RTO you avoided, which is the COD failure rate on that slice multiplied by what one failed COD delivery actually costs you — forward freight, return freight, the COD handling fee, the packaging, and the staff time to receive and re-grade the unit. Put the failure rate at a quarter of COD orders and the all-in cost of one failure at ₹220, both figures you should be computing from your own data rather than taking from anyone, and a switch is worth about ₹55 in avoided RTO. Add something for the cash arriving weeks earlier instead of sitting in a <a href="/blog/cod-remittance-cycle-cash-flow">remittance cycle</a>, and call it ₹65.</p>
+
+        <p>₹531 to buy ₹65. The programme destroyed roughly ₹32,000 of margin a month while every reported metric improved. Nothing about those inputs is unusual. If you have never run this calculation on your own prepaid offer, there is a reasonable chance it is in the same territory.</p>
+
+        <p>Our guide to the broader question of <a href="/blog/cod-to-prepaid-conversion">shifting the payment mix</a> covers the non-price levers — trust, timing, and how the payment options are presented. This article is only about the money.</p>
+
+        <h2 id="ceiling">The ceiling, written out</h2>
+
+        <p>The condition for a prepaid incentive to be worth running is short enough to keep in your head.</p>
+
+        <p><strong>Discount per prepaid order must be no greater than the switch yield, multiplied by your COD RTO rate, multiplied by the all-in cost of one failed COD delivery.</strong></p>
+
+        <p>Switch yield is the term that does the work: the extra prepaid orders the offer created, divided by every prepaid order that received the discount. In the example above it was 70 over 620, about 11%. That means the entire discount budget per prepaid order is 11% of the RTO saving per switch — a little over ₹7 on those numbers, when the offer being run was ₹60.</p>
+
+        <p>Three things follow immediately. First, a sitewide percentage discount almost never clears this bar, because its switch yield is structurally low. Second, the lever with the most leverage is not the size of the discount but the yield, and yield is a targeting problem. Third, you cannot evaluate an incentive at all without an estimate of the yield, which means you cannot evaluate it from historical data — more on that below.</p>
+
+        <p>One honest caveat on the right-hand side. If your COD failures are not driven by payment intent at all, the saving is smaller than this formula suggests, because the order you converted to prepaid may still come back. A customer who refuses a parcel because the kurta does not fit will refuse it whether or not they paid in advance; you have converted an RTO into a return, which is cheaper but not free. Brands with high <a href="/blog/apparel-sizing-cod-returns">sizing-driven returns</a> should discount the RTO saving accordingly.</p>
+
+        <h2 id="targeting">Raise the yield instead of cutting the discount</h2>
+
+        <p>If the yield is 11%, cutting the discount from 5% to 3% does not fix the economics. It reduces the waste and probably reduces the yield as well. The structural fix is to stop paying people who were never going to use COD.</p>
+
+        <p>Four exclusions do most of the work, in rough order of value.</p>
+
+        <p><strong>Show the offer only after the buyer has chosen COD.</strong> A banner on the product page reaches everybody; a message that appears when COD is selected reaches only the population you are trying to move. This single change can take the yield from a tenth to a third, which multiplies your allowable discount by three without spending a rupee more per switch.</p>
+
+        <p><strong>Exclude customers whose recent orders were prepaid.</strong> Someone who has paid in advance on their last three orders is pure leakage: they will take the discount and change nothing. A simple rule on the customer's payment history removes a large slice of the denominator and almost none of the numerator. The same logic cuts the other way for the buyers in your <a href="/blog/cod-fraud-repeat-offenders">repeat-refuser list</a>, who should not be offered an incentive at all — they should be offered prepaid only.</p>
+
+        <p><strong>Target the slices where the right-hand side is large.</strong> The RTO saving per switch is not uniform. It is concentrated in the pincodes, couriers and categories where failure rates are highest, and in first-time buyers. Running the incentive only on the worst decile of your <a href="/blog/cod-pincode-serviceability">pincode-level data</a> raises the average value of a switch, which raises the ceiling. A buyer in a lane where COD succeeds 95% of the time is not worth paying to convert.</p>
+
+        <p><strong>Cap the cart value.</strong> This one is counterintuitive and covered in the next section.</p>
+
+        <p>Each exclusion makes the programme smaller and better. That is the trade most teams refuse to make, because a shrinking programme looks like a retreat and a growing prepaid share looks like progress.</p>
+
+        <h2 id="shape">The shape of the offer, ranked by cost per switch</h2>
+
+        <p>Five shapes, and they are not equivalent even when the rupee value is identical.</p>
+
+        <p><strong>A COD fee is the cheapest way to create the same price gap.</strong> If prepaid costs ₹1,200 and COD costs ₹1,240, the gap is ₹40 either way — but the fee touches only the orders you want to discourage, so there is no leakage onto prepaid orders at all. The yield problem disappears by construction. The cost is elsewhere: a visible fee can lose the order entirely rather than converting it, and loss aversion means a ₹40 penalty is felt more sharply than a ₹40 reward, which cuts both ways. It is the strongest lever and the one most likely to be mispriced upward.</p>
+
+        <p><strong>Waiving a COD shipping charge on prepaid</strong> is the next best, if you already charge for COD shipping. You are removing a penalty rather than funding a discount, the cost to you is bounded by the shipping you would have collected, and it reads to the customer as a reason rather than a bribe.</p>
+
+        <p><strong>Store credit on the next order</strong> defers the cost and some of it is never redeemed, which makes the effective cost lower than the face value. It is weak on first-time buyers, who have no reason to value credit with a brand they have not yet received a parcel from, and strong on repeat buyers — exactly inverted from where you want the yield.</p>
+
+        <p><strong>A flat rupee discount</strong> is honest, legible and expensive, and it is the right default if you are not yet charging for COD.</p>
+
+        <p><strong>A percentage discount</strong> is the worst of the five, for the reason in the next section.</p>
+
+        <p>There is also a sixth option that is not an incentive at all: asking for a part payment instead of the full amount. That is a different mechanism with a different cost structure, and we treat it separately in <a href="/blog/partial-cod-payment-advance-amount">how much advance to collect</a>.</p>
+
+        <h2 id="bands">Why percentages are the wrong unit</h2>
+
+        <p>A percentage discount scales with order value. The thing it is supposed to pay for does not. A failed COD delivery on a ₹500 order and a failed delivery on ₹3,000 of the same product cost you nearly the same in forward freight, return freight and handling; the difference is the working capital tied up and whatever the unit is worth after it comes back. So a flat percentage systematically overpays on large carts and underpays on small ones.</p>
+
+        <p>In the Indian market that mismatch is severe, because the order distribution is heavily weighted to the bottom. E-commerce software firm Unicommerce, reporting on more than 138 million order items processed through its Uniware platform during the 6 October to 4 November 2026 festive window, said orders valued below ₹1,000 accounted for 85% of total festive orders. On a ₹600 order, 5% is ₹30 — below the threshold at which most buyers change a habit, so you have paid without buying anything. On a ₹4,000 order the same 5% is ₹200, which is several times the RTO saving and converts a customer who was probably going to pay in advance anyway.</p>
+
+        <p>Flat rupee amounts, banded by cart value, invert this correctly. Something like a meaningful flat amount on the smallest band where the percentage would be invisible, a slightly larger flat amount in the middle, and a hard cap above it — because above a certain cart value the right tool is not a discount but a COD restriction or a part payment. The exact numbers have to come from your own cost of a failed delivery and your own failure rate by band, which is the point of <a href="/blog/cod-return-cost-reverse-logistics">computing what a COD return actually costs you</a> before pricing anything against it.</p>
+
+        <h2 id="placement">Placement, and not stacking</h2>
+
+        <p>Yield rises the later in the journey the offer appears, because by then the population is narrower and the intent is known.</p>
+
+        <p>On the product page, the offer reaches everyone and converts almost no one: maximum leakage. In the cart it is better but still broad. At the payment step, after COD has been selected, is where the economics turn — the buyer has revealed their default and you are paying only to change it.</p>
+
+        <p>The highest-yield placement of all is after the order exists: a message with a payment link, sent during the confirmation window you are already using to verify the order. Only the buyers who actually switch cost you anything, so the yield approaches one and the ceiling on the discount becomes the full RTO saving. The catch is operational rather than financial — you now have a COD order to convert, cancel or edit cleanly in Shopify, and a reconciliation to get right. Our comparison of <a href="/blog/whatsapp-vs-sms-vs-ivr-cod-verification">WhatsApp, SMS and IVR for confirmation</a> covers the channel mechanics; the incentive rides on the same rails.</p>
+
+        <p>One rule regardless of placement: do not let the prepaid incentive stack with coupons, free-shipping thresholds and festive offers. If a buyer can combine three of them you have lost control of your floor price, and the first time you notice is in the margin report.</p>
+
+        <h2 id="measure">Measuring it honestly</h2>
+
+        <p>Prepaid share rises for reasons that have nothing to do with your offer. Digital payment habits in India are still deepening — the National Payments Corporation of India reported that UPI processed 25.47 billion transactions worth ₹31.53 lakh crore in October 2026, up 23% in volume year on year — and your product mix, your traffic sources and the season all move the mix on their own. Unicommerce's festive dataset put prepaid at 61% of orders in that window, with prepaid volumes in tier-3 cities growing more than 40% year on year. A before-and-after read on your own prepaid share cannot separate your offer from any of that.</p>
+
+        <p>So use a holdout. Withhold the incentive from a random 15% or so of eligible sessions, or eligible orders if you are converting post-order, and run it for long enough to accumulate a few hundred orders in the smaller group. The difference in prepaid share between the two groups is your switch yield. It is the only number in this article you cannot estimate from a dashboard, and it is the one the whole calculation turns on.</p>
+
+        <p>Two further things to watch in that comparison. Total orders in both groups, because an incentive that converts COD to prepaid while quietly reducing order count is a loss that no payment-mix metric will ever show you. And the realised cost: discount rupees given away divided by incremental prepaid orders, compared against RTO rate times cost per failure on the same slice. If the first number is larger, the programme is a subsidy.</p>
+
+        <h2 id="failures">Four ways it goes wrong after it starts working</h2>
+
+        <p><strong>You train the base.</strong> A permanent sitewide prepaid discount stops being an incentive and becomes the reference price. Your list price is now the COD price, you cannot remove the discount without an apparent price rise, and you have given up the lever. Run the incentive as a conditional rule tied to risk and placement, not as a standing promise on every page.</p>
+
+        <p><strong>You count the saving twice.</strong> The avoided RTO cost is what funds the discount. It cannot also be reported as a margin improvement. More than one monthly review has celebrated both halves of the same rupee.</p>
+
+        <p><strong>Your COD RTO rate gets worse and you panic.</strong> This is the one that catches people. A successful programme converts the most compliant, most reachable COD buyers first. What remains in the COD pool is a worse population, so the COD RTO rate rises even though total RTO falls. Watch absolute failed deliveries and total RTO cost, not the COD RTO percentage, or you will read a win as a loss. Our <a href="/blog/rto-benchmarks-india">note on benchmarks</a> makes the same point about comparing your numbers to anyone else's.</p>
+
+        <p><strong>Nobody owns the exclusions.</strong> The rules that make the programme work — payment history, pincode decile, cart band — drift. Pincodes change behaviour, couriers change performance, and a rule set written in March is wrong by October. Put a quarterly review on someone's calendar, and revisit it before the festive peak rather than during it.</p>
+
+        <h2 id="start">A configuration to start from</h2>
+
+        <p>If you are building this from nothing, in order. Compute the all-in cost of one failed COD delivery from your own freight bills, COD fees, packaging and handling time. Compute your COD failure rate split by pincode tier and by first-time versus repeat buyer. Multiply the two to get the value of a switch for each slice, and discard the slices where it is small. Choose flat rupee amounts by cart band rather than a percentage, with a cap above which you restrict COD instead. Show the offer only after COD is selected, and only to customers whose recent orders were not prepaid. Hold out 15% of eligible traffic. Review after three weeks against cost per incremental prepaid order, and change one variable at a time.</p>
+
+        <p>That is more work than picking 5%, and it is the difference between a lever and a leak.</p>
+
+        <p>COD King exists partly for the plumbing this requires: prepaid discounts and COD fees applied as rules by pincode, cart value, product or risk rather than as a sitewide setting, which is what makes the targeting above possible without custom development. It also handles the post-order route — sending a payment link during the confirmation window, which is the highest-yield placement described here.</p>
+
+        <h2 id="short">The short version</h2>
+
+        <p>A prepaid discount costs you every prepaid order it touches and earns you only the ones it moves. Divide the second by the first to get your switch yield; your entire discount budget per prepaid order is that yield multiplied by your COD failure rate multiplied by the cost of one failed delivery, and a sitewide percentage offer rarely clears it. Fix the yield rather than the discount: show the offer after COD is chosen, exclude habitual prepaid buyers, target the worst lanes, and price in flat rupees by cart band because freight does not scale with order value. Prove it with a holdout, because the market's prepaid share is rising without your help. And when your COD RTO percentage gets worse while your total RTO cost falls, that is the programme working.</p>
+      </div>
+    </div>
+
+    <div className="ck-col-right"><div className="ck-sticky"><div className="ck-toc-label">On this page</div><div className="ck-toc"><a href="#denominator">The missing denominator</a><a href="#ceiling">The ceiling, written out</a><a href="#targeting">Raise the yield</a><a href="#shape">Shapes ranked by cost</a><a href="#bands">Why percentages are wrong</a><a href="#placement">Placement and stacking</a><a href="#measure">Measuring honestly</a><a href="#failures">Four later failures</a><a href="#start">Where to start</a></div><div className="ck-cta"><input type="email" placeholder="Email address" /><a href="https://codking.tech" className="ck-btn-primary">Start for free</a><a href="https://codking.tech" className="ck-btn-secondary">Contact sales</a></div></div></div>
+  </div>
+
+  <div className="ck-footer">
+    <div className="ck-footer-inner">
+      <div className="ck-footer-brand">
+        <div className="ck-footer-logo">COD King</div>
+        <p className="ck-footer-tagline">Practical guides, strategies, and product insights for Shopify merchants managing Cash on Delivery.</p>
+      </div>
+
+      <div className="ck-footer-cols">
+        <div className="ck-footer-col">
+          <div className="ck-footer-head">Blog</div>
+          <a href="/blog">All articles</a>
+          <a href="/blog/understanding-cod-verification">Understanding COD Verification</a>
+          <a href="/blog/reduce-rto-for-cod-orders">How to Reduce RTO for COD Orders</a>
+          <a href="/blog/apparel-sizing-cod-returns">Apparel Sizing and COD Returns</a>
+          <a href="/blog/cod-fraud-repeat-offenders">COD Fraud and Repeat Refusers</a>
+          <a href="/blog/ndr-management-cod-orders">NDR Management</a>
+          <a href="/blog/courier-allocation-cod-orders">Courier Allocation</a>
+          <a href="/blog/address-quality-cod-orders">Address Quality for COD Orders</a>
+          <a href="/blog/cod-risk-scoring">COD Risk Scoring</a>
+          <a href="/blog/cod-pincode-serviceability">COD Pincode Serviceability</a>
+          <a href="/blog/dispatch-speed-cod-orders">Dispatch Speed for COD Orders</a>
+          <a href="/blog/cod-return-cost-reverse-logistics">What a COD Return Costs</a>
+          <a href="/blog/festive-season-cod-operations">Running COD Through a Festive Peak</a>
+          <a href="/blog/rto-benchmarks-india">RTO Benchmarks for Indian D2C</a>
+          <a href="/blog/cod-to-prepaid-conversion">COD to Prepaid Conversion</a>
+          <a href="/blog/prepaid-incentive-design">Designing a Prepaid Incentive</a>
+          <a href="/blog/partial-cod-payment-advance-amount">How Much COD Advance to Collect</a>
+          <a href="/blog/courier-weight-disputes">Courier Weight Disputes</a>
+          <a href="/blog/best-cod-verification-apps-shopify">Best COD Verification Apps</a>
+          <a href="/blog/in-house-ndr-vs-3pl">In-House NDR vs 3PL</a>
+          <a href="/blog/native-checkout-vs-cod-order-form">Native Checkout vs COD Form</a>
+          <a href="/blog/cod-king-vs-releasit">COD King vs Releasit</a>
+          <a href="/blog/cod-king-vs-hillteck">COD King vs HillTeck</a>
+          <a href="/blog/whatsapp-vs-sms-vs-ivr-cod-verification">WhatsApp vs SMS vs IVR</a>
+          <a href="/blog/how-to-reduce-cod-cancellations">How to Reduce COD Cancellations</a>
+          <a href="/blog/shopify-checkout-optimization">Checkout Optimization for Shopify Stores</a>
+          <a href="/blog/payment-options-indian-ecommerce">Payment Options for Indian E-commerce</a>
+          <a href="/blog/cod-remittance-cycle-cash-flow">COD Remittance Cycles and Cash Flow</a>
+        </div>
+
+        <div className="ck-footer-col">
+          <div className="ck-footer-head">COD King</div>
+          <a href="https://apps.shopify.com/cash-on-delivery-cod-order-confirmation" target="_blank" rel="noreferrer">Shopify App Store</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="ck-footer-bottom">© 2026 COD King</div>
+  </div>
+</div>
